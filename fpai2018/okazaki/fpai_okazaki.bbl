@@ -1,0 +1,22 @@
+\begin{thebibliography}{1}
+
+\bibitem{gBoost}
+Hiroto Saigo, Sebastian Nowozin, Tadashi Kadowaki, Taku Kudo, and Koji Tsuda.
+\newblock gboost: a mathematical programming approach to graph classification
+  and regression.
+\newblock {\em Machine Learning}, Vol.~75, No.~1, pp. 69--89, 2009.
+
+\bibitem{gSpan}
+Xifeng Yan and Jiawei Han.
+\newblock gspan: Graph-based substructure pattern mining.
+\newblock In {\em Proceedings of the 2002 {IEEE} International Conference on
+  Data Mining {(ICDM} 2002), 9-12 December 2002, Maebashi City, Japan}, pp.
+  721--724, 2002.
+
+\bibitem{2016sys}
+瀧川一学.
+\newblock 多数のグラフからの統計的機械学習.深化する機械学習
+  技術の進展とその応用特集号.
+\newblock システム/制御/情報, Vol.~60, No.~3, pp. 107--112, 2016.
+
+\end{thebibliography}

@@ -1,0 +1,51 @@
+This is pBibTeX, Version 0.99d-j0.33 (utf8.euc) (TeX Live 2017)
+Capacity: max_strings=100000, hash_size=100000, hash_prime=85009
+The top-level auxiliary file: fpai_okazaki.aux
+The style file: jplain.bst
+Database file #1: ref.bib
+A bad cross reference---entry "gSpan"
+refers to entry "DBLP:conf/icdm/2002", which doesn't exist
+Warning--I didn't find a database entry for "DBLP:conf/icdm/2002"
+You've used 3 entries,
+            2620 wiz_defined-function locations,
+            616 strings with 5132 characters,
+and the built_in function-call counts, 1551 in all, are:
+= -- 141
+> -- 46
+< -- 7
++ -- 19
+- -- 16
+* -- 92
+:= -- 204
+add.period$ -- 9
+call.type$ -- 3
+change.case$ -- 17
+chr.to.int$ -- 0
+cite$ -- 3
+duplicate$ -- 84
+empty$ -- 128
+format.name$ -- 24
+if$ -- 361
+int.to.chr$ -- 0
+int.to.str$ -- 3
+missing$ -- 3
+newline$ -- 18
+num.names$ -- 6
+pop$ -- 27
+preamble$ -- 1
+purify$ -- 14
+quote$ -- 0
+skip$ -- 81
+stack$ -- 0
+substring$ -- 103
+swap$ -- 32
+text.length$ -- 7
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 12
+warning$ -- 0
+while$ -- 15
+width$ -- 4
+write$ -- 35
+is.kanji.str$ -- 36
+(There was 1 error message)
