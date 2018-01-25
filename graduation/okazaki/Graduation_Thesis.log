@@ -1,0 +1,548 @@
+This is e-pTeX, Version 3.14159265-p3.6-141210-2.6 (utf8.euc) (TeX Live 2015/Debian) (preloaded format=platex 2016.9.28)  12 OCT 2016 14:34
+entering extended mode
+ restricted \write18 enabled.
+ %&-line parsing enabled.
+**Graduation_Thesis.tex
+(./Graduation_Thesis.tex
+pLaTeX2e <2006/11/10> (based on LaTeX2e <2016/02/01> patch level 0)
+Babel <3.9n> and hyphenation patterns for 80 languages loaded.
+(./jsotsuron.cls
+Document Class: jsotsuron 2006/02/01
+(/usr/share/texlive/texmf-dist/tex/platex/base/jreport.cls
+Document Class: jreport 2006/06/27 v1.6 Standard pLaTeX class
+\c@@paper=\count81
+(/usr/share/texlive/texmf-dist/tex/latex/base/fleqn.clo
+File: fleqn.clo 2015/03/31 v1.1i Standard LaTeX option (flush left equations)
+\mathindent=\dimen118
+Applying: [2015/01/01] Make \[ robust on input line 50.
+LaTeX Info: Redefining \[ on input line 51.
+Already applied: [0000/00/00] Make \[ robust on input line 62.
+Applying: [2015/01/01] Make \] robust on input line 74.
+LaTeX Info: Redefining \] on input line 75.
+Already applied: [0000/00/00] Make \] robust on input line 83.
+)
+(/usr/share/texlive/texmf-dist/tex/platex/base/jsize12.clo
+File: jsize12.clo 2006/06/27 v1.6 Standard pLaTeX file (size option)
+)
+\c@part=\count82
+\c@chapter=\count83
+\c@section=\count84
+\c@subsection=\count85
+\c@subsubsection=\count86
+\c@paragraph=\count87
+\c@subparagraph=\count88
+\c@figure=\count89
+\c@table=\count90
+\abovecaptionskip=\skip41
+\belowcaptionskip=\skip42
+\symmincho=\mathgroup4
+LaTeX Font Info:    Overwriting symbol font `mincho' in version `bold'
+(Font)                  JY1/mc/m/n --> JY1/gt/m/n on input line 677.
+\toclineskip=\dimen119
+\@lnumwidth=\dimen120
+\bibindent=\dimen121
+\heisei=\count91
+))
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/graphicx.sty
+Package: graphicx 2014/10/28 v1.0g Enhanced LaTeX Graphics (DPC,SPQR)
+
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/keyval.sty
+Package: keyval 2014/10/28 v1.15 key=value parser (DPC)
+\KV@toks@=\toks15
+)
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/graphics.sty
+Package: graphics 2016/01/03 v1.0q Standard LaTeX Graphics (DPC,SPQR)
+
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/trig.sty
+Package: trig 2016/01/03 v1.10 sin cos tan (DPC)
+)
+(/usr/share/texlive/texmf-dist/tex/latex/latexconfig/graphics.cfg
+File: graphics.cfg 2010/04/23 v1.9 graphics configuration of TeX Live
+)
+Package graphics Info: Driver file: dvipdfmx.def on input line 95.
+
+(/usr/share/texlive/texmf-dist/tex/latex/dvipdfmx-def/dvipdfmx.def
+File: dvipdfmx.def 2015/11/04 v4.07 LaTeX color/graphics driver for dvipdfmx (T
+eX Live/ChoF)
+
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/infwarerr.sty
+Package: infwarerr 2010/04/08 v1.3 Providing info/warning/error messages (HO)
+)
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/ltxcmds.sty
+Package: ltxcmds 2011/11/09 v1.22 LaTeX kernel commands for general use (HO)
+)))
+\Gin@req@height=\dimen122
+\Gin@req@width=\dimen123
+)
+(/usr/share/texlive/texmf-dist/tex/latex/base/makeidx.sty
+Package: makeidx 2014/09/29 v1.0m Standard LaTeX package
+)
+(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsmath.sty
+Package: amsmath 2016/03/03 v2.15a AMS math features
+\@mathmargin=\skip43
+
+For additional information on amsmath, use the `?' option.
+(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amstext.sty
+Package: amstext 2000/06/29 v2.01 AMS text
+
+(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsgen.sty
+File: amsgen.sty 1999/11/30 v2.0 generic functions
+\@emptytoks=\toks16
+\ex@=\dimen124
+))
+(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsbsy.sty
+Package: amsbsy 1999/11/29 v1.2d Bold Symbols
+\pmbraise@=\dimen125
+)
+(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsopn.sty
+Package: amsopn 1999/12/14 v2.01 operator names
+)
+\inf@bad=\count92
+LaTeX Info: Redefining \frac on input line 199.
+\uproot@=\count93
+\leftroot@=\count94
+LaTeX Info: Redefining \overline on input line 297.
+\classnum@=\count95
+\DOTSCASE@=\count96
+LaTeX Info: Redefining \ldots on input line 394.
+LaTeX Info: Redefining \dots on input line 397.
+LaTeX Info: Redefining \cdots on input line 518.
+\Mathstrutbox@=\box41
+\strutbox@=\box42
+\big@size=\dimen126
+LaTeX Font Info:    Redeclaring font encoding OML on input line 630.
+LaTeX Font Info:    Redeclaring font encoding OMS on input line 631.
+\macc@depth=\count97
+\c@MaxMatrixCols=\count98
+\dotsspace@=\muskip10
+\c@parentequation=\count99
+\dspbrk@lvl=\count100
+\tag@help=\toks17
+\row@=\count101
+\column@=\count102
+\maxfields@=\count103
+\andhelp@=\toks18
+\eqnshift@=\dimen127
+\alignsep@=\dimen128
+\tagshift@=\dimen129
+\tagwidth@=\dimen130
+\totwidth@=\dimen131
+\lineht@=\dimen132
+\@envbody=\toks19
+\multlinegap=\skip44
+\multlinetaggap=\skip45
+\mathdisplay@stack=\toks20
+LaTeX Info: Redefining \[ on input line 2735.
+LaTeX Info: Redefining \] on input line 2736.
+)
+(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/amssymb.sty
+Package: amssymb 2013/01/14 v3.01 AMS font symbols
+
+(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/amsfonts.sty
+Package: amsfonts 2013/01/14 v3.01 Basic AMSFonts support
+\symAMSa=\mathgroup5
+\symAMSb=\mathgroup6
+LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
+(Font)                  U/euf/m/n --> U/euf/b/n on input line 106.
+))
+(/usr/share/texlive/texmf-dist/tex/latex/amscls/amsthm.sty
+Package: amsthm 2015/03/04 v2.20.2
+\thm@style=\toks21
+\thm@bodyfont=\toks22
+\thm@headfont=\toks23
+\thm@notefont=\toks24
+\thm@headpunct=\toks25
+\thm@preskip=\skip46
+\thm@postskip=\skip47
+\thm@headsep=\skip48
+\dth@everypar=\toks26
+)
+(/usr/share/texlive/texmf-dist/tex/latex/algorithms/algorithmic.sty
+Package: algorithmic 2009/08/24 v0.1 Document Style `algorithmic'
+
+(/usr/share/texlive/texmf-dist/tex/latex/base/ifthen.sty
+Package: ifthen 2014/09/29 v1.1c Standard LaTeX ifthen package (DPC)
+)
+\c@ALC@unique=\count104
+\c@ALC@line=\count105
+\c@ALC@rem=\count106
+\c@ALC@depth=\count107
+\ALC@tlm=\skip49
+\algorithmicindent=\skip50
+)
+(/usr/share/texlive/texmf-dist/tex/latex/algorithms/algorithm.sty
+Package: algorithm 2009/08/24 v0.1 Document Style `algorithm' - floating enviro
+nment
+
+(/usr/share/texlive/texmf-dist/tex/latex/float/float.sty
+Package: float 2001/11/08 v1.3d Float enhancements (AL)
+\c@float@type=\count108
+\float@exts=\toks27
+\float@box=\box43
+\@float@everytoks=\toks28
+\@floatcapt=\box44
+)
+\@float@every@algorithm=\toks29
+\c@algorithm=\count109
+)
+(/usr/share/texlive/texmf-dist/tex/latex/url/url.sty
+\Urlmuskip=\muskip11
+Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
+)
+(/usr/share/texlive/texmf-dist/tex/latex/here/here.sty)
+\c@Theorem=\count110
+\c@Definition=\count111
+\c@Proof=\count112
+\c@Lemma=\count113
+\@indexfile=\write3
+\openout3 = `Graduation_Thesis.idx'.
+
+
+Writing index file Graduation_Thesis.idx
+(./Graduation_Thesis.aux (./exp.aux) (./result.aux))
+\openout1 = `Graduation_Thesis.aux'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 29.
+LaTeX Font Info:    ... okay on input line 29.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 29.
+LaTeX Font Info:    ... okay on input line 29.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 29.
+LaTeX Font Info:    ... okay on input line 29.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 29.
+LaTeX Font Info:    ... okay on input line 29.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 29.
+LaTeX Font Info:    ... okay on input line 29.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 29.
+LaTeX Font Info:    ... okay on input line 29.
+LaTeX Font Info:    Checking defaults for JY1/mc/m/n on input line 29.
+LaTeX Font Info:    ... okay on input line 29.
+LaTeX Font Info:    Checking defaults for JT1/mc/m/n on input line 29.
+LaTeX Font Info:    ... okay on input line 29.
+LaTeX Font Info:    Font shape `JT1/mc/bx/n' in size <17.28> not available
+(Font)              Font shape `JT1/gt/m/n' tried instead on input line 30.
+LaTeX Font Info:    Font shape `JY1/mc/bx/n' in size <17.28> not available
+(Font)              Font shape `JY1/gt/m/n' tried instead on input line 30.
+ [1
+
+]
+LaTeX Font Info:    Font shape `JT1/mc/bx/n' in size <20.74> not available
+(Font)              Font shape `JT1/gt/m/n' tried instead on input line 31.
+LaTeX Font Info:    Font shape `JY1/mc/bx/n' in size <20.74> not available
+(Font)              Font shape `JY1/gt/m/n' tried instead on input line 31.
+
+(./Graduation_Thesis.toc
+LaTeX Font Info:    Font shape `JT1/mc/bx/n' in size <12> not available
+(Font)              Font shape `JT1/gt/m/n' tried instead on input line 1.
+LaTeX Font Info:    Font shape `JY1/mc/bx/n' in size <12> not available
+(Font)              Font shape `JY1/gt/m/n' tried instead on input line 1.
+LaTeX Font Info:    Try loading font information for U+msa on input line 2.
+
+(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
+File: umsa.fd 2013/01/14 v3.01 AMS symbols A
+)
+LaTeX Font Info:    Try loading font information for U+msb on input line 2.
+
+(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
+File: umsb.fd 2013/01/14 v3.01 AMS symbols B
+) [0
+
+])
+\tf@toc=\write4
+\openout4 = `Graduation_Thesis.toc'.
+
+ [1]
+第 1 章
+LaTeX Font Info:    Font shape `JT1/mc/bx/n' in size <14.4> not available
+(Font)              Font shape `JT1/gt/m/n' tried instead on input line 35.
+LaTeX Font Info:    Font shape `JY1/mc/bx/n' in size <14.4> not available
+(Font)              Font shape `JY1/gt/m/n' tried instead on input line 35.
+[2
+
+]
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 84.
+ (/usr/share/texlive/texmf-dist/tex/latex/base/omscmr.fd
+File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
+)
+LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <12> not available
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 84.
+ [3] [4]
+第 2 章
+
+LaTeX Font Warning: Font shape `JT1/mc/m/it' undefined
+(Font)              using `JT1/mc/m/n' instead on input line 116.
+
+
+LaTeX Font Warning: Font shape `JY1/mc/m/it' undefined
+(Font)              using `JY1/mc/m/n' instead on input line 116.
+
+[5
+
+] [6]
+Overfull \hbox (4.84654pt too wide) in paragraph at lines 184--186
+[]\OT1/cmr/m/n/12 G \JY1/mc/m/it/12 の深さ優先探索順 \OT1/cmr/m/n/12 1 \JY1/mc/
+m/it/12 つに対し \OT1/cmr/m/n/12 DFS \JY1/mc/m/it/12 コ ードが一意に決まり， $[
+]\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 G\OT1/cmr/m/n/12 ) = (\OML/cmm/m/it/12 e[]\J
+Y1/mc/m/it/12 ， \OML/cmm/m/it/12 e[]\JY1/mc/m/it/12 ， [] ， \OML/cmm/m/it/12 
+e[]\OT1/cmr/m/n/12 )$(\JY1/mc/m/it/12 た
+ []
+
+[7] [8]
+第 3 章
+File: fig/gggg.png Graphic file (type bmp)
+<fig/gggg.png>
+Overfull \hbox (58.6838pt too wide) in paragraph at lines 251--252
+ [] 
+ []
+
+File: fig/g.png Graphic file (type bmp)
+<fig/g.png>
+Overfull \hbox (24.0pt too wide) in paragraph at lines 246--264
+[][]
+ []
+
+File: fig/gw.eps Graphic file (type eps)
+<fig/gw.eps> [9
+
+] [10] [11] [12] [13]
+第 4 章
+[14
+
+] [15]
+File: fig/gab.eps Graphic file (type eps)
+ <fig/gab.eps>
+File: fig/gabg.eps Graphic file (type eps)
+ <fig/gabg.eps> [16]
+File: fig/wildprun.eps Graphic file (type eps)
+ <fig/wildprun.eps>
+File: fig/wip-true.eps Graphic file (type eps)
+
+<fig/wip-true.eps> [17] [18]
+File: fig/wip-clo.eps Graphic file (type eps)
+ <fig/wip-clo.eps>
+File: fig/tree.eps Graphic file (type eps)
+ <fig/tree.eps> [19] [20]
+[21] [22] [23]
+\openout2 = `exp.aux'.
+
+ (./exp.tex
+第 5 章
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[24
+
+
+] [25]
+File: fig/mutag_out.eps Graphic file (type eps)
+ <fig/mutag_out.eps>
+Overfull \hbox (10.87027pt too wide) in paragraph at lines 117--118
+ [][] 
+ []
+
+File: fig/cpdb_out.eps Graphic file (type eps)
+<fig/cpdb_out.eps>
+Overfull \hbox (10.87027pt too wide) in paragraph at lines 121--122
+ [][] 
+ []
+
+File: fig/mutag_time.eps Graphic file (type eps)
+<fig/mutag_time.eps>
+Overfull \hbox (10.87027pt too wide) in paragraph at lines 125--126
+ [][] 
+ []
+
+File: fig/cpdb_time.eps Graphic file (type eps)
+<fig/cpdb_time.eps>
+Overfull \hbox (10.87027pt too wide) in paragraph at lines 129--130
+ [][] 
+ []
+
+File: fig/per_mutag.eps Graphic file (type eps)
+<fig/per_mutag.eps>
+Overfull \hbox (10.87027pt too wide) in paragraph at lines 133--134
+ [][] 
+ []
+
+File: fig/per_cpdb.eps Graphic file (type eps)
+<fig/per_cpdb.eps>
+Overfull \hbox (10.87027pt too wide) in paragraph at lines 137--138
+ [][] 
+ []
+
+
+Overfull \hbox (27.55658pt too wide) in paragraph at lines 113--141
+[][] 
+ []
+
+[26] [27] [28] [29]
+File: fig/mutag_svm.eps Graphic file (type eps)
+ <fig/mutag_svm.eps>
+Overfull \hbox (10.87027pt too wide) in paragraph at lines 284--285
+ [][] 
+ []
+
+File: fig/mutag_rf.eps Graphic file (type eps)
+<fig/mutag_rf.eps>
+Overfull \hbox (10.87027pt too wide) in paragraph at lines 288--289
+ [][] 
+ []
+
+File: fig/cpdb_svm.eps Graphic file (type eps)
+<fig/cpdb_svm.eps>
+Overfull \hbox (10.87027pt too wide) in paragraph at lines 293--294
+ [][] 
+ []
+
+File: fig/cpdb_rf.eps Graphic file (type eps)
+<fig/cpdb_rf.eps>
+Overfull \hbox (10.87027pt too wide) in paragraph at lines 297--298
+ [][] 
+ []
+
+File: fig/cacm_svm.eps Graphic file (type eps)
+<fig/cacm_svm.eps>
+Overfull \hbox (10.87027pt too wide) in paragraph at lines 302--303
+ [][] 
+ []
+
+File: fig/cacm_rf.eps Graphic file (type eps)
+<fig/cacm_rf.eps>
+Overfull \hbox (10.87027pt too wide) in paragraph at lines 306--307
+ [][] 
+ []
+
+
+Overfull \hbox (27.55658pt too wide) in paragraph at lines 280--310
+[][] 
+ []
+
+[30]
+Overfull \vbox (10.186pt too high) has occurred while \output is active []
+
+
+[31]
+File: fig/wildcard_mutag_out.eps Graphic file (type eps)
+ <fig/wildcard_mutag_out.eps>
+Overfull \hbox (10.87027pt too wide) in paragraph at lines 386--387
+ [][] 
+ []
+
+File: fig/wildcard_cpdb_out.eps Graphic file (type eps)
+<fig/wildcard_cpdb_out.eps>
+Overfull \hbox (10.87027pt too wide) in paragraph at lines 390--391
+ [][] 
+ []
+
+File: fig/wildcard_mutag_time.eps Graphic file (type eps)
+<fig/wildcard_mutag_time.eps>
+Overfull \hbox (10.87027pt too wide) in paragraph at lines 394--395
+ [][] 
+ []
+
+File: fig/wildcard_cpdb_time.eps Graphic file (type eps)
+<fig/wildcard_cpdb_time.eps>
+Overfull \hbox (10.87027pt too wide) in paragraph at lines 398--399
+ [][] 
+ []
+
+
+Overfull \hbox (27.55658pt too wide) in paragraph at lines 382--401
+[][] 
+ []
+
+File: fig/mutag_svm_wildcard1_pruning.eps Graphic file (type eps)
+<fig/mutag_svm_wildcard1_pruning.eps>
+Overfull \hbox (10.87027pt too wide) in paragraph at lines 411--412
+ [][] 
+ []
+
+File: fig/mutag_rf_wildcard1_pruning.eps Graphic file (type eps)
+<fig/mutag_rf_wildcard1_pruning.eps>
+Overfull \hbox (10.87027pt too wide) in paragraph at lines 415--416
+ [][] 
+ []
+
+File: fig/mutag_svm_wildcard2_pruning.eps Graphic file (type eps)
+<fig/mutag_svm_wildcard2_pruning.eps>
+Overfull \hbox (10.87027pt too wide) in paragraph at lines 420--421
+ [][] 
+ []
+
+File: fig/mutag_rf_wildcard2_pruning.eps Graphic file (type eps)
+<fig/mutag_rf_wildcard2_pruning.eps>
+Overfull \hbox (10.87027pt too wide) in paragraph at lines 424--425
+ [][] 
+ []
+
+
+Overfull \hbox (27.55658pt too wide) in paragraph at lines 407--427
+[][] 
+ []
+
+File: fig/cpdb_svm_wildcard1_pruning.eps Graphic file (type eps)
+<fig/cpdb_svm_wildcard1_pruning.eps>
+Overfull \hbox (10.87027pt too wide) in paragraph at lines 436--437
+ [][] 
+ []
+
+File: fig/cpdb_rf_wildcard1_pruning.eps Graphic file (type eps)
+<fig/cpdb_rf_wildcard1_pruning.eps>
+Overfull \hbox (10.87027pt too wide) in paragraph at lines 440--441
+ [][] 
+ []
+
+File: fig/cpdb_svm_wildcard2_pruning.eps Graphic file (type eps)
+<fig/cpdb_svm_wildcard2_pruning.eps>
+Overfull \hbox (10.87027pt too wide) in paragraph at lines 445--446
+ [][] 
+ []
+
+File: fig/cpdb_rf_wildcard2_pruning.eps Graphic file (type eps)
+<fig/cpdb_rf_wildcard2_pruning.eps>
+Overfull \hbox (10.87027pt too wide) in paragraph at lines 449--450
+ [][] 
+ []
+
+
+Overfull \hbox (27.55658pt too wide) in paragraph at lines 432--453
+[][] 
+ []
+
+) [32] [33] [34] [35]
+\openout2 = `result.aux'.
+
+ (./result.tex
+第 6 章
+) [36
+
+
+
+] [37] [38
+
+
+] (./Graduation_Thesis.bbl
+
+LaTeX Font Warning: Font shape `JT1/gt/m/it' undefined
+(Font)              using `JT1/gt/m/n' instead on input line 6.
+
+
+LaTeX Font Warning: Font shape `JY1/gt/m/it' undefined
+(Font)              using `JY1/gt/m/n' instead on input line 6.
+
+[39
+
+]) [40] (./Graduation_Thesis.aux (./exp.aux) (./result.aux))
+
+LaTeX Font Warning: Some font shapes were not available, defaults substituted.
+
+ ) 
+Here is how much of TeX's memory you used:
+ 2403 strings out of 493723
+ 29382 string characters out of 6152570
+ 97306 words of memory out of 5000000
+ 5849 multiletter control sequences out of 15000+600000
+ 23453 words of font info for 92 fonts, out of 8000000 for 9000
+ 929 hyphenation exceptions out of 8191
+ 29i,11n,26p,373b,632s stack positions out of 5000i,500n,10000p,200000b,80000s
+
+Output written on Graduation_Thesis.dvi (42 pages, 103580 bytes).

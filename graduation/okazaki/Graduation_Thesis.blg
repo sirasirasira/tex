@@ -1,0 +1,77 @@
+This is pBibTeX, Version 0.99d-j0.33 (utf8.euc) (TeX Live 2015/Debian)
+Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
+The top-level auxiliary file: Graduation_Thesis.aux
+The style file: jplain.bst
+A level-1 auxiliary file: exp.aux
+A level-1 auxiliary file: result.aux
+Database file #1: ref.bib
+A bad cross reference---entry "fssm"
+refers to entry "DBLP:conf/icdm/2003", which doesn't exist
+A bad cross reference---entry "fsg"
+refers to entry "DBLP:conf/icdm/2001", which doesn't exist
+A bad cross reference---entry "agm1"
+refers to entry "DBLP:conf/pkdd/2000", which doesn't exist
+A bad cross reference---entry "gSpan"
+refers to entry "DBLP:conf/icdm/2002", which doesn't exist
+A bad cross reference---entry "gaston"
+refers to entry "DBLP:conf/kdd/2004", which doesn't exist
+A bad cross reference---entry "ws1"
+refers to entry "DBLP:conf/ictai/2010-1", which doesn't exist
+A bad cross reference---entry "ws2"
+refers to entry "DBLP:conf/iri/2007", which doesn't exist
+A bad cross reference---entry "graphgrep"
+refers to entry "DBLP:conf/icpr/2002", which doesn't exist
+A bad cross reference---entry "gi"
+refers to entry "DBLP:conf/stoc/STOC3", which doesn't exist
+Warning--I didn't find a database entry for "DBLP:conf/icdm/2003"
+Warning--I didn't find a database entry for "DBLP:conf/icdm/2001"
+Warning--I didn't find a database entry for "DBLP:conf/pkdd/2000"
+Warning--I didn't find a database entry for "DBLP:conf/icdm/2002"
+Warning--I didn't find a database entry for "DBLP:conf/kdd/2004"
+Warning--I didn't find a database entry for "DBLP:conf/ictai/2010-1"
+Warning--I didn't find a database entry for "DBLP:conf/iri/2007"
+Warning--I didn't find a database entry for "DBLP:conf/icpr/2002"
+Warning--I didn't find a database entry for "DBLP:conf/stoc/STOC3"
+You've used 14 entries,
+            2620 wiz_defined-function locations,
+            698 strings with 7886 characters,
+and the built_in function-call counts, 7384 in all, are:
+= -- 670
+> -- 248
+< -- 23
++ -- 105
+- -- 88
+* -- 422
+:= -- 955
+add.period$ -- 42
+call.type$ -- 14
+change.case$ -- 86
+chr.to.int$ -- 0
+cite$ -- 14
+duplicate$ -- 396
+empty$ -- 617
+format.name$ -- 132
+if$ -- 1729
+int.to.chr$ -- 0
+int.to.str$ -- 14
+missing$ -- 14
+newline$ -- 73
+num.names$ -- 28
+pop$ -- 145
+preamble$ -- 1
+purify$ -- 72
+quote$ -- 0
+skip$ -- 382
+stack$ -- 0
+substring$ -- 476
+swap$ -- 146
+text.length$ -- 23
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 56
+warning$ -- 0
+while$ -- 67
+width$ -- 16
+write$ -- 156
+is.kanji.str$ -- 174
+(There were 9 error messages)

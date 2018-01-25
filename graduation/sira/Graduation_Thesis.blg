@@ -1,0 +1,47 @@
+This is pBibTeX, Version 0.99d-j0.33 (utf8.euc) (TeX Live 2017)
+Capacity: max_strings=100000, hash_size=100000, hash_prime=85009
+The top-level auxiliary file: Graduation_Thesis.aux
+The style file: jplain.bst
+Database file #1: ref.bib
+You've used 11 entries,
+            2620 wiz_defined-function locations,
+            677 strings with 6475 characters,
+and the built_in function-call counts, 5866 in all, are:
+= -- 531
+> -- 217
+< -- 26
++ -- 91
+- -- 78
+* -- 377
+:= -- 780
+add.period$ -- 35
+call.type$ -- 11
+change.case$ -- 72
+chr.to.int$ -- 0
+cite$ -- 11
+duplicate$ -- 297
+empty$ -- 452
+format.name$ -- 117
+if$ -- 1356
+int.to.chr$ -- 0
+int.to.str$ -- 11
+missing$ -- 11
+newline$ -- 58
+num.names$ -- 22
+pop$ -- 96
+preamble$ -- 1
+purify$ -- 61
+quote$ -- 0
+skip$ -- 284
+stack$ -- 0
+substring$ -- 353
+swap$ -- 112
+text.length$ -- 26
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 44
+warning$ -- 0
+while$ -- 54
+width$ -- 13
+write$ -- 125
+is.kanji.str$ -- 144

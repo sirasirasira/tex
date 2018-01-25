@@ -1,0 +1,756 @@
+-e 1e-2 -x 4 -n 0.01 -f 1
+node mean :  21148.7
+node var :  409.83982359
+acc mean :  0.720652173913
+acc var :  0.0180130736181
+auc mean :  0.723625803263
+auc var :  0.0236794027387
+beta mean :  0.0
+beta var :  0.0
+-e 1e-2 -x 4 -n 0.01 -f 5
+node mean :  95334.8
+node var :  9619.64942896
+acc mean :  0.752770673487
+acc var :  0.0186392010557
+auc mean :  0.746139396935
+auc var :  0.0163192913768
+beta mean :  -0.006343038
+beta var :  0.00163734547496
+-e 1e-2 -x 4 -n 0.01 -f 10
+node mean :  225346.6
+node var :  3294.60342439
+acc mean :  0.746994884911
+acc var :  0.022347773508
+auc mean :  0.754666337123
+auc var :  0.0209115232387
+beta mean :  -0.011824525
+beta var :  0.000186658244025
+-e 1e-2 -x 4 -n 0.1 -f 1
+node mean :  26810.8
+node var :  979.463126412
+acc mean :  0.729326513214
+acc var :  0.0116372189836
+auc mean :  0.738040039545
+auc var :  0.00998755584555
+beta mean :  -0.004841728
+beta var :  0.000405018426008
+-e 1e-2 -x 4 -n 0.1 -f 5
+node mean :  114485.9
+node var :  2260.61289234
+acc mean :  0.736849957374
+acc var :  0.0147696533589
+auc mean :  0.749307958477
+auc var :  0.0164985696137
+beta mean :  -0.010816235
+beta var :  0.000168800083426
+-e 1e-2 -x 4 -n 0.1 -f 10
+node mean :  213475.6
+node var :  3255.04917075
+acc mean :  0.741219096334
+acc var :  0.0223334869495
+auc mean :  0.735051903114
+auc var :  0.0214506505347
+beta mean :  -0.011723565
+beta var :  0.000181262899895
+-e 1e-2 -x 4 -n 0.2 -f 1
+node mean :  22956.0
+node var :  699.7770645
+acc mean :  0.751598465473
+acc var :  0.0151369494536
+auc mean :  0.747661888285
+auc var :  0.0134762792422
+beta mean :  -0.006810548
+beta var :  0.000221271960039
+-e 1e-2 -x 4 -n 0.2 -f 5
+node mean :  89731.8
+node var :  1541.93539294
+acc mean :  0.749957374254
+acc var :  0.0187483711812
+auc mean :  0.748892733564
+auc var :  0.0200263782027
+beta mean :  -0.010885665
+beta var :  0.000170497828345
+-e 1e-2 -x 4 -n 0.2 -f 10
+node mean :  163688.2
+node var :  1967.85018637
+acc mean :  0.75594629156
+acc var :  0.016413498595
+auc mean :  0.750904597133
+auc var :  0.0150371988563
+beta mean :  -0.011611058
+beta var :  0.000180512495998
+-e 1e-2 -x 4 -n 0.3 -f 1
+node mean :  14255.3
+node var :  686.041296862
+acc mean :  0.751513213981
+acc var :  0.0110066679684
+auc mean :  0.760388037568
+auc var :  0.0158284888633
+beta mean :  -0.006246293
+beta var :  0.000439127064085
+-e 1e-2 -x 4 -n 0.3 -f 5
+node mean :  69113.6
+node var :  1485.08223476
+acc mean :  0.771909633419
+acc var :  0.0103966981875
+auc mean :  0.772723677707
+auc var :  0.0139720341914
+beta mean :  -0.013494186
+beta var :  0.000215834703068
+-e 1e-2 -x 4 -n 0.3 -f 10
+node mean :  125802.8
+node var :  4050.27883188
+acc mean :  0.752941176471
+acc var :  0.0109635539908
+auc mean :  0.751880869995
+auc var :  0.0188373229516
+beta mean :  -0.014012171
+beta var :  0.0002671660418
+-e 1e-2 -x 4 -n 0.4 -f 1
+node mean :  9791.7
+node var :  418.804179779
+acc mean :  0.76332054561
+acc var :  0.0107066273272
+auc mean :  0.755103806228
+auc var :  0.0169991507376
+beta mean :  -0.00979172
+beta var :  0.000681055445396
+-e 1e-2 -x 4 -n 0.4 -f 5
+node mean :  47101.8
+node var :  1069.37763021
+acc mean :  0.761807331628
+acc var :  0.0133530277449
+auc mean :  0.768564013841
+auc var :  0.0151743904192
+beta mean :  -0.016885729
+beta var :  0.000253328414405
+-e 1e-2 -x 4 -n 0.4 -f 10
+node mean :  87006.8
+node var :  3497.50412666
+acc mean :  0.764705882353
+acc var :  0.0136132712427
+auc mean :  0.75735788433
+auc var :  0.019258282715
+beta mean :  -0.01802103
+beta var :  0.000339073516557
+-e 1e-2 -x 4 -n 0.5 -f 1
+node mean :  6635.2
+node var :  236.869491493
+acc mean :  0.771973572038
+acc var :  0.016738909815
+auc mean :  0.761890756302
+auc var :  0.0213331374843
+beta mean :  -0.016103972
+beta var :  0.0009327253054
+-e 1e-2 -x 4 -n 0.5 -f 5
+node mean :  26427.1
+node var :  1195.16057038
+acc mean :  0.747144075021
+acc var :  0.0122129717461
+auc mean :  0.744028670291
+auc var :  0.017060786927
+beta mean :  -0.023131991
+beta var :  0.000416924644996
+-e 1e-2 -x 4 -n 0.5 -f 10
+node mean :  52437.3
+node var :  1519.60096769
+acc mean :  0.758930093777
+acc var :  0.0196229520813
+auc mean :  0.756579337618
+auc var :  0.0257229233322
+beta mean :  -0.024822154
+beta var :  0.000455607359153
+-e 1e-2 -x 4 -n 0.6 -f 1
+node mean :  4527.7
+node var :  149.634491345
+acc mean :  0.738405797101
+acc var :  0.0157160784268
+auc mean :  0.708331685615
+auc var :  0.0151277693002
+beta mean :  -0.029521099
+beta var :  0.00091133775167
+-e 1e-2 -x 4 -n 0.6 -f 5
+node mean :  15646.5
+node var :  651.146055044
+acc mean :  0.728260869565
+acc var :  0.0241050195109
+auc mean :  0.700637666831
+auc var :  0.0269893880167
+beta mean :  -0.036989191
+beta var :  0.000652202279403
+-e 1e-2 -x 4 -n 0.6 -f 10
+node mean :  30672.1
+node var :  974.588697349
+acc mean :  0.739833759591
+acc var :  0.0195792131785
+auc mean :  0.716984676224
+auc var :  0.024281454127
+beta mean :  -0.038437417
+beta var :  0.000884793841897
+-e 1e-2 -x 6 -n 0.01 -f 1
+node mean :  27251.4
+node var :  1518.38286476
+acc mean :  0.718009377664
+acc var :  0.0176549965983
+auc mean :  0.718882847257
+auc var :  0.0179625208335
+beta mean :  -0.001717522
+beta var :  0.000883416368692
+-e 1e-2 -x 6 -n 0.01 -f 5
+node mean :  182044.0
+node var :  3625.49616466
+acc mean :  0.742561807332
+acc var :  0.0200416595724
+auc mean :  0.73082797825
+auc var :  0.0247147011757
+beta mean :  -0.013717796
+beta var :  0.000118304774462
+-e 1e-2 -x 6 -n 0.01 -f 10
+node mean :  337073.8
+node var :  5500.73095834
+acc mean :  0.745673486786
+acc var :  0.0167003203835
+auc mean :  0.755318833416
+auc var :  0.0200958149503
+beta mean :  -0.014496138
+beta var :  0.000158503925124
+-e 1e-2 -x 6 -n 0.1 -f 1
+node mean :  32953.8
+node var :  900.334102431
+acc mean :  0.761722080137
+acc var :  0.0125697174351
+auc mean :  0.769535343549
+auc var :  0.0185887097935
+beta mean :  -0.007188409
+beta var :  0.000380980032163
+-e 1e-2 -x 6 -n 0.1 -f 5
+node mean :  172558.1
+node var :  3665.25646702
+acc mean :  0.755754475703
+acc var :  0.0175096115143
+auc mean :  0.750323776569
+auc var :  0.0189928827061
+beta mean :  -0.013736378
+beta var :  0.000103344403949
+-e 1e-2 -x 6 -n 0.1 -f 10
+node mean :  329038.2
+node var :  6140.78611873
+acc mean :  0.752962489344
+acc var :  0.0141820299292
+auc mean :  0.766000988631
+auc var :  0.0212933942921
+beta mean :  -0.014535019
+beta var :  0.000187031219995
+-e 1e-2 -x 6 -n 0.2 -f 1
+node mean :  27709.8
+node var :  593.065945743
+acc mean :  0.758844842285
+acc var :  0.0117719334367
+auc mean :  0.751653484924
+auc var :  0.0145422741426
+beta mean :  -0.007943953
+beta var :  0.000173739470075
+-e 1e-2 -x 6 -n 0.2 -f 5
+node mean :  133866.3
+node var :  1946.70284866
+acc mean :  0.757438192668
+acc var :  0.0157424806277
+auc mean :  0.766411270391
+auc var :  0.0161660758633
+beta mean :  -0.013476599
+beta var :  0.000207473737473
+-e 1e-2 -x 6 -n 0.2 -f 10
+node mean :  252678.5
+node var :  5187.31970916
+acc mean :  0.765984654731
+acc var :  0.0175495947406
+auc mean :  0.765694513099
+auc var :  0.0205910452229
+beta mean :  -0.014298431
+beta var :  0.00029644635921
+-e 1e-2 -x 6 -n 0.3 -f 1
+node mean :  17467.9
+node var :  717.311570379
+acc mean :  0.751385336743
+acc var :  0.0104909248131
+auc mean :  0.746396440929
+auc var :  0.013563947998
+beta mean :  -0.007460918
+beta var :  0.000486182915337
+-e 1e-2 -x 6 -n 0.3 -f 5
+node mean :  100840.8
+node var :  2097.79294879
+acc mean :  0.760251491901
+acc var :  0.0165899449787
+auc mean :  0.757839841819
+auc var :  0.0242603382627
+beta mean :  -0.01554654
+beta var :  0.000243194101627
+-e 1e-2 -x 6 -n 0.3 -f 10
+node mean :  199218.2
+node var :  4821.9479234
+acc mean :  0.755967604433
+acc var :  0.022334772331
+auc mean :  0.756646070193
+auc var :  0.0274019018797
+beta mean :  -0.016659434
+beta var :  0.00023427857897
+-e 1e-2 -x 6 -n 0.4 -f 1
+node mean :  13203.1
+node var :  672.428352317
+acc mean :  0.783503836317
+acc var :  0.017316884385
+auc mean :  0.793578843302
+auc var :  0.0176102818613
+beta mean :  -0.011160332
+beta var :  0.00075859732463
+-e 1e-2 -x 6 -n 0.4 -f 5
+node mean :  66921.2
+node var :  2606.35640617
+acc mean :  0.769032395567
+acc var :  0.0123190267894
+auc mean :  0.766114681167
+auc var :  0.0159063087087
+beta mean :  -0.018747564
+beta var :  0.000227183580798
+-e 1e-2 -x 6 -n 0.4 -f 10
+node mean :  140980.1
+node var :  4200.37943869
+acc mean :  0.754433077579
+acc var :  0.0146690421585
+auc mean :  0.75437716263
+auc var :  0.0177809614765
+beta mean :  -0.020501824
+beta var :  0.000365368999
+-e 1e-2 -x 6 -n 0.5 -f 1
+node mean :  8689.8
+node var :  429.431969001
+acc mean :  0.736828644501
+acc var :  0.0160808359538
+auc mean :  0.732429560059
+auc var :  0.0216631442196
+beta mean :  -0.017674339
+beta var :  0.000644180952492
+-e 1e-2 -x 6 -n 0.5 -f 5
+node mean :  42112.4
+node var :  1235.18667577
+acc mean :  0.764727195226
+acc var :  0.0160251107822
+auc mean :  0.752451804251
+auc var :  0.021025320687
+beta mean :  -0.025698913
+beta var :  0.000400834632162
+-e 1e-2 -x 6 -n 0.5 -f 10
+node mean :  80030.5
+node var :  3692.66729682
+acc mean :  0.751534526854
+acc var :  0.0178872735301
+auc mean :  0.746309935739
+auc var :  0.0264984412568
+beta mean :  -0.026860558
+beta var :  0.000478311661292
+-e 1e-2 -x 6 -n 0.6 -f 1
+node mean :  5150.2
+node var :  196.460672909
+acc mean :  0.723721227621
+acc var :  0.0163782474598
+auc mean :  0.694162135442
+auc var :  0.0164155510947
+beta mean :  -0.029555711
+beta var :  0.00129416955106
+-e 1e-2 -x 6 -n 0.6 -f 5
+node mean :  22094.3
+node var :  914.240942531
+acc mean :  0.733994032395
+acc var :  0.0231405876451
+auc mean :  0.710101334652
+auc var :  0.028865636064
+beta mean :  -0.037992773
+beta var :  0.000834851430243
+-e 1e-2 -x 6 -n 0.6 -f 10
+node mean :  45200.1
+node var :  1559.82025535
+acc mean :  0.742796248934
+acc var :  0.021551958218
+auc mean :  0.709221453287
+auc var :  0.0242783201746
+beta mean :  -0.039821852
+beta var :  0.000816563573437
+-e 1e-2 -x 8 -n 0.01 -f 1
+node mean :  33389.3
+node var :  1967.53917394
+acc mean :  0.723614663257
+acc var :  0.0179913422306
+auc mean :  0.711141868512
+auc var :  0.0263282987077
+beta mean :  -0.002967742
+beta var :  0.00115265209086
+-e 1e-2 -x 8 -n 0.01 -f 5
+node mean :  230434.7
+node var :  3891.71205268
+acc mean :  0.770353793691
+acc var :  0.0178674408502
+auc mean :  0.790832921404
+auc var :  0.0204991734341
+beta mean :  -0.014394277
+beta var :  0.000143389133389
+-e 1e-2 -x 8 -n 0.01 -f 10
+node mean :  443747.4
+node var :  4507.60792039
+acc mean :  0.754113384484
+acc var :  0.0196179189891
+auc mean :  0.754703410776
+auc var :  0.0171853344714
+beta mean :  -0.015326602
+beta var :  0.000197636431727
+-e 1e-2 -x 8 -n 0.1 -f 1
+node mean :  42672.3
+node var :  1514.32668239
+acc mean :  0.758823529412
+acc var :  0.00958653879325
+auc mean :  0.754982698962
+auc var :  0.0162533049058
+beta mean :  -0.009188269
+beta var :  0.00046898656219
+-e 1e-2 -x 8 -n 0.1 -f 5
+node mean :  215073.0
+node var :  3162.14245093
+acc mean :  0.749893435635
+acc var :  0.0129005483877
+auc mean :  0.743400889768
+auc var :  0.0136066378652
+beta mean :  -0.01434063
+beta var :  0.000194687977595
+-e 1e-2 -x 8 -n 0.1 -f 10
+node mean :  419410.0
+node var :  8577.02241457
+acc mean :  0.742668371697
+acc var :  0.0148214199393
+auc mean :  0.758660405339
+auc var :  0.0195123685772
+beta mean :  -0.015248611
+beta var :  0.000208856456493
+-e 1e-2 -x 8 -n 0.2 -f 1
+node mean :  30354.6
+node var :  679.168303147
+acc mean :  0.735336743393
+acc var :  0.0126050752584
+auc mean :  0.723489866535
+auc var :  0.0145588659391
+beta mean :  -0.007699296
+beta var :  0.000337610282421
+-e 1e-2 -x 8 -n 0.2 -f 5
+node mean :  165336.9
+node var :  3049.0291322
+acc mean :  0.742604433078
+acc var :  0.0161054839297
+auc mean :  0.751925358379
+auc var :  0.0147818094384
+beta mean :  -0.013977086
+beta var :  0.000261890251851
+-e 1e-2 -x 8 -n 0.2 -f 10
+node mean :  328829.9
+node var :  5041.63703463
+acc mean :  0.755818414322
+acc var :  0.0179980631539
+auc mean :  0.762071181414
+auc var :  0.023260145585
+beta mean :  -0.015166413
+beta var :  0.000198724533347
+-e 1e-2 -x 8 -n 0.3 -f 1
+node mean :  21781.1
+node var :  1344.65180958
+acc mean :  0.769011082694
+acc var :  0.0183085840821
+auc mean :  0.776196243203
+auc var :  0.0201410506223
+beta mean :  -0.008792835
+beta var :  0.000700271964311
+-e 1e-2 -x 8 -n 0.3 -f 5
+node mean :  123666.4
+node var :  2503.21665543
+acc mean :  0.755903665814
+acc var :  0.0152561781667
+auc mean :  0.755687098369
+auc var :  0.0204917442146
+beta mean :  -0.015839761
+beta var :  0.000369581931107
+-e 1e-2 -x 8 -n 0.3 -f 10
+node mean :  257942.8
+node var :  4046.97672294
+acc mean :  0.744181585678
+acc var :  0.0138904039644
+auc mean :  0.756967375185
+auc var :  0.0207789406414
+beta mean :  -0.017261889
+beta var :  0.000229610490237
+-e 1e-2 -x 8 -n 0.4 -f 1
+node mean :  14592.8
+node var :  300.66991203
+acc mean :  0.751449275362
+acc var :  0.0173940936032
+auc mean :  0.743220464656
+auc var :  0.0163357616227
+beta mean :  -0.011213394
+beta var :  0.000433873951311
+-e 1e-2 -x 8 -n 0.4 -f 5
+node mean :  81870.3
+node var :  2622.38415206
+acc mean :  0.747101449275
+acc var :  0.0129484500068
+auc mean :  0.759411764706
+auc var :  0.0217889475158
+beta mean :  -0.018855588
+beta var :  0.000328634227158
+-e 1e-2 -x 8 -n 0.4 -f 10
+node mean :  172641.6
+node var :  5142.88511091
+acc mean :  0.763213981245
+acc var :  0.0170184858805
+auc mean :  0.777098368759
+auc var :  0.0249239649848
+beta mean :  -0.020642461
+beta var :  0.000250178459618
+-e 1e-2 -x 8 -n 0.5 -f 1
+node mean :  10102.7
+node var :  586.023362162
+acc mean :  0.739748508099
+acc var :  0.0184377281015
+auc mean :  0.719204152249
+auc var :  0.0297094062847
+beta mean :  -0.01804785
+beta var :  0.000735225074805
+-e 1e-2 -x 8 -n 0.5 -f 5
+node mean :  48288.6
+node var :  1617.08146486
+acc mean :  0.770524296675
+acc var :  0.0165093220253
+auc mean :  0.760321304993
+auc var :  0.026911848709
+beta mean :  -0.025812214
+beta var :  0.000503346892495
+-e 1e-2 -x 8 -n 0.5 -f 10
+node mean :  107718.8
+node var :  4545.54269323
+acc mean :  0.752983802217
+acc var :  0.0178944130416
+auc mean :  0.746473059812
+auc var :  0.0255177216034
+beta mean :  -0.027822106
+beta var :  0.000448984964412
+-e 1e-2 -x 8 -n 0.6 -f 1
+node mean :  5833.5
+node var :  370.076620445
+acc mean :  0.735421994885
+acc var :  0.024079853205
+auc mean :  0.702009391992
+auc var :  0.0259322586838
+beta mean :  -0.029159264
+beta var :  0.00113350220162
+-e 1e-2 -x 8 -n 0.6 -f 5
+node mean :  29434.6
+node var :  929.698286542
+acc mean :  0.72958226769
+acc var :  0.0203127624346
+auc mean :  0.694619377163
+auc var :  0.0218934050716
+beta mean :  -0.038768721
+beta var :  0.000762615691034
+-e 1e-2 -x 8 -n 0.6 -f 10
+node mean :  54101.0
+node var :  2352.261261
+acc mean :  0.734057971015
+acc var :  0.0215266938347
+auc mean :  0.705088976767
+auc var :  0.0259465747283
+beta mean :  -0.040113609
+beta var :  0.000707118828638
+-e 1e-2 -x 10 -n 0.01 -f 1
+node mean :  45023.5
+node var :  2149.7127029
+acc mean :  0.754390451833
+acc var :  0.0144539687136
+auc mean :  0.748408304498
+auc var :  0.0148164554931
+beta mean :  -0.007169642
+beta var :  0.000826644118315
+-e 1e-2 -x 10 -n 0.01 -f 5
+node mean :  254184.3
+node var :  4914.77774686
+acc mean :  0.755797101449
+acc var :  0.0142901756394
+auc mean :  0.76731092437
+auc var :  0.0181303215343
+beta mean :  -0.014287164
+beta var :  0.000274469271982
+-e 1e-2 -x 10 -n 0.01 -f 10
+node mean :  519395.4
+node var :  5016.14909308
+acc mean :  0.751385336743
+acc var :  0.0162076586872
+auc mean :  0.767936233317
+auc var :  0.0144212390991
+beta mean :  -0.015422394
+beta var :  0.000157044443908
+-e 1e-2 -x 10 -n 0.1 -f 1
+node mean :  46704.5
+node var :  1254.81351802
+acc mean :  0.744160272805
+acc var :  0.0119373856254
+auc mean :  0.744246169056
+auc var :  0.014514050496
+beta mean :  -0.009104524
+beta var :  0.000406307383734
+-e 1e-2 -x 10 -n 0.1 -f 5
+node mean :  252005.6
+node var :  5261.04016369
+acc mean :  0.748380221654
+acc var :  0.0149679868388
+auc mean :  0.75222441918
+auc var :  0.0203392086732
+beta mean :  -0.01446769
+beta var :  0.000187015345681
+-e 1e-2 -x 10 -n 0.1 -f 10
+node mean :  497579.2
+node var :  7349.37927692
+acc mean :  0.761572890026
+acc var :  0.0220943894148
+auc mean :  0.769594661394
+auc var :  0.0256330426142
+beta mean :  -0.015495003
+beta var :  0.000210415959585
+-e 1e-2 -x 10 -n 0.2 -f 1
+node mean :  34397.8
+node var :  962.631838243
+acc mean :  0.757310315431
+acc var :  0.0172321148361
+auc mean :  0.779480968858
+auc var :  0.0145407451747
+beta mean :  -0.008494398
+beta var :  0.000286282627796
+-e 1e-2 -x 10 -n 0.2 -f 5
+node mean :  185980.3
+node var :  6017.11697751
+acc mean :  0.746973572037
+acc var :  0.0149443154057
+auc mean :  0.740239742956
+auc var :  0.0235142153439
+beta mean :  -0.013911886
+beta var :  0.00038140613359
+-e 1e-2 -x 10 -n 0.2 -f 10
+node mean :  406682.2
+node var :  11998.5814727
+acc mean :  0.742732310315
+acc var :  0.0114475109236
+auc mean :  0.744831932773
+auc var :  0.0199478295305
+beta mean :  -0.015388364
+beta var :  0.000233862230389
+-e 1e-2 -x 10 -n 0.3 -f 1
+node mean :  23893.7
+node var :  1218.61388512
+acc mean :  0.741197783461
+acc var :  0.0136101360207
+auc mean :  0.731445872467
+auc var :  0.0220697897725
+beta mean :  -0.008621454
+beta var :  0.000674981274548
+-e 1e-2 -x 10 -n 0.3 -f 5
+node mean :  146781.7
+node var :  4422.42074898
+acc mean :  0.766112531969
+acc var :  0.0144734714515
+auc mean :  0.755064260998
+auc var :  0.016827837573
+beta mean :  -0.015905454
+beta var :  0.00022444784298
+-e 1e-2 -x 10 -n 0.3 -f 10
+node mean :  309385.7
+node var :  6113.31925888
+acc mean :  0.769011082694
+acc var :  0.015621501381
+auc mean :  0.771495304004
+auc var :  0.0200810286404
+beta mean :  -0.017601693
+beta var :  0.000194873633178
+-e 1e-2 -x 10 -n 0.4 -f 1
+node mean :  15982.4
+node var :  971.44206415
+acc mean :  0.752898550725
+acc var :  0.01442509028
+auc mean :  0.744723183391
+auc var :  0.0207881808215
+beta mean :  -0.011514386
+beta var :  0.000627590737602
+-e 1e-2 -x 10 -n 0.4 -f 5
+node mean :  98600.1
+node var :  3000.42848423
+acc mean :  0.77779198636
+acc var :  0.00962819268434
+auc mean :  0.786109738013
+auc var :  0.014339966718
+beta mean :  -0.019608939
+beta var :  0.00022658261065
+-e 1e-2 -x 10 -n 0.4 -f 10
+node mean :  211436.1
+node var :  4781.14534699
+acc mean :  0.754454390452
+acc var :  0.0121778201497
+auc mean :  0.762857142857
+auc var :  0.0198579875905
+beta mean :  -0.021070266
+beta var :  0.000358770928519
+-e 1e-2 -x 10 -n 0.5 -f 1
+node mean :  11002.3
+node var :  473.350695574
+acc mean :  0.751513213981
+acc var :  0.0149318982825
+auc mean :  0.73314631735
+auc var :  0.0191981579624
+beta mean :  -0.017780347
+beta var :  0.000456635299545
+-e 1e-2 -x 10 -n 0.5 -f 5
+node mean :  58531.9
+node var :  2168.06418932
+acc mean :  0.750063938619
+acc var :  0.0220777714932
+auc mean :  0.75748393475
+auc var :  0.0260400327375
+beta mean :  -0.025916058
+beta var :  0.000623987048926
+-e 1e-2 -x 10 -n 0.5 -f 10
+node mean :  126109.1
+node var :  3412.31766824
+acc mean :  0.777855924979
+acc var :  0.0179733127087
+auc mean :  0.771517548196
+auc var :  0.0236839730329
+beta mean :  -0.027695341
+beta var :  0.000466133659824
+-e 1e-2 -x 10 -n 0.6 -f 1
+node mean :  6992.0
+node var :  350.365523418
+acc mean :  0.728132992327
+acc var :  0.0205539914913
+auc mean :  0.666354424123
+auc var :  0.0373705613032
+beta mean :  -0.030649067
+beta var :  0.00118998829176
+-e 1e-2 -x 10 -n 0.6 -f 5
+node mean :  34799.6
+node var :  1743.37083949
+acc mean :  0.731010230179
+acc var :  0.0201974182011
+auc mean :  0.703284725655
+auc var :  0.0222071492114
+beta mean :  -0.03873353
+beta var :  0.000703204631105
+-e 1e-2 -x 10 -n 0.6 -f 10
+node mean :  67619.8
+node var :  3401.41817129
+acc mean :  0.720822676897
+acc var :  0.0206037496769
+auc mean :  0.690462184874
+auc var :  0.0266031678492
+beta mean :  -0.040576812
+beta var :  0.000829742656575

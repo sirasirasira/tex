@@ -1,0 +1,95 @@
+\begin{thebibliography}{10}
+
+\bibitem{gi}
+Stephen~A. Cook.
+\newblock The complexity of theorem-proving procedures.
+\newblock In {\em Proceedings of the 3rd Annual {ACM} Symposium on Theory of
+  Computing, May 3-5, 1971, Shaker Heights, Ohio, {USA}}, pp. 151--158, 1971.
+
+\bibitem{graphfind}
+Alfredo Ferro, Rosalba Giugno, Misael Mongiov{\`{\i}}, Alfredo Pulvirenti,
+  Dmitry Skripin, and Dennis Shasha.
+\newblock Graphfind: enhancing graph searching by low support data mining
+  techniques.
+\newblock {\em {BMC} Bioinformatics}, Vol.~9, No. {S-4}, 2008.
+
+\bibitem{graphgrep}
+Rosalba Giugno and Dennis Shasha.
+\newblock Graphgrep: {A} fast and universal method for querying graphs.
+\newblock In {\em 16th International Conference on Pattern Recognition, {ICPR}
+  2002, Quebec, Canada, August 11-15, 2002.}, pp. 112--115, 2002.
+
+\bibitem{ws2}
+Yu~He, Xindong Wu, Xingquan Zhu, and Abdullah~N. Arslan.
+\newblock Mining frequent patterns with wildcards from biological sequences.
+\newblock In {\em Proceedings of the {IEEE} International Conference on
+  Information Reuse and Integration, {IRI} 2007, 13-15 August 2007, Las Vegas,
+  Nevada, {USA}}, pp. 329--334, 2007.
+
+\bibitem{wildcard}
+Heiko Hofer, Christian Borgelt, and Michael~R. Berthold.
+\newblock Large scale mining of molecular fragments with wildcards.
+\newblock {\em Intell. Data Anal.}, Vol.~8, No.~5, pp. 495--504, 2004.
+
+\bibitem{fssm}
+Jun Huan, Wei Wang, and Jan Prins.
+\newblock Efficient mining of frequent subgraphs in the presence of
+  isomorphism.
+\newblock In {\em Proceedings of the 3rd {IEEE} International Conference on
+  Data Mining {(ICDM} 2003), 19-22 December 2003, Melbourne, Florida, {USA}},
+  pp. 549--552, 2003.
+
+\bibitem{agm1}
+Akihiro Inokuchi, Takashi Washio, and Hiroshi Motoda.
+\newblock An apriori-based algorithm for mining frequent substructures from
+  graph data.
+\newblock In {\em Principles of Data Mining and Knowledge Discovery, 4th
+  European Conference, {PKDD} 2000, Lyon, France, September 13-16, 2000,
+  Proceedings}, pp. 13--23, 2000.
+
+\bibitem{agm2}
+Akihiro Inokuchi, Takashi Washio, and Hiroshi Motoda.
+\newblock Complete mining of frequent patterns from graphs: Mining graph data.
+\newblock {\em Machine Learning}, Vol.~50, No.~3, pp. 321--354, 2003.
+
+\bibitem{fsg}
+Michihiro Kuramochi and George Karypis.
+\newblock Frequent subgraph discovery.
+\newblock In {\em Proceedings of the 2001 {IEEE} International Conference on
+  Data Mining, 29 November - 2 December 2001, San Jose, California, {USA}}, pp.
+  313--320, 2001.
+
+\bibitem{gaston}
+Siegfried Nijssen and Joost~N. Kok.
+\newblock A quickstart in frequent structure mining can make a difference.
+\newblock In {\em Proceedings of the Tenth {ACM} {SIGKDD} International
+  Conference on Knowledge Discovery and Data Mining, Seattle, Washington, USA,
+  August 22-25, 2004}, pp. 647--652, 2004.
+
+\bibitem{deltol}
+Ichigaku Takigawa and Hiroshi Mamitsuka.
+\newblock Efficiently mining \emph{{\(\delta\)}}-tolerance closed frequent
+  subgraphs.
+\newblock {\em Machine Learning}, Vol.~82, No.~2, pp. 95--121, 2011.
+
+\bibitem{ws3}
+Xindong Wu, Xingquan Zhu, Yu~He, and Abdullah~N. Arslan.
+\newblock {PMBC:} pattern mining from biological sequences with wildcard
+  constraints.
+\newblock {\em Comp. in Bio. and Med.}, Vol.~43, No.~5, pp. 481--492, 2013.
+
+\bibitem{ws1}
+Fei Xie, Xindong Wu, Xuegang Hu, Jun Gao, Dan Guo, Yulian Fei, and Ertian Hua.
+\newblock Sequential pattern mining with wildcards.
+\newblock In {\em 22nd {IEEE} International Conference on Tools with Artificial
+  Intelligence, {ICTAI} 2010, Arras, France, 27-29 October 2010 - Volume 1},
+  pp. 241--247, 2010.
+
+\bibitem{gSpan}
+Xifeng Yan and Jiawei Han.
+\newblock gspan: Graph-based substructure pattern mining.
+\newblock In {\em Proceedings of the 2002 {IEEE} International Conference on
+  Data Mining {(ICDM} 2002), 9-12 December 2002, Maebashi City, Japan}, pp.
+  721--724, 2002.
+
+\end{thebibliography}

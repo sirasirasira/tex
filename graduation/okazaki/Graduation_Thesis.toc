@@ -1,0 +1,37 @@
+\contentsline {chapter}{\numberline {第1章}はじめに}{2}
+\contentsline {section}{\numberline {1.1}背景}{2}
+\contentsline {section}{\numberline {1.2}概要}{3}
+\contentsline {section}{\numberline {1.3}構成}{3}
+\contentsline {chapter}{\numberline {第2章}頻出部分グラフマイニング}{5}
+\contentsline {section}{\numberline {2.1}グラフマイニング}{5}
+\contentsline {section}{\numberline {2.2}グラフの定義}{5}
+\contentsline {section}{\numberline {2.3}問題定義}{6}
+\contentsline {section}{\numberline {2.4}既存手法}{6}
+\contentsline {subsection}{\numberline {2.4.1}DFSコード}{6}
+\contentsline {subsection}{\numberline {2.4.2}DFS辞書順}{7}
+\contentsline {subsection}{\numberline {2.4.3}最小DFSコード}{8}
+\contentsline {subsection}{\numberline {2.4.4}DFSコード木とgSpanアルゴリズム}{8}
+\contentsline {chapter}{\numberline {第3章}Wildcard許容頻出部分グラフマイニング}{9}
+\contentsline {section}{\numberline {3.1}Wildcardを許容した部分グラフ}{9}
+\contentsline {section}{\numberline {3.2}Wildcard許容版gSpanアルゴリズム}{10}
+\contentsline {chapter}{\numberline {第4章}Wildcard許容頻出飽和・極大部分グラフマイニング}{14}
+\contentsline {section}{\numberline {4.1}頻出飽和パターン集合と頻出極大パターン集合}{14}
+\contentsline {section}{\numberline {4.2}既存手法}{15}
+\contentsline {section}{\numberline {4.3}Wildcard許容版$\delta $-tolerance closed frequent subgraphs}{17}
+\contentsline {subsection}{\numberline {4.3.1}Wildcardを含むパターンに対する飽和集合・極大集合}{17}
+\contentsline {subsection}{\numberline {4.3.2}Wildcard pruning}{18}
+\contentsline {subsection}{\numberline {4.3.3}提案アルゴリズム}{19}
+\contentsline {chapter}{\numberline {第5章}実験と考察}{24}
+\contentsline {section}{\numberline {5.1}実験環境}{24}
+\contentsline {section}{\numberline {5.2}使用したデータベース}{24}
+\contentsline {section}{\numberline {5.3}出力数と出力時間に関する実験}{25}
+\contentsline {subsection}{\numberline {5.3.1}考察}{25}
+\contentsline {section}{\numberline {5.4}機械学習に対する応用実験}{28}
+\contentsline {subsection}{\numberline {5.4.1}実験準備}{28}
+\contentsline {subsection}{\numberline {5.4.2}実験1:結果と考察}{29}
+\contentsline {subsection}{\numberline {5.4.3}実験2:結果と考察}{32}
+\contentsline {chapter}{\numberline {第6章}まとめ}{36}
+\contentsline {section}{\numberline {6.1}結論}{36}
+\contentsline {section}{\numberline {6.2}今後の展望}{36}
+\contentsline {chapter}{謝辞}{38}
+\contentsline {chapter}{参考文献}{39}
