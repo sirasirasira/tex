@@ -1,4 +1,4 @@
-This is e-pTeX, Version 3.14159265-p3.7.1-161114-2.6 (utf8.euc) (TeX Live 2017) (preloaded format=platex 2017.6.8)  24 JAN 2018 23:31
+This is e-pTeX, Version 3.14159265-p3.7.1-161114-2.6 (utf8.euc) (TeX Live 2017) (preloaded format=platex 2017.6.8)  31 JAN 2018 17:46
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -414,21 +414,22 @@ LaTeX Font Info:    Font shape `JY1/mc/bx/n' in size <14.4> not available
 [1
 
 ]
-LaTeX Font Info:    Try loading font information for OMS+cmr on input line 98.
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 101.
+
  (/usr/local/texlive/2017/texmf-dist/tex/latex/base/omscmr.fd
 File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <12> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 98.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 101.
  (./gboost.tex [2]
 第 2 章
 [3
 
 ]
 LaTeX Font Info:    Font shape `U/lasy/b/n' in size <8> not available
-(Font)              Font shape `U/lasy/m/n' tried instead on input line 46.
+(Font)              Font shape `U/lasy/m/n' tried instead on input line 50.
 LaTeX Font Info:    Font shape `U/lasy/b/n' in size <6> not available
-(Font)              Font shape `U/lasy/m/n' tried instead on input line 46.
+(Font)              Font shape `U/lasy/m/n' tried instead on input line 50.
  [4] [5]) (./randomized_search.tex [6]
 第 3 章
 
@@ -459,24 +460,24 @@ LaTeX Font Warning: Font shape `JY1/mc/m/sc' undefined
 第 4 章
 File: cpdb/purpose_1.eps Graphic file (type eps)
 <cpdb/purpose_1.eps>
-Overfull \hbox (7.43245pt too wide) in paragraph at lines 179--180
+Overfull \hbox (7.43245pt too wide) in paragraph at lines 177--178
  [] 
  []
 
 File: cpdb/purpose_3.eps Graphic file (type eps)
 <cpdb/purpose_3.eps>
-Overfull \hbox (7.43245pt too wide) in paragraph at lines 187--188
+Overfull \hbox (7.43245pt too wide) in paragraph at lines 185--186
  [] 
  []
 
 File: cpdb/purpose_5.eps Graphic file (type eps)
 <cpdb/purpose_5.eps>
-Overfull \hbox (7.43245pt too wide) in paragraph at lines 195--196
+Overfull \hbox (7.43245pt too wide) in paragraph at lines 193--194
  [] 
  []
 
 
-Overfull \hbox (19.23271pt too wide) in paragraph at lines 176--203
+Overfull \hbox (15.317pt too wide) in paragraph at lines 174--200
  [][][] 
  []
 
@@ -485,68 +486,85 @@ Overfull \hbox (19.23271pt too wide) in paragraph at lines 176--203
 ]
 File: cpdb/node_1.eps Graphic file (type eps)
  <cpdb/node_1.eps>
-Overfull \hbox (7.43245pt too wide) in paragraph at lines 216--217
+Overfull \hbox (7.43245pt too wide) in paragraph at lines 213--214
  [] 
  []
 
 File: cpdb/node_3.eps Graphic file (type eps)
 <cpdb/node_3.eps>
-Overfull \hbox (7.43245pt too wide) in paragraph at lines 224--225
+Overfull \hbox (7.43245pt too wide) in paragraph at lines 221--222
  [] 
  []
 
 File: cpdb/node_5.eps Graphic file (type eps)
 <cpdb/node_5.eps>
-Overfull \hbox (7.43245pt too wide) in paragraph at lines 232--233
+Overfull \hbox (7.43245pt too wide) in paragraph at lines 229--230
  [] 
  []
 
 
-Overfull \hbox (19.23271pt too wide) in paragraph at lines 213--240
+Overfull \hbox (15.317pt too wide) in paragraph at lines 210--236
  [][][] 
  []
 
 File: cpdb/purpose_node_1.eps Graphic file (type eps)
 <cpdb/purpose_node_1.eps>
-Overfull \hbox (7.43245pt too wide) in paragraph at lines 252--253
+Overfull \hbox (7.43245pt too wide) in paragraph at lines 248--249
  [] 
  []
 
 File: cpdb/purpose_node_3.eps Graphic file (type eps)
 <cpdb/purpose_node_3.eps>
-Overfull \hbox (7.43245pt too wide) in paragraph at lines 260--261
+Overfull \hbox (7.43245pt too wide) in paragraph at lines 256--257
  [] 
  []
 
 File: cpdb/purpose_node_5.eps Graphic file (type eps)
 <cpdb/purpose_node_5.eps>
-Overfull \hbox (7.43245pt too wide) in paragraph at lines 268--269
+Overfull \hbox (7.43245pt too wide) in paragraph at lines 264--265
  [] 
  []
 
 
-Overfull \hbox (19.23271pt too wide) in paragraph at lines 249--276
+Overfull \hbox (15.317pt too wide) in paragraph at lines 245--271
  [][][] 
  []
 
 [12]
 File: cpdb/node_acc.eps Graphic file (type eps)
  <cpdb/node_acc.eps>
-File: mutag/node_acc.eps Graphic file (type eps)
- <mutag/node_acc.eps>
-Overfull \hbox (2.61049pt too wide) in paragraph at lines 330--347
-[][]$[]$[] []$[]$[]
+File: cpdb/node_acc_para.eps Graphic file (type eps)
+ <cpdb/node_acc_para.eps>
+Overfull \hbox (2.61049pt too wide) in paragraph at lines 325--341
+[][]$[]$[] []$[]$[] 
  []
 
-[13] [14]
+File: mutag/node_acc.eps Graphic file (type eps)
+<mutag/node_acc.eps>
+File: mutag/node_acc_para.eps Graphic file (type eps)
+ <mutag/node_acc_para.eps>
+Overfull \hbox (2.61049pt too wide) in paragraph at lines 345--361
+[][]$[]$[] []$[]$[] 
+ []
+
+[13]
+File: cpdb/purpose_node_3_tree.eps Graphic file (type eps)
+ <cpdb/purpose_node_3_tree.eps>
+File: cpdb/purpose_node_3.eps Graphic file (type eps)
+ <cpdb/purpose_node_3.eps>
+Overfull \hbox (2.61049pt too wide) in paragraph at lines 372--388
+[][]$[]$[] []$[]$[] 
+ []
+
+[14] [15]
 第 5 章
-[15
+[16
 
-] [16]
+] [17] [18]
 第 6 章
-) [17
+) [19
 
-] (./Graduation_Thesis.bbl [18
+] (./Graduation_Thesis.bbl [20
 
 ]
 
@@ -557,20 +575,20 @@ LaTeX Font Warning: Font shape `JT1/gt/m/it' undefined
 LaTeX Font Warning: Font shape `JY1/gt/m/it' undefined
 (Font)              using `JY1/gt/m/n' instead on input line 6.
 
-[19
+[21
 
-]) [20] (./Graduation_Thesis.aux)
+]) [22] (./Graduation_Thesis.aux)
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
  ) 
 Here is how much of TeX's memory you used:
- 5778 strings out of 493653
- 82082 string characters out of 6148875
+ 5793 strings out of 493653
+ 82301 string characters out of 6148875
  153339 words of memory out of 5000000
- 9204 multiletter control sequences out of 15000+600000
+ 9217 multiletter control sequences out of 15000+600000
  38178 words of font info for 119 fonts, out of 8000000 for 9000
  929 hyphenation exceptions out of 8191
  36i,20n,43p,290b,688s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on Graduation_Thesis.dvi (24 pages, 63760 bytes).
+Output written on Graduation_Thesis.dvi (26 pages, 71624 bytes).

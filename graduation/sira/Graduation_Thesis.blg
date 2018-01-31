@@ -1,47 +1,47 @@
 This is pBibTeX, Version 0.99d-j0.33 (utf8.euc) (TeX Live 2017)
 Capacity: max_strings=100000, hash_size=100000, hash_prime=85009
 The top-level auxiliary file: Graduation_Thesis.aux
-The style file: jplain.bst
+The style file: junsrt.bst
 Database file #1: ref.bib
 You've used 11 entries,
-            2620 wiz_defined-function locations,
-            677 strings with 6475 characters,
-and the built_in function-call counts, 5866 in all, are:
-= -- 531
-> -- 217
+            2270 wiz_defined-function locations,
+            624 strings with 5991 characters,
+and the built_in function-call counts, 4500 in all, are:
+= -- 376
+> -- 128
 < -- 26
-+ -- 91
-- -- 78
-* -- 377
-:= -- 780
++ -- 50
+- -- 39
+* -- 266
+:= -- 531
 add.period$ -- 35
 call.type$ -- 11
-change.case$ -- 72
+change.case$ -- 11
 chr.to.int$ -- 0
 cite$ -- 11
-duplicate$ -- 297
-empty$ -- 452
-format.name$ -- 117
-if$ -- 1356
+duplicate$ -- 275
+empty$ -- 408
+format.name$ -- 78
+if$ -- 1118
 int.to.chr$ -- 0
 int.to.str$ -- 11
 missing$ -- 11
 newline$ -- 58
-num.names$ -- 22
-pop$ -- 96
+num.names$ -- 11
+pop$ -- 57
 preamble$ -- 1
-purify$ -- 61
+purify$ -- 0
 quote$ -- 0
-skip$ -- 284
+skip$ -- 229
 stack$ -- 0
-substring$ -- 353
+substring$ -- 296
 swap$ -- 112
 text.length$ -- 26
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 44
+type$ -- 0
 warning$ -- 0
-while$ -- 54
+while$ -- 43
 width$ -- 13
 write$ -- 125
 is.kanji.str$ -- 144
