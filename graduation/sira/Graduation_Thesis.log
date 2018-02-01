@@ -1,4 +1,4 @@
-This is e-pTeX, Version 3.14159265-p3.7.1-161114-2.6 (utf8.euc) (TeX Live 2017) (preloaded format=platex 2017.6.8)  31 JAN 2018 17:46
+This is e-pTeX, Version 3.14159265-p3.7.1-161114-2.6 (utf8.euc) (TeX Live 2017) (preloaded format=platex 2017.6.8)  1 FEB 2018 23:28
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -349,36 +349,36 @@ Writing index file Graduation_Thesis.idx
 (./Graduation_Thesis.aux)
 \openout1 = `Graduation_Thesis.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 49.
-LaTeX Font Info:    ... okay on input line 49.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 49.
-LaTeX Font Info:    ... okay on input line 49.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 49.
-LaTeX Font Info:    ... okay on input line 49.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 49.
-LaTeX Font Info:    ... okay on input line 49.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 49.
-LaTeX Font Info:    ... okay on input line 49.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 49.
-LaTeX Font Info:    ... okay on input line 49.
-LaTeX Font Info:    Checking defaults for JY1/mc/m/n on input line 49.
-LaTeX Font Info:    ... okay on input line 49.
-LaTeX Font Info:    Checking defaults for JT1/mc/m/n on input line 49.
-LaTeX Font Info:    ... okay on input line 49.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 50.
+LaTeX Font Info:    ... okay on input line 50.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 50.
+LaTeX Font Info:    ... okay on input line 50.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 50.
+LaTeX Font Info:    ... okay on input line 50.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 50.
+LaTeX Font Info:    ... okay on input line 50.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 50.
+LaTeX Font Info:    ... okay on input line 50.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 50.
+LaTeX Font Info:    ... okay on input line 50.
+LaTeX Font Info:    Checking defaults for JY1/mc/m/n on input line 50.
+LaTeX Font Info:    ... okay on input line 50.
+LaTeX Font Info:    Checking defaults for JT1/mc/m/n on input line 50.
+LaTeX Font Info:    ... okay on input line 50.
 \c@lstlisting=\count130
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: End \AtBeginDocument code.
 LaTeX Font Info:    Font shape `JT1/mc/bx/n' in size <17.28> not available
-(Font)              Font shape `JT1/gt/m/n' tried instead on input line 50.
+(Font)              Font shape `JT1/gt/m/n' tried instead on input line 51.
 LaTeX Font Info:    Font shape `JY1/mc/bx/n' in size <17.28> not available
-(Font)              Font shape `JY1/gt/m/n' tried instead on input line 50.
+(Font)              Font shape `JY1/gt/m/n' tried instead on input line 51.
  [1
 
 ]
 LaTeX Font Info:    Font shape `JT1/mc/bx/n' in size <20.74> not available
-(Font)              Font shape `JT1/gt/m/n' tried instead on input line 51.
+(Font)              Font shape `JT1/gt/m/n' tried instead on input line 52.
 LaTeX Font Info:    Font shape `JY1/mc/bx/n' in size <20.74> not available
-(Font)              Font shape `JY1/gt/m/n' tried instead on input line 51.
+(Font)              Font shape `JY1/gt/m/n' tried instead on input line 52.
  (./Graduation_Thesis.toc
 LaTeX Font Info:    Font shape `JT1/mc/bx/n' in size <12> not available
 (Font)              Font shape `JT1/gt/m/n' tried instead on input line 1.
@@ -406,78 +406,76 @@ File: ulasy.fd 1998/08/17 v2.2e LaTeX symbol font definitions
 
  [1]
 LaTeX Font Info:    Font shape `JT1/mc/bx/n' in size <14.4> not available
-(Font)              Font shape `JT1/gt/m/n' tried instead on input line 54.
+(Font)              Font shape `JT1/gt/m/n' tried instead on input line 55.
 LaTeX Font Info:    Font shape `JY1/mc/bx/n' in size <14.4> not available
-(Font)              Font shape `JY1/gt/m/n' tried instead on input line 54.
+(Font)              Font shape `JY1/gt/m/n' tried instead on input line 55.
  [0]
 第 1 章
 [1
 
 ]
-LaTeX Font Info:    Try loading font information for OMS+cmr on input line 101.
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 104.
 
  (/usr/local/texlive/2017/texmf-dist/tex/latex/base/omscmr.fd
 File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <12> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 101.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 104.
  (./gboost.tex [2]
 第 2 章
 [3
 
 ]
 LaTeX Font Info:    Font shape `U/lasy/b/n' in size <8> not available
-(Font)              Font shape `U/lasy/m/n' tried instead on input line 50.
+(Font)              Font shape `U/lasy/m/n' tried instead on input line 52.
 LaTeX Font Info:    Font shape `U/lasy/b/n' in size <6> not available
-(Font)              Font shape `U/lasy/m/n' tried instead on input line 50.
+(Font)              Font shape `U/lasy/m/n' tried instead on input line 52.
  [4] [5]) (./randomized_search.tex [6]
 第 3 章
 
 LaTeX Font Warning: Font shape `JT1/mc/m/it' undefined
-(Font)              using `JT1/mc/m/n' instead on input line 17.
+(Font)              using `JT1/mc/m/n' instead on input line 16.
 
 
 LaTeX Font Warning: Font shape `JY1/mc/m/it' undefined
-(Font)              using `JY1/mc/m/n' instead on input line 17.
+(Font)              using `JY1/mc/m/n' instead on input line 16.
 
-[7
-
-]
 LaTeX Font Info:    Font shape `JT1/mc/bx/n' in size <10.95> not available
-(Font)              Font shape `JT1/gt/m/n' tried instead on input line 33.
+(Font)              Font shape `JT1/gt/m/n' tried instead on input line 34.
 LaTeX Font Info:    Font shape `JY1/mc/bx/n' in size <10.95> not available
-(Font)              Font shape `JY1/gt/m/n' tried instead on input line 33.
-
+(Font)              Font shape `JY1/gt/m/n' tried instead on input line 34.
 
 LaTeX Font Warning: Font shape `JT1/mc/m/sc' undefined
-(Font)              using `JT1/mc/m/n' instead on input line 33.
+(Font)              using `JT1/mc/m/n' instead on input line 34.
 
 
 LaTeX Font Warning: Font shape `JY1/mc/m/sc' undefined
-(Font)              using `JY1/mc/m/n' instead on input line 33.
+(Font)              using `JY1/mc/m/n' instead on input line 34.
 
-[8] [9] [10]
+[7
+
+] [8] [9] [10]
 第 4 章
 File: cpdb/purpose_1.eps Graphic file (type eps)
 <cpdb/purpose_1.eps>
-Overfull \hbox (7.43245pt too wide) in paragraph at lines 177--178
+Overfull \hbox (7.43245pt too wide) in paragraph at lines 178--179
  [] 
  []
 
 File: cpdb/purpose_3.eps Graphic file (type eps)
 <cpdb/purpose_3.eps>
-Overfull \hbox (7.43245pt too wide) in paragraph at lines 185--186
+Overfull \hbox (7.43245pt too wide) in paragraph at lines 186--187
  [] 
  []
 
 File: cpdb/purpose_5.eps Graphic file (type eps)
 <cpdb/purpose_5.eps>
-Overfull \hbox (7.43245pt too wide) in paragraph at lines 193--194
+Overfull \hbox (7.43245pt too wide) in paragraph at lines 194--195
  [] 
  []
 
 
-Overfull \hbox (15.317pt too wide) in paragraph at lines 174--200
+Overfull \hbox (15.317pt too wide) in paragraph at lines 175--201
  [][][] 
  []
 
@@ -486,56 +484,55 @@ Overfull \hbox (15.317pt too wide) in paragraph at lines 174--200
 ]
 File: cpdb/node_1.eps Graphic file (type eps)
  <cpdb/node_1.eps>
-Overfull \hbox (7.43245pt too wide) in paragraph at lines 213--214
+Overfull \hbox (7.43245pt too wide) in paragraph at lines 214--215
  [] 
  []
 
 File: cpdb/node_3.eps Graphic file (type eps)
 <cpdb/node_3.eps>
-Overfull \hbox (7.43245pt too wide) in paragraph at lines 221--222
+Overfull \hbox (7.43245pt too wide) in paragraph at lines 222--223
  [] 
  []
 
 File: cpdb/node_5.eps Graphic file (type eps)
 <cpdb/node_5.eps>
-Overfull \hbox (7.43245pt too wide) in paragraph at lines 229--230
+Overfull \hbox (7.43245pt too wide) in paragraph at lines 230--231
  [] 
  []
 
 
-Overfull \hbox (15.317pt too wide) in paragraph at lines 210--236
+Overfull \hbox (15.317pt too wide) in paragraph at lines 211--237
  [][][] 
  []
 
 File: cpdb/purpose_node_1.eps Graphic file (type eps)
 <cpdb/purpose_node_1.eps>
-Overfull \hbox (7.43245pt too wide) in paragraph at lines 248--249
+Overfull \hbox (7.43245pt too wide) in paragraph at lines 249--250
  [] 
  []
 
 File: cpdb/purpose_node_3.eps Graphic file (type eps)
 <cpdb/purpose_node_3.eps>
-Overfull \hbox (7.43245pt too wide) in paragraph at lines 256--257
+Overfull \hbox (7.43245pt too wide) in paragraph at lines 257--258
  [] 
  []
 
 File: cpdb/purpose_node_5.eps Graphic file (type eps)
 <cpdb/purpose_node_5.eps>
-Overfull \hbox (7.43245pt too wide) in paragraph at lines 264--265
+Overfull \hbox (7.43245pt too wide) in paragraph at lines 265--266
  [] 
  []
 
 
-Overfull \hbox (15.317pt too wide) in paragraph at lines 245--271
+Overfull \hbox (15.317pt too wide) in paragraph at lines 246--272
  [][][] 
  []
 
-[12]
 File: cpdb/node_acc.eps Graphic file (type eps)
- <cpdb/node_acc.eps>
+<cpdb/node_acc.eps>
 File: cpdb/node_acc_para.eps Graphic file (type eps)
  <cpdb/node_acc_para.eps>
-Overfull \hbox (2.61049pt too wide) in paragraph at lines 325--341
+Overfull \hbox (2.61049pt too wide) in paragraph at lines 327--343
 [][]$[]$[] []$[]$[] 
  []
 
@@ -543,20 +540,20 @@ File: mutag/node_acc.eps Graphic file (type eps)
 <mutag/node_acc.eps>
 File: mutag/node_acc_para.eps Graphic file (type eps)
  <mutag/node_acc_para.eps>
-Overfull \hbox (2.61049pt too wide) in paragraph at lines 345--361
+Overfull \hbox (2.61049pt too wide) in paragraph at lines 347--363
 [][]$[]$[] []$[]$[] 
  []
 
-[13]
+[12]
 File: cpdb/purpose_node_3_tree.eps Graphic file (type eps)
  <cpdb/purpose_node_3_tree.eps>
 File: cpdb/purpose_node_3.eps Graphic file (type eps)
  <cpdb/purpose_node_3.eps>
-Overfull \hbox (2.61049pt too wide) in paragraph at lines 372--388
+Overfull \hbox (2.61049pt too wide) in paragraph at lines 374--390
 [][]$[]$[] []$[]$[] 
  []
 
-[14] [15]
+[13] [14] [15]
 第 5 章
 [16
 
@@ -583,12 +580,12 @@ LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
  ) 
 Here is how much of TeX's memory you used:
- 5793 strings out of 493653
- 82301 string characters out of 6148875
- 153339 words of memory out of 5000000
- 9217 multiletter control sequences out of 15000+600000
+ 5795 strings out of 493653
+ 82322 string characters out of 6148875
+ 158339 words of memory out of 5000000
+ 9219 multiletter control sequences out of 15000+600000
  38178 words of font info for 119 fonts, out of 8000000 for 9000
  929 hyphenation exceptions out of 8191
- 36i,20n,43p,290b,688s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 36i,20n,43p,279b,688s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on Graduation_Thesis.dvi (26 pages, 71624 bytes).
+Output written on Graduation_Thesis.dvi (26 pages, 70884 bytes).
