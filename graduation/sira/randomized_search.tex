@@ -12,16 +12,28 @@
 この探索空間の変更の詳細は\ref{search space}において言及する．
 
 \section{確率的探索}
-まず初めに，本提案手法で用いる探索パスおよび$K$パス探索を定義する．
+まず初めに，本提案手法で用いる探索パスおよび$K$パス空間を定義する．
 \begin{Definition}[探索パス]
 	根ノードを始点とし，子ノードを展開する．
 	展開した子ノードの中からある確率分布$P$に従い一つの子ノードを選択する．
 	子ノードの展開，選択の動作を終了条件を満たすまで繰り返す．
-	ここで，終了条件とは，子を持たないノード，もしくは予め設定する部分グラフの最大サイズ(maxpat)のノードのことを指す．
-	以上の動作によって選択された根ノードから葉ノードまでのパスを探索パスと定義する．
+	ここで，終了条件とは，子を持たないノード，もしくは予め設定する部分グラフの最大サイズ（maxpat）のノードのことを指す．
+	以上の動作によって選択された根ノードから葉ノードまでのパスを探索パスと定義する．（図\ref{path}）
+	\begin{figure}[t]
+		\centering
+		\includegraphics[width=80mm]{figure/red1.jpg}
+		\caption{探索パス}
+		\label{path}
+	\end{figure}
 \end{Definition}
 \begin{Definition}[$K$パス空間]
-	$K$本の探索パスによってカバーされるノード集合を$K$パス空間と定義する．
+	$K$本の探索パスをサンプリングすることによってカバーされるノード集合を$K$パス空間と定義する．（図\ref{area}）
+	\begin{figure}[t]
+		\centering
+		\includegraphics[width=80mm]{figure/red.jpg}
+		\caption{$K$パス空間}
+		\label{area}
+	\end{figure}
 \end{Definition}
 
 以下では$K$パス空間を探索空間として利用した，提案手法の枠組みを説明する．
@@ -75,7 +87,7 @@ Algorithm\ref{alg_main}では，$K$パス探索において同一ノードの探
 まず，根ノードを始点に設定し，探索パスの本数$K$とともに\textsc{Grow}関数へ渡す．
 \textsc{Grow}関数では引数として渡されたノードにおけるgainとboundの値を式\eqref{eq:gain}および\eqref{eq:bound}で計算し，gainの値がこれまでの最良値である場合には更新する．
 また，既存手法と同様にして式\eqref{eq:prune}を用いて枝刈りを行う.
-その後，終了条件を満たさないならば，渡されたノードの子ノードを展開し($C$)，展開した子ノード集合上に選択確率分布$P$を設定する．
+その後，終了条件を満たさないならば，渡されたノードの子ノードを展開し（$C$），展開した子ノード集合上に選択確率分布$P$を設定する．
 \textsc{SampleCount}関数内で，設定した確率分布$P$に基づきサンプリングを行い， $K$を各子ノードに割り振る．
 各子ノード$c$に対応する整数$k_c$が$0$より大きい場合，\textsc{Grow}関数にそれぞれを引渡し再帰的に探索を行う．
 以上のアルゴリズムにより深さ優先的な$K$パス探索を達成する．
@@ -90,9 +102,9 @@ Algorithm\ref{alg_main}では，$K$パス探索において同一ノードの探
 	P(c) = 1 / |C|.
 \]
 
-\subsection{提案手法2：支持度(support)の情報を加えた確率設定}
+\subsection{提案手法2：支持度（support）の情報を加えた確率設定}
 提案手法1は，入力グラフの特徴を利用しないナイーブな手法である．
-本節では，入力グラフに対する支持度(support)の情報を利用した手法を提案する．
+本節では，入力グラフに対する支持度（support）の情報を利用した手法を提案する．
 ある部分グラフ$x \in \mathcal{T}$の支持度とは，$x$が$\ell$個の全入力グラフの内いくつのグラフで現れるかを表す値であり以下の式で定義される．
 \[
 	\sigma(x) = \sum_{n=1}^{\ell} \mathbb{I} (x \subseteq G_n) .
@@ -133,7 +145,24 @@ gSpanアルゴリズムでは，グラフ同型問題を解き，
 
 したがって本研究では，gSpanアルゴリズムでのグラフ同型判定を行わずに，
 辞書順最小でないノードも木に追加することで，
-探索パスの滞りを防ぎ，各深さでの探索に偏りが生じないよう探索空間を変更する．
+探索パスの滞りを防ぎ，各深さでの探索に偏りが生じないよう探索空間を変更する．（図\ref{change_area}）
+\begin{figure*}[t]
+	\centering
+	\begin{tabular}{c}
+		\begin{minipage}{0.5\hsize}
+			\centering
+			\includegraphics[width=65mm]{figure/DFS.jpg}
+			\subcaption{既存手法での探索空間}
+		\end{minipage}
+		\begin{minipage}{0.5\hsize}
+			\centering
+			\includegraphics[width=65mm]{figure/DFS+.jpg}
+			\subcaption{提案手法での探索空間}
+		\end{minipage}
+	\end{tabular}
+	\caption{探索空間の変更}
+	\label{change_area}
+\end{figure*}
 
 \chapter{実験と結果}
 \section{データセット}
@@ -163,8 +192,8 @@ Sybyl Mol2形式で頂点ラベル，辺ラベルを付与した分子グラフ�
 どれだけ既存手法より効率化できているかを計る実験を行う．
 本稿では，式\eqref{eq:dualprob}の双対問題における目的関数の最終値を探索精度の指標に，
 モデル構築までにgainとboundの値を計算したノードの総数を探索ノード数とし，効率化の指標に用いる．
-以下では，誤分類に対するコスト制御のパラメータ$\nu$の値が0.1，0.3，0.5の3つの場合に対して実験を行う．
-(その他のパラメータ設定に関しては，gBoostにおける固定値maxpat=10，$\epsilon$=0.01を用いる．)
+以下では，誤分類に対するコスト制御のパラメータ$\ \nu\ $の値が0.1，0.3，0.5の3つの場合に対して実験を行う．
+（その他のパラメータ設定に関しては，gBoostにおける固定値maxpat=10，$\epsilon$=0.01を用いる．）
 
 初めに，探索パスの本数パラメータ$K$を変化させた時の目的関数の最終値の推移を図\ref{1-1}に示す．
 横軸は$K$，縦軸は目的関数の最終値である．$K$の刻み幅は，提案手法1，2に対しては10とする．
@@ -177,7 +206,6 @@ Sybyl Mol2形式で頂点ラベル，辺ラベルを付与した分子グラフ�
 				\begin{center}
 					\includegraphics[width=55mm]{cpdb/purpose_1.eps}
 				\end{center}
-				\vspace{0.5cm}
 				\subcaption{$\nu = 0.1$}
 				\label{fig:1}
 			\end{minipage}
@@ -185,7 +213,6 @@ Sybyl Mol2形式で頂点ラベル，辺ラベルを付与した分子グラフ�
 				\begin{center}
 					\includegraphics[width=55mm]{cpdb/purpose_3.eps}
 				\end{center}
-				\vspace{0.5cm}
 				\subcaption{$\nu = 0.3$}
 				\label{fig:2}
 			\end{minipage}
@@ -193,7 +220,6 @@ Sybyl Mol2形式で頂点ラベル，辺ラベルを付与した分子グラフ�
 				\begin{center}
 					\includegraphics[width=55mm]{cpdb/purpose_5.eps}
 				\end{center}
-				\vspace{0.5cm}
 				\subcaption{$\nu = 0.5$}
 				\label{fig:3}
 			\end{minipage}
@@ -213,7 +239,6 @@ $K$の刻み幅は，前述したものと同じ値とする．
 				\begin{center}
 					\includegraphics[width=55mm]{cpdb/node_1.eps}
 				\end{center}
-				\vspace{0.5cm}
 				\subcaption{$\nu = 0.1$}
 				\label{fig:4}
 			\end{minipage}
@@ -221,7 +246,6 @@ $K$の刻み幅は，前述したものと同じ値とする．
 				\begin{center}
 					\includegraphics[width=55mm]{cpdb/node_3.eps}
 				\end{center}
-				\vspace{0.5cm}
 				\subcaption{$\nu = 0.3$}
 				\label{fig:5}
 			\end{minipage}
@@ -229,7 +253,6 @@ $K$の刻み幅は，前述したものと同じ値とする．
 				\begin{center}
 					\includegraphics[width=55mm]{cpdb/node_5.eps}
 				\end{center}
-				\vspace{0.5cm}
 				\subcaption{$\nu = 0.5$}
 				\label{fig:6}
 			\end{minipage}
@@ -248,7 +271,6 @@ $K$の刻み幅は，前述したものと同じ値とする．
 				\begin{center}
 					\includegraphics[width=55mm]{cpdb/purpose_node_1.eps}
 				\end{center}
-				\vspace{0.5cm}
 				\subcaption{$\nu = 0.1$}
 				\label{fig:7}
 			\end{minipage}
@@ -256,7 +278,6 @@ $K$の刻み幅は，前述したものと同じ値とする．
 				\begin{center}
 					\includegraphics[width=55mm]{cpdb/purpose_node_3.eps}
 				\end{center}
-				\vspace{0.5cm}
 				\subcaption{$\nu = 0.3$}
 				\label{fig:8}
 			\end{minipage}
@@ -264,7 +285,6 @@ $K$の刻み幅は，前述したものと同じ値とする．
 				\begin{center}
 					\includegraphics[width=55mm]{cpdb/purpose_node_5.eps}
 				\end{center}
-				\vspace{0.5cm}
 				\subcaption{$\nu = 0.5$}
 				\label{fig:9}
 			\end{minipage}
@@ -279,7 +299,7 @@ $K$の刻み幅は，前述したものと同じ値とする．
 したがって，実験2ではCPDBデータに対して各提案手法が乱数にどれだけ影響を受けるのかを調べる．
 $K$の数を10，100，1000とし，異なるシード値を与えて10回実行した時の
 各提案手法での目的関数の最終値の平均，分散，探索ノード数の平均値を比較する．
-$\nu$の値を0.3に固定し，
+$\ \nu\ $の値を0.3に固定し，
 表\ref{randomseed}に結果を示す．
 \begin{table}[t]
 	\centering
@@ -322,22 +342,20 @@ $\nu$の値を0.3に固定し，
 既存手法では精度が10分割交差検証の正答率の値で測られる．
 したがって，確率的探索を行う各提案手法では10分割交差検証を10回行うことで，正答率の平均値，分散値，
 探索ノード数の平均値を求め，各手法の精度を比較する．
-$\nu$の値が，0.01，0.1，0.2，0.3，0.4，0.5，0.6の場合に対して実験を行なう．
+$\ \nu\ $の値が，0.01，0.1，0.2，0.3，0.4，0.5，0.6の場合に対して実験を行なう．
 \begin{figure*}[t]
 	\begin{minipage}{0.5\hsize}
 		\begin{center}
 			\includegraphics[width=65mm]{cpdb/node_acc.eps}
 		\end{center}
-		\vspace{0.5cm}
-		\subcaption{gBoostの最良$\nu$パラメータを用いた場合}
+		\subcaption{gBoostの最良$\ \nu\ $パラメータを用いた場合}
 		\label{fig:10}
 	\end{minipage}
 	\begin{minipage}{0.5\hsize}
 		\begin{center}
 			\includegraphics[width=65mm]{cpdb/node_acc_para.eps}
 		\end{center}
-		\vspace{0.5cm}
-		\subcaption{各手法で$\nu$パラメータのチューニングを行なった場合}
+		\subcaption{各手法で$\ \nu\ $パラメータのチューニングを行なった場合}
 		\label{fig:11}
 	\end{minipage}
 	\caption{実験3（探索ノード数 - 正答率）CPDB}
@@ -348,16 +366,14 @@ $\nu$の値が，0.01，0.1，0.2，0.3，0.4，0.5，0.6の場合に対して�
 		\begin{center}
 			\includegraphics[width=65mm]{mutag/node_acc.eps}
 		\end{center}
-		\vspace{0.5cm}
-		\subcaption{gBoostの最良$\nu$パラメータを用いた場合}
+		\subcaption{gBoostの最良$\ \nu\ $パラメータを用いた場合}
 		\label{fig:12}
 	\end{minipage}
 	\begin{minipage}{0.5\hsize}
 		\begin{center}
 			\includegraphics[width=65mm]{mutag/node_acc_para.eps}
 		\end{center}
-		\vspace{0.5cm}
-		\subcaption{各手法で$\nu$パラメータのチューニングを行なった場合}
+		\subcaption{各手法で$\ \nu\ $パラメータのチューニングを行なった場合}
 		\label{fig:13}
 	\end{minipage}
 	\caption{実験3（探索ノード数 - 正答率）Mutag}
@@ -368,14 +384,13 @@ $\nu$の値が，0.01，0.1，0.2，0.3，0.4，0.5，0.6の場合に対して�
 \section{実験4：探索空間の変更に関する実験}
 提案手法では，各階層での探索の偏りを防ぐために，既存手法で利用する探索木を拡大した探索木を用いている．
 実験4ではCPDBデータに対して，探索木を変更したことによる探索精度の影響を調べる．
-$\nu$の値を0.3に固定し，探索ノード数に対する目的関数の結果を，
+$\ \nu\ $の値を0.3に固定し，探索ノード数に対する目的関数の結果を，
 数既存手法で用いる探索木を利用した場合と，提案手法で変更した探索木を利用した場合とで比較する．
 \begin{figure*}[t]
 	\begin{minipage}{0.5\hsize}
 		\begin{center}
 			\includegraphics[width=65mm]{cpdb/purpose_node_3_tree.eps}
 		\end{center}
-		\vspace{0.5cm}
 		\subcaption{既存の探索木(DFSコード木)を用いた場合}
 		\label{fig:14}
 	\end{minipage}
@@ -383,7 +398,6 @@ $\nu$の値を0.3に固定し，探索ノード数に対する目的関数の結
 		\begin{center}
 			\includegraphics[width=65mm]{cpdb/purpose_node_3.eps}
 		\end{center}
-		\vspace{0.5cm}
 		\subcaption{変更した探索木を用いた場合}
 		\label{fig:15}
 	\end{minipage}
@@ -395,7 +409,8 @@ $\nu$の値を0.3に固定し，探索ノード数に対する目的関数の結
 \chapter{考察}
 \label{考察}
 \section{実験1：探索の精度，効率に関する実験}
-図\ref{1-1}から見て取れるように，同数の探索パスを伸ばす場合には，提案手法3，2，1の順に目的関数の値が良い値となった．
+図\ref{1-1}から見て取れるように，同数の探索パスを伸ばす場合には，
+提案手法3，2，1の順に目的関数の値が良い値となった．
 この理由としては，図\ref{1-2}のように，
 ランダムに探索パスを伸ばすよりもグラフの特徴を利用した方が広く探索を行えるからであると考えられる．
 図\ref{1-2}において，提案手法3のノード数が他の手法より莫大に多くなるのは，
@@ -407,7 +422,7 @@ $\nu$の値を0.3に固定し，探索ノード数に対する目的関数の結
 探索の効率として，探索ノード数に応じた目的関数の最終値を考えると，
 提案手法1が他と比べて少し劣る結果となった．
 これには2つの理由が予想される．
-1つ目は，提案手法1は，2と3に比べて探索パスに対する探索ノード数が少ない(図\ref{1-2})．
+1つ目は，提案手法1は，2と3に比べて探索パスに対する探索ノード数が少ない（図\ref{1-2}）．
 したがって，他の手法と同程度のノード数を探索するためには，探索パスの数を増やす必要がある．
 ここで問題であるのが，本探索空間は同型判定を除外しているため，
 同じ部分グラフを表現するノードが複数存在しうることである．
@@ -425,7 +440,7 @@ $\nu$の値を0.3に固定し，探索ノード数に対する目的関数の結
 探索ノード数を基準として分散を考える．
 表\ref{randomseed}より，$K$100の提案手法2と$K$1000の提案手法1を比較すると，
 同程度の探索ノード数であるが，分散値は提案手法2のほうが小さい
-($K$10場合の提案手法1は目的関数の最終値が0であるため学習が行われなかったものとし除外する).
+（$K$10場合の提案手法1は目的関数の最終値が0であるため学習が行われなかったものとし除外する）.
 また，$K$10の提案手法3と$K$100の提案手法2を比較すると，
 提案手法2のほうが探索ノード数が少ないにもかかわらず，小さい分散値をとる．
 以上より，提案手法2が最も分散の少ない手法であることがわかる．
@@ -435,26 +450,34 @@ $\nu$の値を0.3に固定し，探索ノード数に対する目的関数の結
 
 \section{実験3：モデルの予測精度に関する実験}
 図\ref{cpdb_acc}，図\ref{mutag_acc}より各手法の予測精度を比較する．
-既存手法の最良$\nu$パラメータを用いた結果と各種法で$\nu$パラメータのチューニングを行なった結果を比較すると，
-正答率に差が生じることから，既存手法と提案手法の最良の$\nu$は異なる値をとることが分かった．
+既存手法の最良$\ \nu\ $パラメータを用いた結果と各種法で$\ \nu\ $パラメータのチューニングを行なった結果を比較すると，
+正答率に差が生じることから，既存手法と提案手法の最良の$\ \nu\ $は異なる値をとることが分かった．
 また，既存手法での探索ノード数の平均値が，CPDBの場合17,834,167.0，Mutagの場合2,270,063.5であることを考慮すると，
 各手法共に，大きく探索を削減しつつ，既存手法と同等以上の精度を出すことが分かる．
 精度の上昇に関しては，探索を確率的に行なうことで汎化性能が出たものと考える．
 
 \section{実験4：探索空間の変更に関する実験}
-図\ref{tree}で二つのグラフにおいて同探索ノード数での目的関数の値を比較すると，既存の探索木を用いる場合の方が変更した探索木を用いる場合よりも良い値となる結果となった．
-この理由としては，各深さでの探索の偏りを防ぐことよりも、探索木を変更することによって生じる同じ部分グラフを複数回探索する恐れがあるという問題点の方が，
+図\ref{tree}で二つのグラフにおいて同探索ノード数での目的関数の値を比較すると，
+既存の探索木を用いる場合の方が良い値となった．
+この理由としては，各深さでの探索の偏りを防ぐことよりも、
+探索木を変更することによって生じる同じ部分グラフを複数回探索する恐れがあるという問題点の方が，
 探索の精度に関して大きく影響を与えたためだと考えられる．
 
 
 \chapter{結論と今後の展望}
 本研究では，確率的に部分グラフ特徴空間を探索することで，特徴探索を効率化する手法を提案した．
-その結果，既存手法と比較して，大幅な特徴量探索数の削減を達成した．
+その結果，既存手法と比較して，精度の低下なしに大幅な特徴量探索数の削減を達成した．
 しかし，用いた探索木の問題点として，同一部分グラフを表現するノードが複数存在するという点が挙げられる．
 したがって，今後の展望としては，探索木構築の際に同型判定を取り除かずに，
 gSpanの辞書順最小ではないノードが出現した際には
 辞書順最小のノードにエッジを繋ぐ，つまり既存手法の探索木をDAG状の
-探索空間に拡張することで解決したい．
+探索空間（図\ref{DAG}）に拡張することで解決したい．
+\begin{figure}[t]
+	\centering
+	\includegraphics[width=80mm]{figure/DAG.jpg}
+	\caption{DAG状の探索空間}
+	\label{DAG}
+\end{figure}
 また，既存手法と提案手法ではハイパーパラメータチューニングに関して差が生じたため，
 各手法のハイパーパラメータに関する特徴も考察したい．
 最後に，本研究では学習モデルとしてgBoostを拡張したが，確率的探索を行う場合は

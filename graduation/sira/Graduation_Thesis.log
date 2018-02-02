@@ -1,4 +1,4 @@
-This is e-pTeX, Version 3.14159265-p3.7.1-161114-2.6 (utf8.euc) (TeX Live 2017) (preloaded format=platex 2017.6.8)  1 FEB 2018 23:28
+This is e-pTeX, Version 3.14159265-p3.7.1-161114-2.6 (utf8.euc) (TeX Live 2017) (preloaded format=platex 2017.6.8)  2 FEB 2018 15:36
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -68,6 +68,17 @@ File: dvipdfmx.def 2016/07/11 v4.12 LaTeX color/graphics driver for dvipdfmx (L
 \Gin@req@height=\dimen122
 \Gin@req@width=\dimen123
 )
+(/usr/local/texlive/2017/texmf-dist/tex/latex/graphics/color.sty
+Package: color 2016/07/10 v1.1e Standard LaTeX Color (DPC)
+
+(/usr/local/texlive/2017/texmf-dist/tex/latex/graphics-cfg/color.cfg
+File: color.cfg 2016/01/02 v1.6 sample color configuration
+)
+Package color Info: Driver file: dvipdfmx.def on input line 147.
+
+(/usr/local/texlive/2017/texmf-dist/tex/latex/graphics/dvipsnam.def
+File: dvipsnam.def 2016/06/17 v3.0m Driver-dependent file (DPC,SPQR)
+))
 (/usr/local/texlive/2017/texmf-dist/tex/latex/base/makeidx.sty
 Package: makeidx 2014/09/29 v1.0m Standard LaTeX package
 )
@@ -268,20 +279,6 @@ Package: latexsym 1998/08/17 v2.2e Standard LaTeX package (lasy symbols)
 LaTeX Font Info:    Overwriting symbol font `lasy' in version `bold'
 (Font)                  U/lasy/m/n --> U/lasy/b/n on input line 52.
 )
-(/usr/local/texlive/2017/texmf-dist/tex/latex/graphics/color.sty
-Package: color 2016/07/10 v1.1e Standard LaTeX Color (DPC)
-
-(/usr/local/texlive/2017/texmf-dist/tex/latex/graphics-cfg/color.cfg
-File: color.cfg 2016/01/02 v1.6 sample color configuration
-)
-Package color Info: Driver file: dvips.def on input line 147.
-
-(/usr/local/texlive/2017/texmf-dist/tex/latex/graphics-def/dvips.def
-File: dvips.def 2016/07/10 v3.1a Driver-dependent file (DPC,SPQR)
-)
-(/usr/local/texlive/2017/texmf-dist/tex/latex/graphics/dvipsnam.def
-File: dvipsnam.def 2016/06/17 v3.0m Driver-dependent file (DPC,SPQR)
-))
 (/usr/local/texlive/2017/texmf-dist/tex/latex/caption/caption.sty
 Package: caption 2016/02/21 v3.3-144 Customizing captions (AR)
 
@@ -427,10 +424,12 @@ LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <12> not available
 
 ]
 LaTeX Font Info:    Font shape `U/lasy/b/n' in size <8> not available
-(Font)              Font shape `U/lasy/m/n' tried instead on input line 52.
+(Font)              Font shape `U/lasy/m/n' tried instead on input line 51.
 LaTeX Font Info:    Font shape `U/lasy/b/n' in size <6> not available
-(Font)              Font shape `U/lasy/m/n' tried instead on input line 52.
- [4] [5]) (./randomized_search.tex [6]
+(Font)              Font shape `U/lasy/m/n' tried instead on input line 51.
+ [4]
+File: figure/small_DFS.jpg Graphic file (type bmp)
+ <figure/small_DFS.jpg> [5]) (./randomized_search.tex [6]
 第 3 章
 
 LaTeX Font Warning: Font shape `JT1/mc/m/it' undefined
@@ -440,91 +439,105 @@ LaTeX Font Warning: Font shape `JT1/mc/m/it' undefined
 LaTeX Font Warning: Font shape `JY1/mc/m/it' undefined
 (Font)              using `JY1/mc/m/n' instead on input line 16.
 
+File: figure/red1.jpg Graphic file (type bmp)
+<figure/red1.jpg>
+File: figure/red.jpg Graphic file (type bmp)
+ <figure/red.jpg>
 LaTeX Font Info:    Font shape `JT1/mc/bx/n' in size <10.95> not available
-(Font)              Font shape `JT1/gt/m/n' tried instead on input line 34.
+(Font)              Font shape `JT1/gt/m/n' tried instead on input line 46.
 LaTeX Font Info:    Font shape `JY1/mc/bx/n' in size <10.95> not available
-(Font)              Font shape `JY1/gt/m/n' tried instead on input line 34.
+(Font)              Font shape `JY1/gt/m/n' tried instead on input line 46.
+
 
 LaTeX Font Warning: Font shape `JT1/mc/m/sc' undefined
-(Font)              using `JT1/mc/m/n' instead on input line 34.
+(Font)              using `JT1/mc/m/n' instead on input line 46.
 
 
 LaTeX Font Warning: Font shape `JY1/mc/m/sc' undefined
-(Font)              using `JY1/mc/m/n' instead on input line 34.
+(Font)              using `JY1/mc/m/n' instead on input line 46.
 
 [7
 
 ] [8] [9] [10]
+File: figure/DFS.jpg Graphic file (type bmp)
+ <figure/DFS.jpg>
+File: figure/DFS+.jpg Graphic file (type bmp)
+ <figure/DFS+.jpg>
+Overfull \hbox (15.91571pt too wide) in paragraph at lines 151--163
+ [][][][] 
+ []
+
+[11]
 第 4 章
 File: cpdb/purpose_1.eps Graphic file (type eps)
 <cpdb/purpose_1.eps>
-Overfull \hbox (7.43245pt too wide) in paragraph at lines 178--179
+Overfull \hbox (7.43245pt too wide) in paragraph at lines 207--208
  [] 
  []
 
 File: cpdb/purpose_3.eps Graphic file (type eps)
 <cpdb/purpose_3.eps>
-Overfull \hbox (7.43245pt too wide) in paragraph at lines 186--187
+Overfull \hbox (7.43245pt too wide) in paragraph at lines 214--215
  [] 
  []
 
 File: cpdb/purpose_5.eps Graphic file (type eps)
 <cpdb/purpose_5.eps>
-Overfull \hbox (7.43245pt too wide) in paragraph at lines 194--195
+Overfull \hbox (7.43245pt too wide) in paragraph at lines 221--222
  [] 
  []
 
 
-Overfull \hbox (15.317pt too wide) in paragraph at lines 175--201
+Overfull \hbox (15.317pt too wide) in paragraph at lines 204--227
  [][][] 
  []
 
-[11
+[12
 
 ]
 File: cpdb/node_1.eps Graphic file (type eps)
  <cpdb/node_1.eps>
-Overfull \hbox (7.43245pt too wide) in paragraph at lines 214--215
+Overfull \hbox (7.43245pt too wide) in paragraph at lines 240--241
  [] 
  []
 
 File: cpdb/node_3.eps Graphic file (type eps)
 <cpdb/node_3.eps>
-Overfull \hbox (7.43245pt too wide) in paragraph at lines 222--223
+Overfull \hbox (7.43245pt too wide) in paragraph at lines 247--248
  [] 
  []
 
 File: cpdb/node_5.eps Graphic file (type eps)
 <cpdb/node_5.eps>
-Overfull \hbox (7.43245pt too wide) in paragraph at lines 230--231
+Overfull \hbox (7.43245pt too wide) in paragraph at lines 254--255
  [] 
  []
 
 
-Overfull \hbox (15.317pt too wide) in paragraph at lines 211--237
+Overfull \hbox (15.317pt too wide) in paragraph at lines 237--260
  [][][] 
  []
 
 File: cpdb/purpose_node_1.eps Graphic file (type eps)
 <cpdb/purpose_node_1.eps>
-Overfull \hbox (7.43245pt too wide) in paragraph at lines 249--250
+Overfull \hbox (7.43245pt too wide) in paragraph at lines 272--273
  [] 
  []
 
 File: cpdb/purpose_node_3.eps Graphic file (type eps)
 <cpdb/purpose_node_3.eps>
-Overfull \hbox (7.43245pt too wide) in paragraph at lines 257--258
+Overfull \hbox (7.43245pt too wide) in paragraph at lines 279--280
  [] 
  []
 
 File: cpdb/purpose_node_5.eps Graphic file (type eps)
 <cpdb/purpose_node_5.eps>
-Overfull \hbox (7.43245pt too wide) in paragraph at lines 265--266
+Overfull \hbox (7.43245pt too wide) in paragraph at lines 286--287
  [] 
  []
 
 
-Overfull \hbox (15.317pt too wide) in paragraph at lines 246--272
+Overfull \hbox (15.317pt too wide) in paragraph at lines 269--292
  [][][] 
  []
 
@@ -532,7 +545,7 @@ File: cpdb/node_acc.eps Graphic file (type eps)
 <cpdb/node_acc.eps>
 File: cpdb/node_acc_para.eps Graphic file (type eps)
  <cpdb/node_acc_para.eps>
-Overfull \hbox (2.61049pt too wide) in paragraph at lines 327--343
+Overfull \hbox (2.61049pt too wide) in paragraph at lines 347--361
 [][]$[]$[] []$[]$[] 
  []
 
@@ -540,28 +553,29 @@ File: mutag/node_acc.eps Graphic file (type eps)
 <mutag/node_acc.eps>
 File: mutag/node_acc_para.eps Graphic file (type eps)
  <mutag/node_acc_para.eps>
-Overfull \hbox (2.61049pt too wide) in paragraph at lines 347--363
+Overfull \hbox (2.61049pt too wide) in paragraph at lines 365--379
 [][]$[]$[] []$[]$[] 
  []
 
-[12]
+[13]
 File: cpdb/purpose_node_3_tree.eps Graphic file (type eps)
  <cpdb/purpose_node_3_tree.eps>
 File: cpdb/purpose_node_3.eps Graphic file (type eps)
  <cpdb/purpose_node_3.eps>
-Overfull \hbox (2.61049pt too wide) in paragraph at lines 374--390
+Overfull \hbox (2.61049pt too wide) in paragraph at lines 390--404
 [][]$[]$[] []$[]$[] 
  []
 
-[13] [14] [15]
+[14] [15] [16]
 第 5 章
-[16
+[17
 
-] [17] [18]
+] [18] [19]
 第 6 章
-) [19
+File: figure/DAG.jpg Graphic file (type bmp)
+<figure/DAG.jpg>) [20
 
-] (./Graduation_Thesis.bbl [20
+] [21] (./Graduation_Thesis.bbl [22
 
 ]
 
@@ -572,20 +586,20 @@ LaTeX Font Warning: Font shape `JT1/gt/m/it' undefined
 LaTeX Font Warning: Font shape `JY1/gt/m/it' undefined
 (Font)              using `JY1/gt/m/n' instead on input line 6.
 
-[21
+[23
 
-]) [22] (./Graduation_Thesis.aux)
+]) [24] (./Graduation_Thesis.aux)
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
  ) 
 Here is how much of TeX's memory you used:
- 5795 strings out of 493653
- 82322 string characters out of 6148875
- 158339 words of memory out of 5000000
- 9219 multiletter control sequences out of 15000+600000
+ 5810 strings out of 493653
+ 82484 string characters out of 6148875
+ 158114 words of memory out of 5000000
+ 9226 multiletter control sequences out of 15000+600000
  38178 words of font info for 119 fonts, out of 8000000 for 9000
  929 hyphenation exceptions out of 8191
  36i,20n,43p,279b,688s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on Graduation_Thesis.dvi (26 pages, 70884 bytes).
+Output written on Graduation_Thesis.dvi (28 pages, 72152 bytes).

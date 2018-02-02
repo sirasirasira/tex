@@ -24,7 +24,7 @@ $\{G_n, y_n\}^{\ell}_{n=1} (y_n \in \{+1, -1\})$が与えられた時，
 この時グラフ$G_n$は$|\mathcal{T}|$次元のベクトル$\bm{x}_n(x_{n,t} = \mathbb{I}(t \subseteq G_n), \forall t \in \mathcal{T})$として表現することができる．
 $\mathbb{I}(\cdot)$は括弧内が真なら1，偽なら0を返す指示関数である．
 
-この時，各特徴に対して仮説(hypothesis)と呼ばれる，弱学習器を以下で定義する．
+この時，各特徴に対して仮説（hypothesis）と呼ばれる，弱学習器を以下で定義する．
 
 \begin{equation*}
 	h(\bm{x};t,\omega) = \omega (2x_t - 1).
@@ -40,7 +40,6 @@ $\alpha_{t,\omega}$は各弱学習器の重みであり，$\sum_{(t,\omega) \in 
 gBoostでは，
 LPBoostで定式化された以下の線形計画問題を主問題として解くことで，
 式\eqref{eq:linear}の線形モデルの重み$\alpha_{t,\omega}$の値を導く．
-
 \begin{align}
 	&\min_{\bm{\alpha},\bm{\xi},\rho} -\rho + D \sum_{n=1}^{\ell} \xi_{i} \nonumber\\
 	&\text{s.t.} \,\,\left\{
@@ -50,8 +49,7 @@ LPBoostで定式化された以下の線形計画問題を主問題として解�
 		&\sum_{(t,\omega) \in \mathcal{T} \times \Omega} \alpha_{t, \omega} = 1, \alpha_{t, \omega} \geq 0.
 	\end{aligned}\right.
 \end{align}
-
-ここで，$\rho$はソフトマージン，$D=\frac{1}{\nu \ell}, \nu \in (0,1)$であり，$\nu$は誤分類に対するコスト制御のパラメータである．
+ここで，$\rho$はソフトマージン，$D=\frac{1}{\nu \ell}, \nu \in (0,1)$であり，$\ \nu\ $は誤分類に対するコスト制御のパラメータである．
 一般に，変数$\bm{\alpha}$の数は部分グラフの総数であるため膨大であり，主問題を解くことは困難である．
 したがって，主問題と等価な以下の双対問題を扱う．
 
@@ -69,18 +67,14 @@ LPBoostで定式化された以下の線形計画問題を主問題として解�
 列生成法は，制約なしの状態から始め，現制約を最も違反する制約を追加し，
 最適化問題を解くという過程を繰り返すことで解を得る手法である．
 最も違反する制約を見つける問題は以下の最大化問題と等価である．
-
 \begin{equation*}
 	(t^{*}, \omega^{*}) = \argmax_{t \in \mathcal{T} , \omega \in \Omega} \sum_{n=1}^{\ell} \lambda_{n}^{(k)} y_{n} h(\bm{x_{n}} ; t, \omega).
 \end{equation*}
-
 これに対して最大化する目的関数をgainと呼び以下の式で定義する．
-
 \begin{align}
 	\label{eq:gain}
 	g(t, \omega) = \sum_{n=1}^{\ell} \lambda_{n}^{(k)} y_{n} h(\bm{x_{n}} ; t, \omega).
 \end{align}
-
 もし以下を満たすような弱学習器が存在しない場合，現在の解が双対問題の最適解となる．
 
 \begin{equation*}
@@ -89,36 +83,36 @@ LPBoostで定式化された以下の線形計画問題を主問題として解�
 
 経験的に終了付近の制約追加による重みの更新は僅かであるため，
 緩和項$\ \epsilon \ $を用いて以下のように終了条件を緩和することで，計算を効率化する．
-
 \begin{equation*}
 	\sum_{n=1}^{\ell} \lambda_{n}^{(k)} y_{n} h(\bm{x_{n}} ; t, \omega) > \gamma^{(k)} + \epsilon .
 \end{equation*}
-
 双対問題の終了条件緩和により得られる主問題の解は，$V^*$を緩和なしでの最適解とすると，$V \leq V^* + \epsilon$を満たす．\\
 
 次にgBoostにおける特徴探索を考える．
-特徴探索では重複無しに全部分グラフを列挙した探索空間であるDFSコード木\cite{gSpan}を用いる．
+特徴探索では重複無しに全部分グラフを列挙した探索空間であるDFSコード木\cite{gSpan} （図\ref{small_DFS}）を用いる．
+\begin{figure}[t]
+	\centering
+	\includegraphics[width=70mm]{figure/small_DFS.jpg}
+	\caption{DFSコード木}
+	\label{small_DFS}
+\end{figure}
 DFSコード木は，全部分グラフをノードに含む他に，子が親の拡大グラフとなるという特徴を持つ．
 この探索木を深さ優先順にたどり，各ノードにおいてgainを計算することで，最適な部分グラフを探索する．
 一般に，部分グラフの総数は膨大となるため全てのノードを探索するためには相当なコストを要する．
 しかし，子が親の拡大グラフとなる特徴を利用すると，
-bound(子孫ノードでのgainの上限値)を計算することができるため，
+bound（子孫ノードでのgainの上限値）を計算することができるため，
 安全な枝刈りを行うことが可能である．
 boundの計算，枝刈り可能条件を以下に示す．
 
 現探索部分グラフを$t$，その拡大グラフを$t'$とすると，
 boundの値$b(t)$は以下の式で計算できる．
-
 \begin{align}
 	\label{eq:bound}
 	b(t) = \max\{2 \sum_{\{n|y_{n}=+1, t \subseteq G_{n}\}} \lambda_{n}^{(k)} - \sum_{n=1}^{\ell} y_{n} \lambda_{n}^{(k)},	2 \sum_{\{n|y_{n}=-1, t \subseteq G_{n}\}} \lambda_{n}^{(k)} - \sum_{n=1}^{\ell} y_{n} \lambda_{n}^{(k)}\}.
 \end{align}
-
 枝刈り可能条件は，現探索までのgainの最大値を$g^{*}$とすると以下となる．
-
 \begin{align}
 	\label{eq:prune}
 	g^{*} > b(t).
 \end{align}
-
 この枝刈りが有効に働くため，gBoostアルゴリズムは探索空間に対して効率よくモデルを構築することができる．
