@@ -1,0 +1,486 @@
+This is e-pTeX, Version 3.14159265-p3.7-160201-2.6 (utf8.euc) (TeX Live 2016) (preloaded format=platex 2017.1.26)  24 DEC 2019 17:53
+entering extended mode
+ restricted \write18 enabled.
+ %&-line parsing enabled.
+**paper.tex
+(./paper.tex
+pLaTeX2e <2016/05/07> (based on LaTeX2e <2016/03/31>)
+Babel <3.9r> and hyphenation patterns for 83 language(s) loaded.
+(/usr/local/texlive/2016/texmf-dist/tex/latex/base/article.cls
+Document Class: article 2014/09/29 v1.4h Standard LaTeX document class
+(/usr/local/texlive/2016/texmf-dist/tex/latex/base/size11.clo
+File: size11.clo 2014/09/29 v1.4h Standard LaTeX file (size option)
+)
+\c@part=\count81
+\c@section=\count82
+\c@subsection=\count83
+\c@subsubsection=\count84
+\c@paragraph=\count85
+\c@subparagraph=\count86
+\c@figure=\count87
+\c@table=\count88
+\abovecaptionskip=\skip41
+\belowcaptionskip=\skip42
+\bibindent=\dimen118
+)
+(/usr/local/texlive/2016/texmf-dist/tex/latex/cite/cite.sty
+LaTeX Info: Redefining \cite on input line 302.
+LaTeX Info: Redefining \nocite on input line 332.
+Package: cite 2015/02/27  v 5.5
+)
+(/usr/local/texlive/2016/texmf-dist/tex/latex/graphics/graphicx.sty
+Package: graphicx 2014/10/28 v1.0g Enhanced LaTeX Graphics (DPC,SPQR)
+
+(/usr/local/texlive/2016/texmf-dist/tex/latex/graphics/keyval.sty
+Package: keyval 2014/10/28 v1.15 key=value parser (DPC)
+\KV@toks@=\toks15
+)
+(/usr/local/texlive/2016/texmf-dist/tex/latex/graphics/graphics.sty
+Package: graphics 2016/05/09 v1.0r Standard LaTeX Graphics (DPC,SPQR)
+
+(/usr/local/texlive/2016/texmf-dist/tex/latex/graphics/trig.sty
+Package: trig 2016/01/03 v1.10 sin cos tan (DPC)
+)
+(/usr/local/texlive/2016/texmf-dist/tex/latex/graphics-cfg/graphics.cfg
+File: graphics.cfg 2016/01/02 v1.10 sample graphics configuration
+)
+Package graphics Info: Driver file: dvips.def on input line 96.
+
+(/usr/local/texlive/2016/texmf-dist/tex/latex/graphics/dvips.def
+File: dvips.def 2015/12/30 v3.0k Driver-dependent file (DPC,SPQR)
+))
+\Gin@req@height=\dimen119
+\Gin@req@width=\dimen120
+)
+(/usr/local/texlive/2016/texmf-dist/tex/latex/amsfonts/amsfonts.sty
+Package: amsfonts 2013/01/14 v3.01 Basic AMSFonts support
+\@emptytoks=\toks16
+\symAMSa=\mathgroup4
+\symAMSb=\mathgroup5
+LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
+(Font)                  U/euf/m/n --> U/euf/b/n on input line 106.
+)
+(/usr/local/texlive/2016/texmf-dist/tex/latex/amsmath/amsmath.sty
+Package: amsmath 2016/03/10 v2.15b AMS math features
+\@mathmargin=\skip43
+
+For additional information on amsmath, use the `?' option.
+(/usr/local/texlive/2016/texmf-dist/tex/latex/amsmath/amstext.sty
+Package: amstext 2000/06/29 v2.01 AMS text
+
+(/usr/local/texlive/2016/texmf-dist/tex/latex/amsmath/amsgen.sty
+File: amsgen.sty 1999/11/30 v2.0 generic functions
+\@emptytoks=\toks17
+\ex@=\dimen121
+))
+(/usr/local/texlive/2016/texmf-dist/tex/latex/amsmath/amsbsy.sty
+Package: amsbsy 1999/11/29 v1.2d Bold Symbols
+\pmbraise@=\dimen122
+)
+(/usr/local/texlive/2016/texmf-dist/tex/latex/amsmath/amsopn.sty
+Package: amsopn 2016/03/08 v2.02 operator names
+)
+\inf@bad=\count89
+LaTeX Info: Redefining \frac on input line 199.
+\uproot@=\count90
+\leftroot@=\count91
+LaTeX Info: Redefining \overline on input line 297.
+\classnum@=\count92
+\DOTSCASE@=\count93
+LaTeX Info: Redefining \ldots on input line 394.
+LaTeX Info: Redefining \dots on input line 397.
+LaTeX Info: Redefining \cdots on input line 518.
+\Mathstrutbox@=\box41
+\strutbox@=\box42
+\big@size=\dimen123
+LaTeX Font Info:    Redeclaring font encoding OML on input line 634.
+LaTeX Font Info:    Redeclaring font encoding OMS on input line 635.
+\macc@depth=\count94
+\c@MaxMatrixCols=\count95
+\dotsspace@=\muskip10
+\c@parentequation=\count96
+\dspbrk@lvl=\count97
+\tag@help=\toks18
+\row@=\count98
+\column@=\count99
+\maxfields@=\count100
+\andhelp@=\toks19
+\eqnshift@=\dimen124
+\alignsep@=\dimen125
+\tagshift@=\dimen126
+\tagwidth@=\dimen127
+\totwidth@=\dimen128
+\lineht@=\dimen129
+\@envbody=\toks20
+\multlinegap=\skip44
+\multlinetaggap=\skip45
+\mathdisplay@stack=\toks21
+LaTeX Info: Redefining \[ on input line 2739.
+LaTeX Info: Redefining \] on input line 2740.
+)
+(/usr/local/texlive/2016/texmf-dist/tex/latex/amsfonts/amssymb.sty
+Package: amssymb 2013/01/14 v3.01 AMS font symbols
+)
+(/usr/local/texlive/2016/texmf-dist/tex/latex/marvosym/marvosym.sty
+Package: marvosym 2011/07/20 v2.2 Martin Vogel's Symbols font definitions
+)
+(/usr/local/texlive/2016/texmf-dist/tex/latex/psnfss/pifont.sty
+Package: pifont 2005/04/12 PSNFSS-v9.2a Pi font support (SPQR) 
+
+(I search kanjifont definition file: . . ) (I search font definition file: . .
+. . . . . )
+LaTeX Font Info:    Try loading font information for U+pzd on input line 63.
+ (/usr/local/texlive/2016/texmf-dist/tex/latex/psnfss/upzd.fd
+File: upzd.fd 2001/06/04 font definitions for U/pzd.
+)
+(I search kanjifont definition file: . . ) (I search font definition file: . .
+. . . . . )
+LaTeX Font Info:    Try loading font information for U+psy on input line 64.
+ (/usr/local/texlive/2016/texmf-dist/tex/latex/psnfss/upsy.fd
+File: upsy.fd 2001/06/04 font definitions for U/psy.
+))
+(/usr/local/texlive/2016/texmf-dist/tex/platex/base/ascmac.sty
+Package: ascmac 2016/04/15 v2.0b ascmac wrapper (community edition) 
+
+(/usr/local/texlive/2016/texmf-dist/tex/platex/base/tascmac.sty
+Package: tascmac 2016/04/15 v2.0b ascmac package (community edition) 
+\@savetbaselineshift=\dimen130
+\@saveybaselineshift=\dimen131
+\scb@x=\box43
+\scscb@x=\box44
+\@bw=\dimen132
+\@nbox=\box45
+\@nbody=\box46
+\@scw=\dimen133
+\@itemh=\dimen134
+\@iboxpos=\toks22
+\@iboxstr=\box47
+\@bwsp=\box48
+\@@bwsp=\box49
+\@bcal=\count101
+\shaderule=\dimen135
+))
+(/usr/local/texlive/2016/texmf-dist/tex/latex/url/url.sty
+\Urlmuskip=\muskip11
+Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
+)
+(/usr/local/texlive/2016/texmf-dist/tex/latex/booktabs/booktabs.sty
+Package: booktabs 2016/04/27 v1.618033 publication quality tables
+\heavyrulewidth=\dimen136
+\lightrulewidth=\dimen137
+\cmidrulewidth=\dimen138
+\belowrulesep=\dimen139
+\belowbottomsep=\dimen140
+\aboverulesep=\dimen141
+\abovetopsep=\dimen142
+\cmidrulesep=\dimen143
+\cmidrulekern=\dimen144
+\defaultaddspace=\dimen145
+\@cmidla=\count102
+\@cmidlb=\count103
+\@aboverulesep=\dimen146
+\@belowrulesep=\dimen147
+\@thisruleclass=\count104
+\@lastruleclass=\count105
+\@thisrulewidth=\dimen148
+)
+(/usr/local/texlive/2016/texmf-dist/tex/latex/float/float.sty
+Package: float 2001/11/08 v1.3d Float enhancements (AL)
+\c@float@type=\count106
+\float@exts=\toks23
+\float@box=\box50
+\@float@everytoks=\toks24
+\@floatcapt=\box51
+)
+(/usr/local/texlive/2016/texmf-dist/tex/latex/tools/bm.sty
+Package: bm 2016/02/27 v1.2a Bold Symbol Support (DPC/FMi)
+\symboldoperators=\mathgroup6
+\symboldletters=\mathgroup7
+\symboldsymbols=\mathgroup8
+LaTeX Font Info:    Redeclaring math alphabet \mathbf on input line 142.
+LaTeX Info: Redefining \bm on input line 208.
+)
+(/usr/local/texlive/2016/texmf-dist/tex/latex/arydshln/arydshln.sty
+Package: arydshln 2016/04/28 v1.73 
+\dashlinedash=\dimen149
+\dashlinegap=\dimen150
+\adl@box=\box52
+\adl@height=\dimen151
+\adl@heightsave=\dimen152
+\adl@depth=\dimen153
+\adl@depthsave=\dimen154
+\adl@finaldepth=\dimen155
+\adl@columns=\count107
+\adl@ncol=\count108
+\adl@currentcolumn=\count109
+\adl@currentcolumnsave=\count110
+\adl@totalheight=\count111
+\adl@totalheightsave=\count112
+\adl@dash=\count113
+\adl@gap=\count114
+\adl@cla=\count115
+\adl@clb=\count116
+\adl@everyvbox=\toks25
+\adl@LTpagetotal=\dimen156
+)
+(/usr/local/texlive/2016/texmf-dist/tex/latex/comment/comment.sty
+\CommentStream=\write3
+
+Excluding comment 'comment')
+(/usr/local/texlive/2016/texmf-dist/tex/latex/algorithm2e/algorithm2e.sty
+Package: algorithm2e 2013/01/06 v5.00 algorithms environments
+\c@AlgoLine=\count117
+
+(/usr/local/texlive/2016/texmf-dist/tex/latex/base/ifthen.sty
+Package: ifthen 2014/09/29 v1.1c Standard LaTeX ifthen package (DPC)
+)
+\algocf@hangindent=\skip46
+
+(/usr/local/texlive/2016/texmf-dist/tex/latex/tools/xspace.sty
+Package: xspace 2014/10/28 v1.13 Space after command names (DPC,MH)
+)
+(/usr/local/texlive/2016/texmf-dist/tex/latex/relsize/relsize.sty
+Package: relsize 2013/03/29 ver 4.1
+)
+********************************************************
+Package `algorithm2e' Release 5.1 -- october 19 2015 --
+- algorithm2e-announce@lirmm.fr mailing list for announcement about releases
+- algorithm2e-discussion@lirmm.fr mailing list for discussion about package
+subscribe by emailing sympa@lirmm.fr with 'subscribe <list> <firstname name>'
+- Author: Christophe Fiorio (christophe.fiorio@umontpellier.fr)
+********************************************************
+\skiptotal=\skip47
+\skiplinenumber=\skip48
+\skiprule=\skip49
+\skiphlne=\skip50
+\skiptext=\skip51
+\skiplength=\skip52
+\algomargin=\skip53
+\skipalgocfslide=\skip54
+\algowidth=\dimen157
+\inoutsize=\dimen158
+\inoutindent=\dimen159
+\interspacetitleruled=\dimen160
+\interspacealgoruled=\dimen161
+\interspacetitleboxruled=\dimen162
+\algocf@ruledwidth=\skip55
+\algocf@inoutbox=\box53
+\algocf@inputbox=\box54
+\AlCapSkip=\skip56
+\AlCapHSkip=\skip57
+\algoskipindent=\skip58
+\algocf@nlbox=\box55
+\algocf@hangingbox=\box56
+\algocf@untilbox=\box57
+\algocf@skipuntil=\skip59
+\algocf@capbox=\box58
+\algoheightruledefault=\skip60
+\algoheightrule=\skip61
+\algotitleheightruledefault=\skip62
+\algotitleheightrule=\skip63
+\c@algocfline=\count118
+\c@algocfproc=\count119
+\c@algocf=\count120
+\algocf@algoframe=\box59
+\algocf@algobox=\box60
+) (/usr/local/texlive/2016/texmf-dist/tex/latex/stackengine/stackengine.sty
+Package: stackengine 2014/01/06 v3.24\ Stacking text and objects in convenient 
+ways
+
+(/usr/local/texlive/2016/texmf-dist/tex/latex/etoolbox/etoolbox.sty
+Package: etoolbox 2015/08/02 v2.2a e-TeX tools for LaTeX (JAW)
+\etb@tempcnta=\count121
+)
+(/usr/local/texlive/2016/texmf-dist/tex/latex/tools/calc.sty
+Package: calc 2014/10/28 v4.3 Infix arithmetic (KKT,FJ)
+\calc@Acount=\count122
+\calc@Bcount=\count123
+\calc@Adimen=\dimen163
+\calc@Bdimen=\dimen164
+\calc@Askip=\skip64
+\calc@Bskip=\skip65
+LaTeX Info: Redefining \setlength on input line 80.
+LaTeX Info: Redefining \addtolength on input line 81.
+\calc@Ccount=\count124
+\calc@Cskip=\skip66
+)
+\c@@stackindex=\count125
+\@boxshift=\skip67
+\stack@tmplength=\skip68
+\temp@stkl=\skip69
+\@stackedboxwidth=\skip70
+\@addedbox=\box61
+\@anchorbox=\box62
+\stackedbox=\box63
+\@centerbox=\box64
+\c@ROWcellindex@=\count126
+)
+\thickarrayrulewidth=\skip71
+\c@definition=\count127
+\c@theorem=\count128
+
+
+LaTeX Warning: Unused global option(s):
+    [a4j].
+
+(./paper.aux)
+\openout1 = `paper.aux'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 100.
+LaTeX Font Info:    ... okay on input line 100.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 100.
+LaTeX Font Info:    ... okay on input line 100.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 100.
+LaTeX Font Info:    ... okay on input line 100.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 100.
+LaTeX Font Info:    ... okay on input line 100.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 100.
+LaTeX Font Info:    ... okay on input line 100.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 100.
+LaTeX Font Info:    ... okay on input line 100.
+LaTeX Font Info:    Checking defaults for JY1/mc/m/n on input line 100.
+LaTeX Font Info:    ... okay on input line 100.
+LaTeX Font Info:    Checking defaults for JT1/mc/m/n on input line 100.
+LaTeX Font Info:    ... okay on input line 100.
+ [0
+
+]
+LaTeX Font Info:    Font shape `JT1/mc/bx/n' in size <14.4> not available
+(Font)              Font shape `JT1/gt/m/n' tried instead on input line 120.
+LaTeX Font Info:    Font shape `JY1/mc/bx/n' in size <14.4> not available
+(Font)              Font shape `JY1/gt/m/n' tried instead on input line 120.
+ (./paper.toc
+LaTeX Font Info:    Font shape `JT1/mc/bx/n' in size <10.95> not available
+(Font)              Font shape `JT1/gt/m/n' tried instead on input line 1.
+LaTeX Font Info:    Font shape `JY1/mc/bx/n' in size <10.95> not available
+(Font)              Font shape `JY1/gt/m/n' tried instead on input line 1.
+LaTeX Font Info:    Try loading font information for U+msa on input line 2.
+
+(/usr/local/texlive/2016/texmf-dist/tex/latex/amsfonts/umsa.fd
+File: umsa.fd 2013/01/14 v3.01 AMS symbols A
+)
+LaTeX Font Info:    Try loading font information for U+msb on input line 2.
+
+(/usr/local/texlive/2016/texmf-dist/tex/latex/amsfonts/umsb.fd
+File: umsb.fd 2013/01/14 v3.01 AMS symbols B
+))
+\tf@toc=\write4
+\openout4 = `paper.toc'.
+
+ [1]
+(./paper.lof)
+\tf@lof=\write5
+\openout5 = `paper.lof'.
+
+ (./paper.lot)
+\tf@lot=\write6
+\openout6 = `paper.lot'.
+
+ [2]
+LaTeX Font Info:    Font shape `JT1/mc/bx/n' in size <10> not available
+(Font)              Font shape `JT1/gt/m/n' tried instead on input line 131.
+LaTeX Font Info:    Font shape `JY1/mc/bx/n' in size <10> not available
+(Font)              Font shape `JY1/gt/m/n' tried instead on input line 131.
+ (./abstract.tex) (./introduction.tex [3
+
+]
+LaTeX Font Info:    Font shape `JT1/mc/bx/n' in size <12> not available
+(Font)              Font shape `JT1/gt/m/n' tried instead on input line 27.
+LaTeX Font Info:    Font shape `JY1/mc/bx/n' in size <12> not available
+(Font)              Font shape `JY1/gt/m/n' tried instead on input line 27.
+)
+(./preliminaries.tex [4]
+
+LaTeX Font Warning: Font shape `JT1/mc/m/it' undefined
+(Font)              using `JT1/mc/m/n' instead on input line 20.
+
+
+LaTeX Font Warning: Font shape `JY1/mc/m/it' undefined
+(Font)              using `JY1/mc/m/n' instead on input line 20.
+
+
+Overfull \hbox (7.14578pt too wide) in paragraph at lines 20--26
+\OML/cmm/m/it/10.95 ^^^ \OT1/cmr/m/n/10.95 : \OML/cmm/m/it/10.95 V[] \OMS/cmsy/
+m/n/10.95 ! \OML/cmm/m/it/10.95 V$\OT1/cmr/m/it/10.95 , s.t., (1) $\OMS/cmsy/m/
+n/10.95 8\OML/cmm/m/it/10.95 v \OMS/cmsy/m/n/10.95 2 \OML/cmm/m/it/10.95 V; l\O
+T1/cmr/m/n/10.95 (\OML/cmm/m/it/10.95 v\OT1/cmr/m/n/10.95 ) = \OML/cmm/m/it/10.
+95 l[]\OT1/cmr/m/n/10.95 (\OML/cmm/m/it/10.95 ^^^\OT1/cmr/m/n/10.95 (\OML/cmm/m
+/it/10.95 v\OT1/cmr/m/n/10.95 ))$\OT1/cmr/m/it/10.95 , (2) $\OMS/cmsy/m/n/10.95
+ 8\OT1/cmr/m/n/10.95 (\OML/cmm/m/it/10.95 v[]; v[]\OT1/cmr/m/n/10.95 ) \OMS/cms
+y/m/n/10.95 2 \OML/cmm/m/it/10.95 E; \OT1/cmr/m/n/10.95 (\OML/cmm/m/it/10.95 ^^
+^\OT1/cmr/m/n/10.95 (\OML/cmm/m/it/10.95 v[]\OT1/cmr/m/n/10.95 )\OML/cmm/m/it/1
+0.95 ; ^^^\OT1/cmr/m/n/10.95 (\OML/cmm/m/it/10.95 v[]\OT1/cmr/m/n/10.95 )) \OMS
+/cmsy/m/n/10.95 2
+ []
+
+File: img/search_tree.eps Graphic file (type eps)
+<img/search_tree.eps> [5] Excluding 'comment' comment.) (./setting.tex [6])
+(./previous.tex
+Overfull \hbox (23.3964pt too wide) detected at line 16
+ []$[]  \OML/cmm/m/it/10.95 CScore\OT1/cmr/m/n/10.95 (\OML/cmm/m/it/10.95 g[]\O
+T1/cmr/m/n/10.95 ) \OMS/cmsy/m/n/10.95 ^^T [] []\OT1/cmr/m/n/10.95 2 [] \OML/cm
+m/m/it/10.95 y[] \OMS/cmsy/m/n/10.95 ^^@ [] \OML/cmm/m/it/10.95 y[]; \OMS/cmsy/
+m/n/10.95 ^^@\OT1/cmr/m/n/10.95 2 [] \OML/cmm/m/it/10.95 y[] \OT1/cmr/m/n/10.95
+ + [] \OML/cmm/m/it/10.95 y[][]$ []  
+ []
+
+
+Underfull \hbox (badness 1082) detected at line 27
+ []$[]  \OML/cmm/m/it/10.95 RScore\OT1/cmr/m/n/10.95 (\OML/cmm/m/it/10.95 g[]\O
+T1/cmr/m/n/10.95 ) \OMS/cmsy/m/n/10.95 ^^U [] [][]\OT1/cmr/m/n/10.95 (\OMS/cmsy
+/m/n/10.95 D[]\OT1/cmr/m/n/10.95 (\OML/cmm/m/it/10.95 g\OT1/cmr/m/n/10.95 ) \OM
+S/cmsy/m/n/10.95 n \OML/cmm/m/it/10.95 S[]\OT1/cmr/m/n/10.95 ) + [](\OMS/cmsy/m
+/n/10.95 D[]\OT1/cmr/m/n/10.95 (\OML/cmm/m/it/10.95 g\OT1/cmr/m/n/10.95 ) \OMS/
+cmsy/m/n/10.95 [ \OML/cmm/m/it/10.95 S[]\OT1/cmr/m/n/10.95 )[]$ [][]  
+ []
+
+) (./proposed.tex
+File: img/search.eps Graphic file (type eps)
+ <img/search.eps> [7] [8]
+
+LaTeX Font Warning: Font shape `JT1/gt/m/it' undefined
+(Font)              using `JT1/gt/m/n' instead on input line 57.
+
+
+LaTeX Font Warning: Font shape `JY1/gt/m/it' undefined
+(Font)              using `JY1/gt/m/n' instead on input line 57.
+
+[9]
+File: img/MCTS.eps Graphic file (type eps)
+ <img/MCTS.eps> [10] [11]) (./experiments.tex [12]
+Overfull \hbox (13.4235pt too wide) in paragraph at lines 3--16
+\OT1/cmr/m/n/10.95 CAS) in Ta-ble 1: CPDB and Mu-tag for mu-ta-genic-ity tests 
+and AIDS(CAvsCM)
+ []
+
+[13]
+Overfull \hbox (3.44966pt too wide) in paragraph at lines 22--32
+ [][][] 
+ []
+
+Excluding 'comment' comment.) (./conclusion.tex Excluding 'comment' comment.)
+(./paper.bbl [14] [15] [16] [17]
+Underfull \hbox (badness 1147) in paragraph at lines 173--179
+\OT1/cmr/m/n/10.95 Lu-cas, Pe-ter I. Cowl-ing, Philipp Rohlf-sha-gen, Stephen T
+avener,
+ []
+
+[18]) (./appendix.tex) [19] (./paper.aux)
+
+LaTeX Font Warning: Some font shapes were not available, defaults substituted.
+
+ )
+(\end occurred inside a group at level 1)
+
+### simple group (level 1) entered at line 1061 ({)
+### bottom level 
+Here is how much of TeX's memory you used:
+ 4137 strings out of 493693
+ 52881 string characters out of 6149787
+ 130831 words of memory out of 5000000
+ 7553 multiletter control sequences out of 15000+600000
+ 28501 words of font info for 110 fonts, out of 8000000 for 9000
+ 929 hyphenation exceptions out of 8191
+ 27i,19n,26p,788b,2067s stack positions out of 5000i,500n,10000p,200000b,80000s
+
+Output written on paper.dvi (20 pages, 43352 bytes).

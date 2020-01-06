@@ -1,0 +1,33 @@
+\section{Depth First Search with Branch and Bound}
+State of the art methods \cite{Saigo:2009, Shirakawa:2018} 
+searching for a discriminative subgraph pattern is 
+based on the depth first search, as shown in Figure \ref{fig:search} (a), with branch and bound.
+\cite{Saigo:2009} searches the best subgraph patttern using $CScore$. 
+This method calculates the bound of child node of search space, 
+and if the bound is lower than the provisional solution the child is pruned.
+\begin{theorem}
+  \label{thm:bound_C}
+  Given $\D_1(g)$ and $\D_0(g)$, for any subgraph $g' \sqsupseteq g$,
+  \begin{multline}
+    \label{eq:bound_C}
+    CScore(g') \leq 
+    \max \Big[ 2 \sum_{\{n | y_n=+1, D_1(g)\}} y_n - \sum_{n=1}^{l}y_n, 
+	-2 \sum_{\{n | y_n=-1, D_1(g)\}} y_n + \sum_{n=1}^{l}y_n \Big]
+  \end{multline}
+\end{theorem}
+%Similarly, in \cite{Shirakawa:2018}, 
+the bound is calculated based on $RegressionScore$ and used for pruning.
+\begin{theorem}
+  \label{thm:bound_R}
+  Given $\D_1(g)$ and $\D_0(g)$, for any subgraph $g' \sqsupseteq g$,
+  \begin{multline}
+    \label{eq:bound_R}
+    RScore(g') \geq 
+    \mymin{(\diamond,k)} \Big[ \mse(\D_1(g) \setminus S_{\diamond, k}) + \mse(\D_0(g) \cup S_{\diamond, k}) \Big]
+  \end{multline}
+  where $ (\diamond, k) \in \{ \leq, > \} \times \{ 2, \dots, |\D_1(g) - 1| \} $,
+  and $S_{\diamond, k} \subset \D_1(g)$, such that $S_{\leq, k}$ is
+  a set of $k$ pair $(G_i, r_i)$ selected from $\D_1(g)$ in descending order of residual error $r_i$,
+  and $S_{>, k}$ is that in increasing order.
+  Note that $\setminus$, $\cup$ are set difference and set union respectively.
+\end{theorem}
