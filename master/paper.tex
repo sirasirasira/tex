@@ -1,9 +1,11 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \documentclass[a4j,11pt]{article}
+\usepackage{latexsym}
 \usepackage{cite}
 \usepackage[dvips]{graphicx}
 \usepackage{amsfonts}
 \usepackage{amsmath}
+%\usepackage{amsthm}
 \usepackage{amssymb}
 \usepackage{marvosym}
 \usepackage{pifont}
@@ -27,6 +29,7 @@
 
 \newcommand{\tss}{\mathrm{TSS}}
 \newcommand{\mse}{\mathrm{MSE}}
+\newcommand{\mysum}[1]{\sum_{i \in[#1]}}
 \newcommand{\mymin}[1]{\min_{\scalebox{1.0}{$#1$}}}
 \newcommand{\mymax}[1]{\max_{\scalebox{1.0}{$#1$}}}
 \newcommand{\myargmin}[1]{\min_{\scalebox{1.0}{$#1$}}}
@@ -40,6 +43,8 @@
 \renewcommand{\S}{\mathcal{S}} % subgraph Space
 \renewcommand{\H}{\mathcal{H}} % hypothesis space
 \renewcommand{\labelenumi}{\arabic{enumi})}
+\renewcommand{\a}{\bar{a}}
+\renewcommand{\b}{\bar{b}}
 
 
 %% thick hline
@@ -88,6 +93,8 @@
 % theorem
 \newtheorem{definition}{Definition}
 \newtheorem{theorem}{Theorem}
+\newtheorem{proof}{Proof}
+\def\qed{\hfill $\Box$}
 
 \newcommand{\TODO}[1]{\textcolor{green!50!black}{{\footnotesize TODO }#1}}
 \newcommand{\COMMENT}[1]{\textcolor{orange!80!black}{{\footnotesize Comment: }#1}}

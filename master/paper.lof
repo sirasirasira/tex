@@ -1,3 +1,3 @@
 \contentsline {figure}{\numberline {1}{\ignorespaces DFS code tree}}{6}
-\contentsline {figure}{\numberline {2}{\ignorespaces Where the bold circles show already searched nodes and double circles show the candidate nodes for next expansion}}{8}
-\contentsline {figure}{\numberline {3}{\ignorespaces Four iterative operations of UCT}}{10}
+\contentsline {figure}{\numberline {2}{\ignorespaces Where the bold circles show already searched nodes and double circles show the candidate nodes for next expansion}}{9}
+\contentsline {figure}{\numberline {3}{\ignorespaces One circle of processes in UCT}}{11}

@@ -2,28 +2,29 @@
 State of the art methods \cite{Saigo:2009, Shirakawa:2018} 
 searching for a discriminative subgraph pattern is 
 based on the depth first search, as shown in Figure \ref{fig:search} (a), with branch and bound.
-\cite{Saigo:2009} searches the best subgraph patttern using $CScore$. 
+\cite{Shirakawa:2018} searches the best subgraph pattern using $DScore$. 
 This method calculates the bound of child node of search space, 
 and if the bound is lower than the provisional solution the child is pruned.
+\begin{comment}
 \begin{theorem}
   \label{thm:bound_C}
   Given $\D_1(g)$ and $\D_0(g)$, for any subgraph $g' \sqsupseteq g$,
   \begin{multline}
     \label{eq:bound_C}
     CScore(g') \leq 
-    \max \Big[ 2 \sum_{\{n | y_n=+1, D_1(g)\}} y_n - \sum_{n=1}^{l}y_n, 
-	-2 \sum_{\{n | y_n=-1, D_1(g)\}} y_n + \sum_{n=1}^{l}y_n \Big]
+    \max \Big[ 2 \sum_{\{n | y_n=+1, \{G_{n}, y_{n}\} \in D_1(g)\}} y_n - \sum_{n=1}^{N}y_n, 
+	-2 \sum_{\{n | y_n=-1, \{G_{n}, y_{n}\} \in D_1(g)\}} y_n + \sum_{n=1}^{N}y_n \Big]
   \end{multline}
 \end{theorem}
-%Similarly, in \cite{Shirakawa:2018}, 
-the bound is calculated based on $RegressionScore$ and used for pruning.
+\end{comment}
+
 \begin{theorem}
   \label{thm:bound_R}
   Given $\D_1(g)$ and $\D_0(g)$, for any subgraph $g' \sqsupseteq g$,
   \begin{multline}
     \label{eq:bound_R}
-    RScore(g') \geq 
-    \mymin{(\diamond,k)} \Big[ \mse(\D_1(g) \setminus S_{\diamond, k}) + \mse(\D_0(g) \cup S_{\diamond, k}) \Big]
+    DScore(g') \geq 
+    \mymin{(\diamond,k)} \Big[ \tss(\D_1(g) \setminus S_{\diamond, k}) + \tss(\D_0(g) \cup S_{\diamond, k}) \Big]
   \end{multline}
   where $ (\diamond, k) \in \{ \leq, > \} \times \{ 2, \dots, |\D_1(g) - 1| \} $,
   and $S_{\diamond, k} \subset \D_1(g)$, such that $S_{\leq, k}$ is
@@ -31,3 +32,51 @@ the bound is calculated based on $RegressionScore$ and used for pruning.
   and $S_{>, k}$ is that in increasing order.
   Note that $\setminus$, $\cup$ are set difference and set union respectively.
 \end{theorem}
+
+\begin{proof}
+  Given $\D_1(g)$ and $\D_0(g)$,
+  \small
+  \begin{align}
+    \bound &= \mymin{g'} \bigl[ \tss(\D_1(g')) + \tss(\D_0(g'))  \bigr] \notag \\
+    \label{eq:boundSubset}
+    &= \mymin{S \subset \D_1(g)} \bigl[ \tss(\D_1(g) \setminus S) + \tss(\D_0(g) \cup S)  \bigr] \\
+    \label{eq:linearBound}
+    &= \mymin{(\diamond,k)} \Big[ \tss(\D_1(g) \setminus S_{\diamond,k}) + \tss(\D_0(g) \cup S_{\diamond,k}) \Big]
+  \end{align}\normalsize
+  where $ (\diamond, k) \in \{ \leq, > \} \times \{ 2, \dots, |\D_1(g) - 1| \} $.
+  From the anti-monotone property \eqref{eq:propSubgraph}, we have
+  $\D_1(g') \subseteq \D_1(g)$ for $g' \sqsupseteq g$
+  for the training set $\D$ from which the equation \eqref{eq:boundSubset}
+  directly follows. Thus, we show \eqref{eq:linearBound} in
+  detail. For simplicity,
+  let $A =,\{ a_1, \dots, a_n \mid a_i \in \mathbb{R} \}$ denote $\D_1(g)$,
+  and $B = \{ b_1, \dots, b_m \mid b_i \in \mathbb{R} \}$ denote $\D_0(g)$.
+  Then, the goal of \eqref{eq:boundSubset} is to minimize the total sum
+  of squares $\tss(A \setminus S) + \tss(B \cup S)$ by tweaking
+  $S = \{ s_1, \dots, s_k \} \subset A$.
+  The key fact is that $\tss(A \setminus S) + \tss(B \cup S)$ can
+  be regarded as a quadratic equation of $\sum_{i=1}^k s_i$ when the size
+  of $S$ is fixed to $k$. More precisely,
+  \begingroup
+  \allowdisplaybreaks
+	\begin{align*}
+	  &\tss(A) 
+	  = \mysum{n} \Big(a_i - \frac{\mysum{n}a_i}{|A|}\Big)^2
+	  = \mysum{n} a_i^2 - \frac{\big(\mysum{n} a_i\big)^2}{|A|} \\
+	  &\tss(A) + \tss(B) 
+	  = \mysum{n} a_i^2 + \mysum{m} b_i^2 - \frac{\big(\mysum{n} a_i\big)^2}{|A|} - \frac{\big(\mysum{m} b_i\big)^2}{|B|} \\
+	  &\tss(A \backslash S) + \tss(B \cup S) \\
+	  &= \mysum{n} a_i^2 + \mysum{m} b_i^2 - \frac{\big(\mysum{n} a_i - \mysum{k} s_i\big)^2}{|A \backslash S|} - \frac{\big(\mysum{m} b_i - \mysum{k} s_i\big)^2}{|B \cup S|} \\
+	  &= \mysum{n} a_i^2 + \mysum{m} b_i^2 - \frac{\big(\mysum{n} a_i - \mysum{k} s_i\big)^2}{n - k} - \frac{\big(\mysum{m} b_i - \mysum{k} s_i\big)^2}{m + k} \\
+	\end{align*}
+      \endgroup
+      Therefore, $\tss(A \setminus S) + \tss(B \cup S)$ is minimized
+      when $\sum_{i=1}^k s_i$ is maximized or minimized. In other words,
+      \eqref{eq:boundSubset} becomes minimum when the mean of $S \subset
+      \D_1(g)$ is maximized or minimized.
+	  \qed
+\end{proof}
+
+%TODO
+order
+

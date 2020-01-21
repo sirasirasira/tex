@@ -3,31 +3,39 @@ Graphs are fundamental data structures for representing combinatorial objects
 such as chemical compounds, networks and others.
 However, precisely because of their combinatorial nature, 
 it is usually difficult to understand the underlying trends in large datasets of graphs.
-In addition, due to the rapid increase in the amount of data in recent years, 
-supervised learning in which the inputs are graphs of arbitrary size and shape has attracted attention
+The rapid increase in data in recent years also includes data
+represented as graphs, and thus supervised learning in which the inputs are graphs of
+arbitrary size and shape has gained considerable attention
 in the fields of computer vision \cite{Harchaoui:2007, Nowozin:2007, Barra:2013, Bai:2014a},
 chemoinformatics \cite{Kashima:2003, Tsuda:2007,Saigo:2008a, Saigo:2009,Mahe:2009, 
 Vishwanathan:2010, Shrvashidze:2011, Takigawa:2013, takigawa:2017},
 bioinformatics\cite{Borgwardt:2005, Karklin:2005, Takigawa:2011b} 
-and computational chemistry\cite{Kearnes2016, gilmer:2017}.
+and computational chemistry\cite{Kearnes2016, gilmer:2017} 
 and natural language processing\cite{Kudo:2005}. 
 
-For this problem, the most fundamental feature is subgraph indicators 
-because many reactions and events are attributed to substructures.
+Some of these problems have graph descriptors prepared in advance, 
+such as molecular dataset\cite{james:2004, durant:2002}, 
+but others have no direct descriptors available.
+For these problems, the most fundamental features are subgraph indicators, 
+i.e., if a subgraph is embedded in the given graph or not,
+because many reactions and events are attributed to those substructures.
 However, the number of all possible subgraph patterns is intractably large 
-due to the combinatorial explosion, it is difficult to make feature from dataset.
-Therefore, it is necessary to make feature by restricting the subgraph based on some criterion.
-Frequent subgraph mining \cite{Yan:2002, Nijssen:2004} is one of these methods and is often used.
-However, since this method only considers the frequency, 
-it is possible to overlook the important features for learning.
-On the other hand, discriminative pattern mining \cite{Fan:2008, Saigo:2009, Shirakawa:2018} 
-extracting features important for learning using model-based discriminative criteria has been studied.
-Based on these methods, the present paper considers efficient discriminative subgraph pattern search methods.
+due to the combinatorial explosion, 
+so that it is difficult to enumerate all subgraphs in a realistic time for a given dataset.
+Therefore, it is necessary to restrict the subgraph candidate on the basis of some criterion.
+Frequent subgraph mining \cite{Yan:2002, Nijssen:2004} is one method in this approach.
+However, since it chooses subgraphs acording to the frequencies, 
+it is possible to overlook the importance of subgraphs.
+On the other hand, discriminative pattern mining techniques \cite{Fan:2008, Saigo:2009, Shirakawa:2018} 
+choose subgraphs according to a model-based discriminative criteria, 
+and these not likely to overlook important patterns for learning.
+Because of these merits, the present paper also adopts this approach.
 
 \subsection{Related Work}
+%TODO
 \label{sec:relatedwork}
 Related works \cite{Saigo:2009, Shirakawa:2018} search the discriminative subgraph pattern
-using depth first policy and branch and bound method.
+using depth first policy with branch and bound method.
 While these methods perform efficient searches by designing tricky pruning, 
 search policy of depth first is naive and 
 they still suffer from computational costs for some domain or large datasets.
@@ -35,7 +43,7 @@ they still suffer from computational costs for some domain or large datasets.
 \subsection{Our Approach}
 \label{sec:ourapproach}
 To overcome the above difficulty, 
-we consider the more efficient search algorithms
-using Best First Search and Monte Carlo tree search(MCTS).
-These methods are known to be effective in some domains, 
-and in this paper we apply to subgraph search domain.
+we propose the more efficient two algorithms
+using Best First Search and Monte Carlo tree search (MCTS).
+The efficiency of these building-block algorithms are already known in some domains, 
+so that in this paper we apply them to our graph classification/regression problem.

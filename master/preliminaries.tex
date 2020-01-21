@@ -20,9 +20,9 @@ and the set of all possible connected subgraphs as $\S_N = \bigcup_{G \in \Graph
 \begin{definition}{(subgraph isomorphism)}
 	Let $G' = (V', E', \mathcal{L}', l')$ and $G = (V, E, \mathcal{L}, l)$, 
 	$G'$ is subgraph isomorpic to $G$ iff there exist an injective mapping $\phi: V' \rightarrow V$, 
-	s.t., (1) $\forall v \in V, l(v) = l'(\phi(v))$, 
-	(2) $\forall (v_{1}, v_{2}) \in E, (\phi(v_{1}), \phi(v_{2})) \in E'$ and
-	(3) $l(v_{1}, v_{2}) = l'(\phi(v_{1}), \phi(v_{2}))$.
+	s.t., (1) $\forall v \in V', l'(v) = l(\phi(v))$, 
+	(2) $\forall (v_{1}, v_{2}) \in E', (\phi(v_{1}), \phi(v_{2})) \in E$ and
+	(3) $l'(v_{1}, v_{2}) = l(\phi(v_{1}), \phi(v_{2}))$.
 \end{definition}
 
 \subsection{Search Space for Subgraphs}
@@ -32,7 +32,7 @@ In supervised learning from graphs, we represent each input graph $G_i \in
 \S) $ with a set $\S$ of relevant subgraph features. However, since $\S$ is not
 explicitly available when the learning phase starts, we need to
 simultaneously search and construct $\S$ during the learning process.
-In order to define an efficient search space for $\S_N$, i.e., any subgraphs occurring in $\Graph_n$,
+In order to define an efficient search space for $\S_N$, i.e., any subgraphs occurring in $\Graph_N$,
 the techniques for \textit{frequent subgraph mining} are
 useful. Note that any subgraph feature
 $g \in \S_N$ can occur multiple times at multiple locations in a single graph,
@@ -63,19 +63,18 @@ derive the efficient search-space pruning of the gSpan algorithm:
 
 \subsection{Discriminative Criteria}
 \label{sec:criteria}
-Assume we have a two-class problem ($y_{i} \in \{-1, +1\}$).
 We evaluate the discriminating degree of each subgraph by the following formulas.
-When predicting the graph labels with discrete values, $ClassificatonScore$ $(CScore)$  is used defined as (\ref{eq:score_C}).
-\begin{eqnarray}
-  \label{eq:score_C}
-  CScore(g) = \max \Big[ \sum_{n=1}^{N} y_{n} (2\I(G_{n} \sqsupseteq g) - 1), \sum_{n=1}^{N} y_{n} (2\I(G_{n} \not\sqsupseteq g) -1) \Big]
-\end{eqnarray}
-This score is the sum of the values that take +1 if the graph label prediction is correct and -1 otherwise.
-When predicting the graph labels with real values, $RegressionScore$ $(RScore)$ is used defined as (\ref{eq:score_R}).
+When predicting the graph labels with discrete values, $Discriminative Score$ $(DScore)$  is used defined as (\ref{eq:score_R}).
+%\begin{eqnarray}
+  %\label{eq:score_C}
+  %CScore(g) = \max \Big[ \sum_{n=1}^{N} y_{n} (2\I(G_{n} \sqsupseteq g) - 1), \sum_{n=1}^{N} y_{n} (2\I(G_{n} \not\sqsupseteq g) -1) \Big]
+%\end{eqnarray}
+%This score is the sum of the values that take +1 if the graph label prediction is correct and -1 otherwise.
+%When predicting the graph labels with real values, $RegressionScore$ $(RScore)$ is used defined as (\ref{eq:score_R}).
 \begin{eqnarray}
   \label{eq:score_R}
-  RScore(g) &=& \mse(\D_1(g)) + \mse(\D_0(g)) \\
-  \mse(\D) &=& \frac{1}{N} \sum_{i \in [N]}
+  DScore(g) &=& \tss(\D_1(g)) + \tss(\D_0(g)) \\
+  \tss(\D) &=& \sum_{i \in [N]}
   (y_i - \bar{y})^2, \,\, \bar{y} = \frac{1}{N} \sum_{i \in [N]} y_i. \nonumber
 \end{eqnarray}
 where MSE is mean squared error, and
@@ -85,8 +84,8 @@ $\D_0(g) = \{ (G_i, y_i) \in \D \mid G \not\sqsupseteq g \} $.
 \begin{comment}
 \subsection{Gradient Tree Boosting}
 \label{sec:GTB}
-Gradient tree boosting (GTB) \cite{friedman2001greedy,
-  mason2000boosting} is a general algorithm for supervised learning to
+Gradient tree boosting (GTB) \cite{friedman2001greedy, mason2000boosting} 
+is a general algorithm for supervised learning to
 predict a response $y$ from a predictor $\bm{x}$. 
 For a given hypothesis space $\H$, the goal is to minimize the empirical
 risk $L(f) = N^{-1}\sum_{i \in [N]} \ell(y_i,f(\bm{x}_i))$ of $f \in

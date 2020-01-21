@@ -1,10 +1,14 @@
 Recently, in various fields such as computational chemistry and bioinformatics,
 attention has been paid to classification and regression
-in which the inputs are graphs of arbitrary size and shape.
-Whether a certain subgraph is included or not 
-is the most fundamental feature for graphs that have no direct descriptors available.
-However, enumerating subgraph patterns and learning any models using them are so expensive 
-since the number of possible subgraph patterns are intractably large due to the combinatorial explosion.
+of data whose inputs are graphs of arbitrary size and shape
+, sometimes called graph classification/regression.
+In these problems,
+whether a certain subgraph is included or not 
+is a fundamental feature for graphs that have no direct descriptors available.
+The simplest solution, 
+enumerating subgraph patterns and use them as features, is so expensive 
+since the number of possible subgraph patterns are intractably large 
+due to the combinatorial explosion.
 Currently, discriminative pattern mining has been studied and given a good solution to this problem.
 The previous search method for such discriminative subgraph patterns 
 tries to find the best one by the depth first search with some pruning rules.

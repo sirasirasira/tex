@@ -9,7 +9,7 @@
 
 \section{Proposed Method}
 The previous method employs a simple search policy with depth first
-without using the discriminative criterion value ($CScore, RScore$) of each node.
+without using the discriminative criterion value ($DScore$) of each node.
 In some cases, this criteria is useful for designing search policies.
 In this section, using this criteria, 
 we present two efficient methods to search a discriminative subgraph pattern 
@@ -22,7 +22,7 @@ The A* and Dijkstra algorithms, well known as route search algorithms,
 are also one of best first search and is known as very good search methods in some domains.
 
 The previous method designed the pruning rule 
-by calculating the bound value (\ref{eq:bound_C})(\ref{eq:bound_R}). 
+by calculating the bound value (\ref{eq:bound_R}). 
 In the proposed method, this bound value is set as the search priority of each node, 
 and is applied to the best first search.
 The procedure of the proposed algorithm is illustrated with pseudocode in 
@@ -42,13 +42,13 @@ The above operation is repeated until pruning is possible for all expansion cand
 	$candidate \leftarrow \{root\}$
     \Repeat{all candidate can be pruned}{
 		$g \leftarrow \argmax_{candidate\ c} bound(c)$ \;
-		$candidate \leftarrow candidate / g$ \;
+		$candidate \leftarrow candidate / {g}$ \;
 		\ForAll{child c of g}{
       		\If{Score(c) is better than $score^*$}{
 	  		  $score^*$ $\leftarrow$ $Score(c)$ \;
 	  		  $g^*$ $\leftarrow$ $c$  \;
       		}
-			$candidate \leftarrow candidate \cup c$ \;
+			$candidate \leftarrow candidate \cup {c}$ \;
 		}
 		
     }
@@ -64,12 +64,12 @@ and is used not only as a game playing algorithm but also in various fields such
 One of them, Upper Confidence Bounds for Tree(UCT) algorithm 
 \cite{Levente:2006} is empirically known as a way to get better solutions within a limited costs.
 This method resolves the exploration-exploitation problem using Upper Confidence Bound(UCB),
-which allow to estimate the expected reword of each child.
+which allow to estimate the expected reward of each child.
 The simplest UCB policy is called UCB1 and does not require the prior specific knowledge.
 The policy selects to search child node $i$ that maximizes
 \begin{equation}
   \label{eq:ucb}
-  UCB1 = \bar{X}_{i} + C \times \sqrt{\frac{2\ln{n}}{n_{i}}}
+  UCB1 = \bar{X}_{i} + C \times \sqrt{\frac{\ln{n}}{2 n_{i}}}
 \end{equation}
 where $\bar{X}_{i}$ is the average reward from child node $i$, 
 $n_{i}$ is the number of times child node $i$ was selected, 
@@ -84,7 +84,7 @@ simulation, and backpropagation up to a predefined computational cost, shown as 
 \begin{figure}[t]
   \centering
   \includegraphics[width=0.9\linewidth]{img/MCTS.eps}
-  \caption{Four iterative operations of UCT}
+  \caption{One circle of processes in UCT}
   \label{fig:MCTS}
 \end{figure}
 
@@ -99,7 +99,7 @@ simulation, and backpropagation up to a predefined computational cost, shown as 
 	\item{Expansion}:
 
 	~~One random child node that is unvisited is expanded.
-	In this operation, we consider the same pruning condition as (\ref{eq:bound_C}) or (\ref{eq:bound_R}). 
+	In this operation, we consider the same pruning condition as (\ref{eq:bound_R}). 
 	If the random select node can be pruned, another node is reselected and added.
 
 	\item{Simulation}:
@@ -113,16 +113,10 @@ simulation, and backpropagation up to a predefined computational cost, shown as 
 	
 	\item{Backpropagation}:
 
-	~~Calculate the reword of the node $g$ obtained by simulation.
+	~~Calculate the reward of the node $g$ obtained by simulation.
 	To align the range to $[0, 1]$, reward is defined, 
 	\begin{eqnarray}
-		reword(g) =
-		\left\{
-		\begin{array}{l}
-			CScore / |\D|\\
-			-RScore / \mse(\D)
-		\end{array}
-		\right.
+		reward(g) = -DScore / \tss(\D)
 	\end{eqnarray}
 	these value will be large if discrimination is successful, otherwise small.
 	Then backpropagate this reward to the nodes selected in selection and expansion phase.
@@ -166,11 +160,11 @@ Alg.~\ref{alg:uct}, \ref{alg:four_operations}.\\
 \end{algorithm2e}
 
 \begin{algorithm2e}[H]
-  \caption{Four Operations in UCT}
+  \caption{Four Basic Operations in UCT}
   \label{alg:four_operations}
   \Fn{Selection($g$)}{
 	\While{$g$ is expandable}{
-		$g \leftarrow \argmax_{children\ c\ of\ g} \bar{X}_{c} + C \times \sqrt{\frac{2\ln{n_{g}}}{n_{c}}}$ \;
+		$g \leftarrow \argmax_{children\ c\ of\ g} \bar{X}_{c} + C \times \sqrt{\frac{\ln{n_{g}}}{2 n_{c}}}$ \;
 
 	}
     \KwRet{$g$} \;

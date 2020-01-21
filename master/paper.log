@@ -1,4 +1,4 @@
-This is e-pTeX, Version 3.14159265-p3.7-160201-2.6 (utf8.euc) (TeX Live 2016) (preloaded format=platex 2017.1.26)  24 DEC 2019 17:53
+This is e-pTeX, Version 3.14159265-p3.7-160201-2.6 (utf8.euc) (TeX Live 2016) (preloaded format=platex 2017.1.26)  21 JAN 2020 22:54
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -22,6 +22,12 @@ File: size11.clo 2014/09/29 v1.4h Standard LaTeX file (size option)
 \abovecaptionskip=\skip41
 \belowcaptionskip=\skip42
 \bibindent=\dimen118
+)
+(/usr/local/texlive/2016/texmf-dist/tex/latex/base/latexsym.sty
+Package: latexsym 1998/08/17 v2.2e Standard LaTeX package (lasy symbols)
+\symlasy=\mathgroup4
+LaTeX Font Info:    Overwriting symbol font `lasy' in version `bold'
+(Font)                  U/lasy/m/n --> U/lasy/b/n on input line 52.
 )
 (/usr/local/texlive/2016/texmf-dist/tex/latex/cite/cite.sty
 LaTeX Info: Redefining \cite on input line 302.
@@ -55,8 +61,8 @@ File: dvips.def 2015/12/30 v3.0k Driver-dependent file (DPC,SPQR)
 (/usr/local/texlive/2016/texmf-dist/tex/latex/amsfonts/amsfonts.sty
 Package: amsfonts 2013/01/14 v3.01 Basic AMSFonts support
 \@emptytoks=\toks16
-\symAMSa=\mathgroup4
-\symAMSb=\mathgroup5
+\symAMSa=\mathgroup5
+\symAMSb=\mathgroup6
 LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
 (Font)                  U/euf/m/n --> U/euf/b/n on input line 106.
 )
@@ -194,9 +200,10 @@ Package: float 2001/11/08 v1.3d Float enhancements (AL)
 )
 (/usr/local/texlive/2016/texmf-dist/tex/latex/tools/bm.sty
 Package: bm 2016/02/27 v1.2a Bold Symbol Support (DPC/FMi)
-\symboldoperators=\mathgroup6
-\symboldletters=\mathgroup7
-\symboldsymbols=\mathgroup8
+\symboldoperators=\mathgroup7
+\symboldletters=\mathgroup8
+\symboldsymbols=\mathgroup9
+\symboldlasy=\mathgroup10
 LaTeX Font Info:    Redeclaring math alphabet \mathbf on input line 142.
 LaTeX Info: Redefining \bm on input line 208.
 )
@@ -318,6 +325,7 @@ LaTeX Info: Redefining \addtolength on input line 81.
 \thickarrayrulewidth=\skip71
 \c@definition=\count127
 \c@theorem=\count128
+\c@proof=\count129
 
 
 LaTeX Warning: Unused global option(s):
@@ -326,34 +334,39 @@ LaTeX Warning: Unused global option(s):
 (./paper.aux)
 \openout1 = `paper.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 100.
-LaTeX Font Info:    ... okay on input line 100.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 100.
-LaTeX Font Info:    ... okay on input line 100.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 100.
-LaTeX Font Info:    ... okay on input line 100.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 100.
-LaTeX Font Info:    ... okay on input line 100.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 100.
-LaTeX Font Info:    ... okay on input line 100.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 100.
-LaTeX Font Info:    ... okay on input line 100.
-LaTeX Font Info:    Checking defaults for JY1/mc/m/n on input line 100.
-LaTeX Font Info:    ... okay on input line 100.
-LaTeX Font Info:    Checking defaults for JT1/mc/m/n on input line 100.
-LaTeX Font Info:    ... okay on input line 100.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 107.
+LaTeX Font Info:    ... okay on input line 107.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 107.
+LaTeX Font Info:    ... okay on input line 107.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 107.
+LaTeX Font Info:    ... okay on input line 107.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 107.
+LaTeX Font Info:    ... okay on input line 107.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 107.
+LaTeX Font Info:    ... okay on input line 107.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 107.
+LaTeX Font Info:    ... okay on input line 107.
+LaTeX Font Info:    Checking defaults for JY1/mc/m/n on input line 107.
+LaTeX Font Info:    ... okay on input line 107.
+LaTeX Font Info:    Checking defaults for JT1/mc/m/n on input line 107.
+LaTeX Font Info:    ... okay on input line 107.
  [0
 
 ]
 LaTeX Font Info:    Font shape `JT1/mc/bx/n' in size <14.4> not available
-(Font)              Font shape `JT1/gt/m/n' tried instead on input line 120.
+(Font)              Font shape `JT1/gt/m/n' tried instead on input line 127.
 LaTeX Font Info:    Font shape `JY1/mc/bx/n' in size <14.4> not available
-(Font)              Font shape `JY1/gt/m/n' tried instead on input line 120.
+(Font)              Font shape `JY1/gt/m/n' tried instead on input line 127.
  (./paper.toc
 LaTeX Font Info:    Font shape `JT1/mc/bx/n' in size <10.95> not available
 (Font)              Font shape `JT1/gt/m/n' tried instead on input line 1.
 LaTeX Font Info:    Font shape `JY1/mc/bx/n' in size <10.95> not available
 (Font)              Font shape `JY1/gt/m/n' tried instead on input line 1.
+LaTeX Font Info:    Try loading font information for U+lasy on input line 2.
+
+(/usr/local/texlive/2016/texmf-dist/tex/latex/base/ulasy.fd
+File: ulasy.fd 1998/08/17 v2.2e LaTeX symbol font definitions
+)
 LaTeX Font Info:    Try loading font information for U+msa on input line 2.
 
 (/usr/local/texlive/2016/texmf-dist/tex/latex/amsfonts/umsa.fd
@@ -363,7 +376,12 @@ LaTeX Font Info:    Try loading font information for U+msb on input line 2.
 
 (/usr/local/texlive/2016/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
-))
+)
+LaTeX Font Info:    Font shape `U/lasy/b/n' in size <8> not available
+(Font)              Font shape `U/lasy/m/n' tried instead on input line 2.
+LaTeX Font Info:    Font shape `U/lasy/b/n' in size <6> not available
+(Font)              Font shape `U/lasy/m/n' tried instead on input line 2.
+)
 \tf@toc=\write4
 \openout4 = `paper.toc'.
 
@@ -378,18 +396,29 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 
  [2]
 LaTeX Font Info:    Font shape `JT1/mc/bx/n' in size <10> not available
-(Font)              Font shape `JT1/gt/m/n' tried instead on input line 131.
+(Font)              Font shape `JT1/gt/m/n' tried instead on input line 138.
 LaTeX Font Info:    Font shape `JY1/mc/bx/n' in size <10> not available
-(Font)              Font shape `JY1/gt/m/n' tried instead on input line 131.
- (./abstract.tex) (./introduction.tex [3
+(Font)              Font shape `JY1/gt/m/n' tried instead on input line 138.
+ (./abstract.tex
+LaTeX Font Info:    Font shape `U/lasy/b/n' in size <7> not available
+(Font)              Font shape `U/lasy/m/n' tried instead on input line 19.
+LaTeX Font Info:    Font shape `U/lasy/b/n' in size <5> not available
+(Font)              Font shape `U/lasy/m/n' tried instead on input line 19.
+) (./introduction.tex [3
 
 ]
 LaTeX Font Info:    Font shape `JT1/mc/bx/n' in size <12> not available
-(Font)              Font shape `JT1/gt/m/n' tried instead on input line 27.
+(Font)              Font shape `JT1/gt/m/n' tried instead on input line 34.
 LaTeX Font Info:    Font shape `JY1/mc/bx/n' in size <12> not available
-(Font)              Font shape `JY1/gt/m/n' tried instead on input line 27.
+(Font)              Font shape `JY1/gt/m/n' tried instead on input line 34.
 )
-(./preliminaries.tex [4]
+(./preliminaries.tex
+Overfull \hbox (13.4259pt too wide) in paragraph at lines 45--1
+\OT1/cmr/m/n/10.95 mains, so that in this pa-per we ap-ply them to our graph cl
+as-si-fi-ca-tion/regression
+ []
+
+[4]
 
 LaTeX Font Warning: Font shape `JT1/mc/m/it' undefined
 (Font)              using `JT1/mc/m/n' instead on input line 20.
@@ -399,34 +428,32 @@ LaTeX Font Warning: Font shape `JY1/mc/m/it' undefined
 (Font)              using `JY1/mc/m/n' instead on input line 20.
 
 
-Overfull \hbox (7.14578pt too wide) in paragraph at lines 20--26
+Overfull \hbox (14.58191pt too wide) in paragraph at lines 20--26
 \OML/cmm/m/it/10.95 ^^^ \OT1/cmr/m/n/10.95 : \OML/cmm/m/it/10.95 V[] \OMS/cmsy/
 m/n/10.95 ! \OML/cmm/m/it/10.95 V$\OT1/cmr/m/it/10.95 , s.t., (1) $\OMS/cmsy/m/
-n/10.95 8\OML/cmm/m/it/10.95 v \OMS/cmsy/m/n/10.95 2 \OML/cmm/m/it/10.95 V; l\O
-T1/cmr/m/n/10.95 (\OML/cmm/m/it/10.95 v\OT1/cmr/m/n/10.95 ) = \OML/cmm/m/it/10.
-95 l[]\OT1/cmr/m/n/10.95 (\OML/cmm/m/it/10.95 ^^^\OT1/cmr/m/n/10.95 (\OML/cmm/m
-/it/10.95 v\OT1/cmr/m/n/10.95 ))$\OT1/cmr/m/it/10.95 , (2) $\OMS/cmsy/m/n/10.95
- 8\OT1/cmr/m/n/10.95 (\OML/cmm/m/it/10.95 v[]; v[]\OT1/cmr/m/n/10.95 ) \OMS/cms
-y/m/n/10.95 2 \OML/cmm/m/it/10.95 E; \OT1/cmr/m/n/10.95 (\OML/cmm/m/it/10.95 ^^
-^\OT1/cmr/m/n/10.95 (\OML/cmm/m/it/10.95 v[]\OT1/cmr/m/n/10.95 )\OML/cmm/m/it/1
-0.95 ; ^^^\OT1/cmr/m/n/10.95 (\OML/cmm/m/it/10.95 v[]\OT1/cmr/m/n/10.95 )) \OMS
-/cmsy/m/n/10.95 2
+n/10.95 8\OML/cmm/m/it/10.95 v \OMS/cmsy/m/n/10.95 2 \OML/cmm/m/it/10.95 V[]; l
+[]\OT1/cmr/m/n/10.95 (\OML/cmm/m/it/10.95 v\OT1/cmr/m/n/10.95 ) = \OML/cmm/m/it
+/10.95 l\OT1/cmr/m/n/10.95 (\OML/cmm/m/it/10.95 ^^^\OT1/cmr/m/n/10.95 (\OML/cmm
+/m/it/10.95 v\OT1/cmr/m/n/10.95 ))$\OT1/cmr/m/it/10.95 , (2) $\OMS/cmsy/m/n/10.
+95 8\OT1/cmr/m/n/10.95 (\OML/cmm/m/it/10.95 v[]; v[]\OT1/cmr/m/n/10.95 ) \OMS/c
+msy/m/n/10.95 2 \OML/cmm/m/it/10.95 E[]; \OT1/cmr/m/n/10.95 (\OML/cmm/m/it/10.9
+5 ^^^\OT1/cmr/m/n/10.95 (\OML/cmm/m/it/10.95 v[]\OT1/cmr/m/n/10.95 )\OML/cmm/m/
+it/10.95 ; ^^^\OT1/cmr/m/n/10.95 (\OML/cmm/m/it/10.95 v[]\OT1/cmr/m/n/10.95 )) 
+\OMS/cmsy/m/n/10.95 2
  []
 
+[5]
 File: img/search_tree.eps Graphic file (type eps)
-<img/search_tree.eps> [5] Excluding 'comment' comment.) (./setting.tex [6])
-(./previous.tex
-Overfull \hbox (23.3964pt too wide) detected at line 16
- []$[]  \OML/cmm/m/it/10.95 CScore\OT1/cmr/m/n/10.95 (\OML/cmm/m/it/10.95 g[]\O
-T1/cmr/m/n/10.95 ) \OMS/cmsy/m/n/10.95 ^^T [] []\OT1/cmr/m/n/10.95 2 [] \OML/cm
-m/m/it/10.95 y[] \OMS/cmsy/m/n/10.95 ^^@ [] \OML/cmm/m/it/10.95 y[]; \OMS/cmsy/
-m/n/10.95 ^^@\OT1/cmr/m/n/10.95 2 [] \OML/cmm/m/it/10.95 y[] \OT1/cmr/m/n/10.95
- + [] \OML/cmm/m/it/10.95 y[][]$ []  
+ <img/search_tree.eps>
+Overfull \hbox (34.9946pt too wide) in paragraph at lines 66--74
+\OT1/cmr/m/n/10.95 mu-las. When pre-dict-ing the graph la-bels with dis-crete v
+al-ues, $\OML/cmm/m/it/10.95 DiscriminativeScore$
  []
 
-
-Underfull \hbox (badness 1082) detected at line 27
- []$[]  \OML/cmm/m/it/10.95 RScore\OT1/cmr/m/n/10.95 (\OML/cmm/m/it/10.95 g[]\O
+Excluding 'comment' comment.) (./setting.tex [6]) (./previous.tex
+Excluding 'comment' comment.
+Underfull \hbox (badness 1881) detected at line 28
+ []$[]  \OML/cmm/m/it/10.95 DScore\OT1/cmr/m/n/10.95 (\OML/cmm/m/it/10.95 g[]\O
 T1/cmr/m/n/10.95 ) \OMS/cmsy/m/n/10.95 ^^U [] [][]\OT1/cmr/m/n/10.95 (\OMS/cmsy
 /m/n/10.95 D[]\OT1/cmr/m/n/10.95 (\OML/cmm/m/it/10.95 g\OT1/cmr/m/n/10.95 ) \OM
 S/cmsy/m/n/10.95 n \OML/cmm/m/it/10.95 S[]\OT1/cmr/m/n/10.95 ) + [](\OMS/cmsy/m
@@ -434,9 +461,9 @@ S/cmsy/m/n/10.95 n \OML/cmm/m/it/10.95 S[]\OT1/cmr/m/n/10.95 ) + [](\OMS/cmsy/m
 cmsy/m/n/10.95 [ \OML/cmm/m/it/10.95 S[]\OT1/cmr/m/n/10.95 )[]$ [][]  
  []
 
-) (./proposed.tex
+[7]) (./proposed.tex
 File: img/search.eps Graphic file (type eps)
- <img/search.eps> [7] [8]
+ <img/search.eps> [8]
 
 LaTeX Font Warning: Font shape `JT1/gt/m/it' undefined
 (Font)              using `JT1/gt/m/n' instead on input line 57.
@@ -445,27 +472,30 @@ LaTeX Font Warning: Font shape `JT1/gt/m/it' undefined
 LaTeX Font Warning: Font shape `JY1/gt/m/it' undefined
 (Font)              using `JY1/gt/m/n' instead on input line 57.
 
-[9]
+[9] [10]
 File: img/MCTS.eps Graphic file (type eps)
- <img/MCTS.eps> [10] [11]) (./experiments.tex [12]
+ <img/MCTS.eps> [11] [12]) (./experiments.tex [13]
+LaTeX Font Info:    Font shape `U/lasy/b/n' in size <9> not available
+(Font)              Font shape `U/lasy/m/n' tried instead on input line 7.
+
 Overfull \hbox (13.4235pt too wide) in paragraph at lines 3--16
 \OT1/cmr/m/n/10.95 CAS) in Ta-ble 1: CPDB and Mu-tag for mu-ta-genic-ity tests 
 and AIDS(CAvsCM)
  []
 
-[13]
+[14]
 Overfull \hbox (3.44966pt too wide) in paragraph at lines 22--32
  [][][] 
  []
 
 Excluding 'comment' comment.) (./conclusion.tex Excluding 'comment' comment.)
-(./paper.bbl [14] [15] [16] [17]
-Underfull \hbox (badness 1147) in paragraph at lines 173--179
+(./paper.bbl [15] [16] [17] [18]
+Underfull \hbox (badness 1147) in paragraph at lines 184--190
 \OT1/cmr/m/n/10.95 Lu-cas, Pe-ter I. Cowl-ing, Philipp Rohlf-sha-gen, Stephen T
 avener,
  []
 
-[18]) (./appendix.tex) [19] (./paper.aux)
+[19]) (./appendix.tex) [20] (./paper.aux)
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
@@ -475,12 +505,12 @@ LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 ### simple group (level 1) entered at line 1061 ({)
 ### bottom level 
 Here is how much of TeX's memory you used:
- 4137 strings out of 493693
- 52881 string characters out of 6149787
- 130831 words of memory out of 5000000
- 7553 multiletter control sequences out of 15000+600000
- 28501 words of font info for 110 fonts, out of 8000000 for 9000
+ 4196 strings out of 493693
+ 53813 string characters out of 6149787
+ 132859 words of memory out of 5000000
+ 7597 multiletter control sequences out of 15000+600000
+ 31404 words of font info for 125 fonts, out of 8000000 for 9000
  929 hyphenation exceptions out of 8191
- 27i,19n,26p,788b,2067s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 28i,19n,26p,788b,2079s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on paper.dvi (20 pages, 43352 bytes).
+Output written on paper.dvi (21 pages, 48232 bytes).

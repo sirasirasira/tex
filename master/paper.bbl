@@ -122,6 +122,17 @@ Taku {Kudo}, Eisaku {Maeda}, and Yuji {Matsumoto}.
   Advances in Neural Information Processing Systems 17}, pp. 729--736. MIT
   Press, Cambridge, MA, 2005.
 
+\bibitem{james:2004}
+C.~A. James, Weininger, D., and J.~Delany.
+\newblock Daylight theory manual.
+\newblock 2004.
+
+\bibitem{durant:2002}
+Joseph~L Durant, Burton~A Leland, Douglas~R Henry, and James~G Nourse.
+\newblock Reoptimization of mdl keys for use in drug discovery.
+\newblock {\em Journal of chemical information and computer sciences}, Vol.~42,
+  No.~6, pp. 1273--1280, 2002.
+
 \bibitem{Yan:2002}
 Xifeng Yan and Jiawei Han.
 \newblock g{S}pan: Graph-based substructure pattern mining.
