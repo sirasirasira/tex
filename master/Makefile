@@ -11,7 +11,8 @@ dvi: $(file_name).tex
 
 pdf: $(file_name).dvi
 	dvipdfmx $(file_name).dvi
-	open $(file_name).pdf &
+	#open $(file_name).pdf &
+	evince $(file_name).pdf &
 
 .PHONY: clean
 clean:
