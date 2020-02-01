@@ -1,0 +1,50 @@
+This is pBibTeX, Version 0.99d-j0.33 (utf8.euc) (TeX Live 2016)
+Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
+The top-level auxiliary file: paper.aux
+The style file: junsrt.bst
+Database file #1: ref.bib
+Warning--empty journal in james:2004
+Warning--empty journal in pearl:1984
+You've used 32 entries,
+            2270 wiz_defined-function locations,
+            766 strings with 10622 characters,
+and the built_in function-call counts, 12739 in all, are:
+= -- 1072
+> -- 375
+< -- 57
++ -- 146
+- -- 114
+* -- 694
+:= -- 1505
+add.period$ -- 98
+call.type$ -- 32
+change.case$ -- 32
+chr.to.int$ -- 0
+cite$ -- 34
+duplicate$ -- 799
+empty$ -- 1167
+format.name$ -- 228
+if$ -- 3184
+int.to.chr$ -- 0
+int.to.str$ -- 32
+missing$ -- 32
+newline$ -- 163
+num.names$ -- 34
+pop$ -- 202
+preamble$ -- 1
+purify$ -- 0
+quote$ -- 0
+skip$ -- 655
+stack$ -- 0
+substring$ -- 804
+swap$ -- 299
+text.length$ -- 57
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 0
+warning$ -- 2
+while$ -- 112
+width$ -- 34
+write$ -- 364
+is.kanji.str$ -- 411
+(There were 2 warnings)

@@ -2,33 +2,32 @@
   	\centering
   	\includegraphics[width=0.9\linewidth]{img/search.eps}
 	\caption{
-		Where the bold circles show already searched nodes and 
+		Depth-first vs. Best-first.
+		The bold circles show already searched nodes and 
 		double circles show the candidate nodes for next expansion}
   	\label{fig:search}
 \end{figure}
 
 \section{Proposed Method}
-The previous method employs a simple search policy with depth first
-without using the discriminative criterion value ($DScore$) of each node.
-In some cases, this criteria is useful for designing search policies.
-In this section, using this criteria, 
+The previous method \cite{Shirakawa:2018} employs a simple depth-first search policy 
+without referring to the discriminative criterion value ($DScore$) and its bound of each node.
+In some cases, this criterion and its bound are useful for designing search policies.
+In this section, using this criterion, 
 we present two efficient methods to search a discriminative subgraph pattern 
 based on $(i)$ Best First Search and $(ii)$ Monte Carlo Tree Search.
 
 \subsection{Best First Search}
-Best First search \cite{pearl:1984} is a search policy 
-that expand from the best node based on some evaluation value, shown as Figure \ref{fig:search} (b).
-The A* and Dijkstra algorithms, well known as route search algorithms, 
-are also one of best first search and is known as very good search methods in some domains.
+Best-first searching \cite{pearl:1984} is a search policy 
+that expands from the best node based on some evaluation value, shown as Figure \ref{fig:search} (b).
+The A* algorithm \cite{hart:1968} and Dijkstra algorithm \cite{dijkstra:1959} are representative.
 
 The previous method designed the pruning rule 
-by calculating the bound value (\ref{eq:bound_R}). 
+by calculating the bound value in (\ref{eq:bound_R}). 
 In the proposed method, this bound value is set as the search priority of each node, 
-and is applied to the best first search.
-The procedure of the proposed algorithm is illustrated with pseudocode in 
-Alg.~\ref{alg:bfs}.
-The search is started from the root node, 
-and the node with the highest bound is selected from the expansion candidate set.
+and is applied to the best-first search.
+The pseudocode is shown in Algorithm.~\ref{alg:bfs}.
+The search starts from the root node, 
+and selects the node with the highest bound from the expansion candidate set.
 The child nodes of the selected node are expanded, 
 and the score is calculated and added to the expansion candidate set.
 The above operation is repeated until pruning is possible for all expansion candidate set.\\
@@ -57,14 +56,15 @@ The above operation is repeated until pruning is possible for all expansion cand
 \end{algorithm2e}
 
 \subsection{Monte Carlo Tree Search}
-We consider applying Monte Carlo tree search(MCTS) 
-\cite{Levente:2006, Romaric:2010, Cameron:2012} to this problem. 
-MCTS is widely known as a search planning method used in computer Go, 
-and is used not only as a game playing algorithm but also in various fields such as feature selection. 
-One of them, Upper Confidence Bounds for Tree(UCT) algorithm 
-\cite{Levente:2006} is empirically known as a way to get better solutions within a limited costs.
-This method resolves the exploration-exploitation problem using Upper Confidence Bound(UCB),
-which allow to estimate the expected reward of each child.
+%TODO
+We consider to apply Monte Carlo tree search (MCTS) 
+\cite{Levente:2006, Romaric:2010, Cameron:2012} to our problem. 
+MCTS is widely known as the method used in computer Go. 
+IT is  also applied in various fields such as feature selection. 
+One of them, Upper Confidence Bounds for Tree (UCT) algorithm 
+\cite{Levente:2006} is empirically highly evaluated as a way to find good solutions within a limited budget.
+This method resolves the exploration-exploitation problem using Upper Confidence Bound (UCB),
+which allows to estimate the expected reward of each child.
 The simplest UCB policy is called UCB1 and does not require the prior specific knowledge.
 The policy selects to search child node $i$ that maximizes
 \begin{equation}

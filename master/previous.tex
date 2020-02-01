@@ -1,10 +1,10 @@
 \section{Depth First Search with Branch and Bound}
-State of the art methods \cite{Saigo:2009, Shirakawa:2018} 
-searching for a discriminative subgraph pattern is 
-based on the depth first search, as shown in Figure \ref{fig:search} (a), with branch and bound.
+The state of the art methods \cite{Saigo:2009, Shirakawa:2018} 
+searching for a discriminative subgraph pattern is typically based on the depth first search, 
+as shown in Figure \ref{fig:search} (a), with a branch and bound technique.
 \cite{Shirakawa:2018} searches the best subgraph pattern using $DScore$. 
-This method calculates the bound of child node of search space, 
-and if the bound is lower than the provisional solution the child is pruned.
+This method calculates the lower bound of $DScore$ obtained by child nodes of search space, 
+and if this lower bound does not reach the provisional solution the child is pruned.
 \begin{comment}
 \begin{theorem}
   \label{thm:bound_C}

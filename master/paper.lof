@@ -1,0 +1,4 @@
+\contentsline {figure}{\numberline {1}{\ignorespaces DFS code tree. Search space for subgraphs that appear in the training dataset.}}{6}
+\contentsline {figure}{\numberline {2}{\ignorespaces Depth-first vs. Best-first. The bold circles show already searched nodes and double circles show the candidate nodes for next expansion}}{9}
+\contentsline {figure}{\numberline {3}{\ignorespaces One circle of processes in UCT}}{11}
+\contentsline {figure}{\numberline {4}{\ignorespaces 一つめの図}}{16}

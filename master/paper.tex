@@ -2,7 +2,8 @@
 \documentclass[a4j,11pt]{article}
 \usepackage{latexsym}
 \usepackage{cite}
-\usepackage[dvips]{graphicx}
+%\usepackage[dvips]{graphicx}
+\usepackage[dvipdfmx]{graphicx}
 \usepackage{amsfonts}
 \usepackage{amsmath}
 %\usepackage{amsthm}
@@ -91,7 +92,9 @@
 \renewcommand*{\algorithmcfname}{Alg.}
 
 % theorem
-\newtheorem{definition}{Definition}
+\usepackage{theorem}
+{\theorembodyfont{\rm}
+\newtheorem{definition}{Definition}}
 \newtheorem{theorem}{Theorem}
 \newtheorem{proof}{Proof}
 \def\qed{\hfill $\Box$}
@@ -110,7 +113,7 @@
   \begin{center}
    \vspace*{2.0cm}
    \LARGE
-   Fast Search of Subgraphs Discriminative for Classification and Regression
+   Subgraph-Feature Search for Learning Classifiers and Regressors under Fixed Budget Constraint
    \\
    \vfill
    \LARGE
@@ -147,6 +150,11 @@
 \input{experiments}
 \input{conclusion}
 
+\newpage
+\input{acknowlege}
+ 
+\newpage
+\small
 %\bibliographystyle{prml}
 \bibliographystyle{junsrt}
 \bibliography{ref}
