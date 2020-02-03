@@ -65,10 +65,11 @@ derive the efficient search-space pruning of the gSpan algorithm:
 \end{equation}
 
 \subsection{Discriminative Criterion}
-%TODO
 \label{sec:criterion}
-We the discriminating power of each subgraph by the following formula.
-When predicting the graph labels with discrete values, $Discriminative Score$ $(DScore)$  is used defined as (\ref{eq:score_R}).
+In the previous methods, the discriminating power are calculated 
+by model-based criterioa or statistical criterioa such as information gain.
+In present paper, the discriminating power ($Discriminative Score: DScore$) is defined 
+by the following equation.
 %\begin{eqnarray}
   %\label{eq:score_C}
   %CScore(g) = \max \Big[ \sum_{n=1}^{N} y_{n} (2\I(G_{n} \sqsupseteq g) - 1), \sum_{n=1}^{N} y_{n} (2\I(G_{n} \not\sqsupseteq g) -1) \Big]
@@ -84,80 +85,9 @@ When predicting the graph labels with discrete values, $Discriminative Score$ $(
 where TSS is the total sum of squared error and
 $\D_1(g) = \{ (G_i, y_i) \in \D \mid G \sqsupseteq g \} $ and
 $\D_0(g) = \{ (G_i, y_i) \in \D \mid G \not\sqsupseteq g \} $.
+Since this score represents an error, 
+a larger value indicates lower discriminating power, 
+and a smaller value indicates higher discriminating power.
+This score does not depend on the learning model, 
+and can be used even when the labels are discrete values.
 
-\begin{comment}
-\subsection{Gradient Tree Boosting}
-\label{sec:GTB}
-Gradient tree boosting (GTB) \cite{friedman2001greedy, mason2000boosting} 
-is a general algorithm for supervised learning to
-predict a response $y$ from a predictor $\bm{x}$. 
-For a given hypothesis space $\H$, the goal is to minimize the empirical
-risk $L(f) = N^{-1}\sum_{i \in [N]} \ell(y_i,f(\bm{x}_i))$ of $f \in
-\H$, which is the average of a loss function $\ell(y,f(\bm{x}))$ over
-the training data $\{(\bm{x}_i, y_i)\}_{i \in[N]}$.
-
-GTB is an additive ensemble model of regression trees
-$T_i(\bm{x})$ of the form for fixed-stepsize cases:
-\[
-f_k(\bm{x}) = T_0 + \eta \sum _{i \in [k]} T_i(\bm{x})
-\]
-where $T_0$ is the mean of response variables in the training data,
-$\eta$ is the stepsize, and $T_i(\bm{x})$ is the $i$-th regression
-tree as a base learner. To fit the model to the training data, GTB
-performs the following gradient-descent-like iterations as a boosting
-procedure:
-\begin{eqnarray*}
-  f_0(\bm{x}) \leftarrow \arg \min_c \sum_{i \in [N]} \ell(y_i, c), \\
-  \quad \text{and} \quad
-  f_k(\bm{x}) \leftarrow f_{k-1}(\bm{x}) + \eta \, T_k(\bm{x}),
-\end{eqnarray*}
-where $T_k(\bm{x})$ is a regression tree to best approximate the values of negative functional
-gradient $-\nabla_{f_{k-1}} L(f_{k-1}) $ at $f_{k-1}$ obtained by
-fitting a regression tree to the data $\left\{\left(
-\bm{x}_i, r_i
-\right)\right\}_{i \in [N]}$, where
-\begin{equation*}
-  r_i =
-  -\left[\frac{\partial\, \ell(y_i,
-      f(\bm{x}_i))}{\partial
-      f(\bm{x}_i)}\right]_{f(\bm{x})=f_{k-1}(\bm{x}_i)}
-\end{equation*}
-Our experiments focus on binary classification tasks with $y \in
-\{-1,+1\}$, and thus we use the logistic loss $\ell(y, \mu) = \log
-(1+\exp(-2 y \mu))$. Note that even for classification, GTB must fit
-regression trees instead of classification trees in order to approximate
-real-valued functions.
-
-The primary hyperparameters of GTB that we consider are
-the following three parameters: a max tree-depth $d$, a stepsize $\eta$,
-and the number of trees $k$.
-
-\subsection{Regression Trees}
-The internal regression-tree fitting is performed by the recursive
-partitioning below:
-\begin{enumerate}
-\item
-  Each node in the regression tree receives a subset $\D' \subseteq \D$ from the parent node.
-\item
-  If a terminal condition is satisfied,
-  the node becomes a leaf decision node with a prediction
-  value by the average of the response values in $\D'$.
-\item
-  Otherwise, the node becomes an internal node that tries
-  to find the best partition of $\D'$ to $\D_1$ and
-  $\D_0 = \D' \setminus \D_1$ that minimizes the total
-  sum of squares of residual error $r$:
-  \begin{equation*}
-    \myargmin{\D_1, \D_0} \bigl[ \tss(\D_1) + \tss(\D_0) \bigr] .
-  \end{equation*}
-  The subsets $\D_1$ and $\D_0$ are further sent to the child nodes, and
-  Step (1) is then recursively applied to each subset at the child nodes.
-\end{enumerate}
-$\tss$ here is the total sum of squares of residual error $r$:
-\begin{equation}
-  \label{eq:tss} 
-  \tss(\D) = \frac{1}{2} \sum_{i \in [N]}
-  (r_i - \bar{r})^2, \,\, \bar{r} = \frac{1}{N} \sum_{i \in [N]}
-  r_i.
-\end{equation}
-\end{comment}

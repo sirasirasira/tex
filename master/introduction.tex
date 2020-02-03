@@ -24,26 +24,51 @@ due to the combinatorial explosion,
 so that it is difficult to enumerate all subgraphs in a realistic time for a given dataset.
 Therefore, it is necessary to restrict the subgraph candidate on the basis of some criterion.
 Frequent subgraph mining \cite{Yan:2002, Nijssen:2004} is one method in this approach.
-However, since it chooses subgraphs acording to the frequencies, 
+However, since it chooses subgraphs according to the frequencies, 
 it is possible to overlook the importance of subgraphs.
-On the other hand, discriminative pattern mining techniques \cite{Fan:2008, Saigo:2009, Shirakawa:2018} 
-choose subgraphs according to a model-based discriminative criteria, 
-and these not likely to overlook important patterns for learning.
-Because of these merits, the present paper also adopts this approach.
+On the other hand, discriminative subgraph mining 
+\cite{Yan:2008, Fan:2008, Saigo:2009, Shirakawa:2018} 
+choose subgraphs according to some discriminative criteria, 
+and not likely to overlook important subgraphs for learning.
+Because of this merit, the present paper also adopts this approach.
 
-\subsection{Related Work}
-%TODO
+\subsection{Related Work and Our Motivation}
 \label{sec:relatedwork}
-Related works \cite{Saigo:2009, Shirakawa:2018} search the discriminative subgraph pattern
-using depth first policy with branch and bound method.
-While these methods perform efficient searches by designing tricky pruning, 
-search policy of depth first is naive and 
-they still suffer from computational costs for some domain or large datasets.
+Frequent subgraph mining methods, such as gSpan \cite{Yan:2002} or Gaston \cite{Nijssen:2004}, 
+are one of the solution of graph classification/regression with subgraph features.
+These methods make feature vector by enumerating frequently appearing subgraph, 
+and an existing machine learning model is applied to the vector.
+This learning method is called two step approach, 
+because the mining part and learning part are completely separated.
+However Wale et al. \cite{Wale:2008} demonstrated experimentally that 
+two step approach is costly in time and memory 
+and it is harmful in accuracy to restrict features by frequency.
 
-\subsection{Our Approach}
-\label{sec:ourapproach}
-To overcome the above difficulty, 
-we propose the more efficient two algorithms
-using Best First Search and Monte Carlo tree search (MCTS).
-The efficiency of these building-block algorithms are already known in some domains, 
-so that in this paper we apply them to our graph classification/regression problem.
+Discriminative subgraph mining methods are used instead to solve these problems.
+Fan et al. \cite{Fan:2008} proposed direct mining method 
+that searches a significant subgraph based on information gain and simultaneously learns decision tree.
+This method is combined with frequent pattern mining and not consider all possible subgraph yet.
+Saigo et al. \cite{Saigo:2009} removed frequency constraint 
+by using model-based discriminative criteria 
+and designing the pruning of search space using anti-monotonic of frequency.
+It learned decision stump directly,  
+and improved the accuracy by taking an ensemble.
+Shirakawa et al. \cite{Shirakawa:2018} directly learned regression trees instead of decision stumps
+to solve non-linear problems.
+Yan et al. devised Leap Search \cite{Yan:2008} that uses horizontal pruning 
+instead of vertical pruning as above.
+This method prunes sibling nodes using the similarity of appearance locations.
+
+The previous discriminative subgraph mining methods have focused on reducing the mining costs by pruning, 
+but all of the search policies have used naive depth-first search.
+One of our motivations is that smarter search policies can make mining more efficient.
+In the previous methods, 
+discriminative criteria and its upper or lower bounds are calculated for every subgraph,
+so designing search policy based on these may be a good solution.
+Another motivation is that there is no need for an exact search.
+Some of the previous methods learn ensemble models, 
+and in the ensemble models it is not necessary to each weak learner be so strong.
+Conversely, an exact search may not only increase search costs, but also lead to over-fitting.
+Therefore, in present paper, 
+consider a search that can obtain a better approximate solution 
+under a predetermined fixed budget constraint without performing an exact search.

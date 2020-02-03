@@ -1,8 +1,8 @@
-\section{Depth First Search with Branch and Bound}
-The state of the art methods \cite{Saigo:2009, Shirakawa:2018} 
-searching for a discriminative subgraph pattern is typically based on the depth first search, 
+\section{Depth-first Search with Branch and Bound}
+The state of the art methods \cite{Yan:2008, Saigo:2009, Shirakawa:2018} 
+searching for a discriminative subgraph pattern is typically based on the depth-first search, 
 as shown in Figure \ref{fig:search} (a), with a branch and bound technique.
-\cite{Shirakawa:2018} searches the best subgraph pattern using $DScore$. 
+\cite{Shirakawa:2018} searches the best subgraph pattern based on $DScore$. 
 This method calculates the lower bound of $DScore$ obtained by child nodes of search space, 
 and if this lower bound does not reach the provisional solution the child is pruned.
 \begin{comment}
@@ -37,7 +37,7 @@ and if this lower bound does not reach the provisional solution the child is pru
   Given $\D_1(g)$ and $\D_0(g)$,
   \small
   \begin{align}
-    \bound &= \mymin{g'} \bigl[ \tss(\D_1(g')) + \tss(\D_0(g'))  \bigr] \notag \\
+    bound(g) &= \mymin{g'} \bigl[ \tss(\D_1(g')) + \tss(\D_0(g'))  \bigr] \notag \\
     \label{eq:boundSubset}
     &= \mymin{S \subset \D_1(g)} \bigl[ \tss(\D_1(g) \setminus S) + \tss(\D_0(g) \cup S)  \bigr] \\
     \label{eq:linearBound}
@@ -76,7 +76,4 @@ and if this lower bound does not reach the provisional solution the child is pru
       \D_1(g)$ is maximized or minimized.
 	  \qed
 \end{proof}
-
-%TODO
-order
-
+This computational cost is $O(|\D_1(g)|)$, i.e. it takes linear time for the frequency of the subgraph.

@@ -9,14 +9,15 @@
 \end{figure}
 
 \section{Proposed Method}
-The previous method \cite{Shirakawa:2018} employs a simple depth-first search policy 
-without referring to the discriminative criterion value ($DScore$) and its bound of each node.
-In some cases, this criterion and its bound are useful for designing search policies.
-In this section, using this criterion, 
-we present two efficient methods to search a discriminative subgraph pattern 
-based on $(i)$ Best First Search and $(ii)$ Monte Carlo Tree Search.
+The previous method \cite{Shirakawa:2018} employs a naive depth-first search policy. 
+This policy does not capture factors such as the nature of the dataset or the situation of current search.
+The previous method calculate $DScore$ and its lower bound for every subgraph, 
+so there is no additional cost for using these values in search policies.
+In this section, using these values, 
+we propose two efficient search policies 
+based on $(i)$ Best-first Search and $(ii)$ Monte Carlo Tree Search.
 
-\subsection{Best First Search}
+\subsection{Best-first Search}
 Best-first searching \cite{pearl:1984} is a search policy 
 that expands from the best node based on some evaluation value, shown as Figure \ref{fig:search} (b).
 The A* algorithm \cite{hart:1968} and Dijkstra algorithm \cite{dijkstra:1959} are representative.
@@ -33,18 +34,18 @@ and the score is calculated and added to the expansion candidate set.
 The above operation is repeated until pruning is possible for all expansion candidate set.\\
 
 \begin{algorithm2e}[H]
-  \caption{Subgraph Search by Best First Search}
+  \caption{Subgraph Search by Best-first Search}
   \label{alg:bfs}
   \KwIn{Training data $\D = \{ (G_1,r_1), (G_2,r_2), \dots, (G_N,r_N) \} $}
   \KwOut{Best score subgraph $g^*$}
-  \Fn{Best First Search($\D$)}{
+  \Fn{Best-first Search($\D$)}{
 	$candidate \leftarrow \{root\}$
     \Repeat{all candidate can be pruned}{
 		$g \leftarrow \argmax_{candidate\ c} bound(c)$ \;
 		$candidate \leftarrow candidate / {g}$ \;
 		\ForAll{child c of g}{
-      		\If{Score(c) is better than $score^*$}{
-	  		  $score^*$ $\leftarrow$ $Score(c)$ \;
+      		\If{DScore(c) is better than $score^*$}{
+	  		  $score^*$ $\leftarrow$ $DScore(c)$ \;
 	  		  $g^*$ $\leftarrow$ $c$  \;
       		}
 			$candidate \leftarrow candidate \cup {c}$ \;
@@ -56,11 +57,10 @@ The above operation is repeated until pruning is possible for all expansion cand
 \end{algorithm2e}
 
 \subsection{Monte Carlo Tree Search}
-%TODO
 We consider to apply Monte Carlo tree search (MCTS) 
 \cite{Levente:2006, Romaric:2010, Cameron:2012} to our problem. 
 MCTS is widely known as the method used in computer Go. 
-IT is  also applied in various fields such as feature selection. 
+It is also applied in various fields such as feature selection. 
 One of them, Upper Confidence Bounds for Tree (UCT) algorithm 
 \cite{Levente:2006} is empirically highly evaluated as a way to find good solutions within a limited budget.
 This method resolves the exploration-exploitation problem using Upper Confidence Bound (UCB),
@@ -92,20 +92,20 @@ simulation, and backpropagation up to a predefined computational cost, shown as 
 \begin{enumerate}
 	\item{Selection}:
 
-	~~Start from the root node, and select the child repeatedly 
-	until the expandable node is reached based on the value of (\ref{eq:ucb}).
+	~~Start from the root node, and select the child node repeatedly 
+	based on the value of $UCB1$ until the expandable node is reached.
 	A node is expandable if it represents a non-terminal state and has unvisited children.
 
 	\item{Expansion}:
 
 	~~One random child node that is unvisited is expanded.
 	In this operation, we consider the same pruning condition as (\ref{eq:bound_R}). 
-	If the random select node can be pruned, another node is reselected and added.
+	If the random select node can be pruned, another node is reselected and expanded.
 
 	\item{Simulation}:
 	
 	~~A Monte Carlo simulation is run from the new expanded node,
-	and repeatedly select a child from the available children uniformly and randomly.
+	and repeatedly select a child randomly from the available children.
 	This simulation stops if the simulation node has no children or 
 	is based on a stochastic condition known as a stopping feature used in \cite{Romaric:2010}.
 	The stochastic condition is $1 - q^{d}$ depending on the simulation node level d,
@@ -116,13 +116,14 @@ simulation, and backpropagation up to a predefined computational cost, shown as 
 	~~Calculate the reward of the node $g$ obtained by simulation.
 	To align the range to $[0, 1]$, reward is defined, 
 	\begin{eqnarray}
-		reward(g) = -DScore / \tss(\D)
+		reward(g) = -DScore(g) / \tss(\D)
 	\end{eqnarray}
-	these value will be large if discrimination is successful, otherwise small.
+	this value will be large if discrimination is successful, otherwise small.
 	Then backpropagate this reward to the nodes selected in selection and expansion phase.
 \end{enumerate}
 
-\subsubsection*{Low Cost Simulation}
+%TODO
+\subsubsection*{UCT for Subgraph Feature Space}
 In this problem setting, the search space is not given in advance.
 Therefore, we need to construct a search space that matches the given dataset 
 and subgraph search at the same time.
@@ -137,7 +138,7 @@ If an expanded subgraph is available(minimum order defined by \cite{Yan:2002}),
 this simulation is taken, otherwise it is repeated. \\
 
 The entire procedure of the proposed algorithm is illustrated with pseudocode in 
-Alg.~\ref{alg:uct}, \ref{alg:four_operations}.\\
+Algorithm.~\ref{alg:uct}, \ref{alg:four_operations}.\\
 
 \begin{algorithm2e}[H]
   \caption{Subgraph Search by UCT}
@@ -148,8 +149,8 @@ Alg.~\ref{alg:uct}, \ref{alg:four_operations}.\\
     \Repeat{predefined cost is exhausted}{
       \g $\leftarrow $ Selection(root) \;
       \g $\leftarrow $ Expansion(\g) \;
-      \If{Score(g) is better than $score^*$}{
-		$score^*$ $\leftarrow$ $Score(g)$ \;
+      \If{DScore(g) is better than $score^*$}{
+		$score^*$ $\leftarrow$ $DScore(g)$ \;
 		$g^*$ $\leftarrow$ \g  \;
       }
       $s \leftarrow $ Simulation(\g) \;
@@ -187,7 +188,7 @@ Alg.~\ref{alg:uct}, \ref{alg:four_operations}.\\
       \KwRet{$s$} \;
   }
   \Fn{Backpropagation($s, g$)}{
-	$X = Score(s)$ \;
+	$X = reward(s)$ \;
 	\While{$g \neq NULL$}{
 		$n_{g} \leftarrow n_{g} + 1$ \;
 		$\bar{X}_{g} \leftarrow \frac{\bar{X}_{g} \times (n_{g} -1) + X}{n_{g}}$ \;

@@ -1,12 +1,13 @@
 \section{Problem Setting and Challenges}
-Our problem is to search for a subgraph $g$
-%that maximizes (\ref{eq:score_C}) or minimizes (\ref{eq:score_R}).
-that minimizes (\ref{eq:score_R}).
-However, the search space of subgraphs (Section \ref{sec:subgraphMining}) is intractably large
-due to the combinatorial explosion.
-The naive search policy require very high computational costs 
-and it is difficult to find the suitable solution.
-Our challenge is to design an efficient policy for searching subgraphs in a large search space
-based on the discriminative criteria.
-%TODO
+Our problem is to search for a subgraph 
+with a smaller value of (\ref{eq:score_R}) under fixed budget constraint.
+As mentioned abobe (Section \ref{sec:subgraphMining}), 
+the search space of subgraphs is intractably large due to the combinatorial explosion.
+Therefore, the searchable space is limited, and where to search is an important issue.
+Simple search policies do not predict the direction of the search 
+and it is difficult to find the better solution.
+On the other hand, search policies that are too complex 
+require a cost to determine the direction of the search and are inefficient.
+Our challenge is to design an efficient search policy for a better solution 
+ with as little computation as possible.
 
