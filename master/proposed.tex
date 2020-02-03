@@ -60,7 +60,7 @@ The above operation is repeated until pruning is possible for all expansion cand
 We consider to apply Monte Carlo tree search (MCTS) 
 \cite{Levente:2006, Romaric:2010, Cameron:2012} to our problem. 
 MCTS is widely known as the method used in computer Go. 
-It is also applied in various fields such as feature selection. 
+It is also applied in various fields such as feature selection \cite{Romaric:2010}. 
 One of them, Upper Confidence Bounds for Tree (UCT) algorithm 
 \cite{Levente:2006} is empirically highly evaluated as a way to find good solutions within a limited budget.
 This method resolves the exploration-exploitation problem using Upper Confidence Bound (UCB),
@@ -84,7 +84,7 @@ simulation, and backpropagation up to a predefined computational cost, shown as 
 \begin{figure}[t]
   \centering
   \includegraphics[width=0.9\linewidth]{img/MCTS.eps}
-  \caption{One circle of processes in UCT}
+  \caption{One circle of processes in UCT algorithm}
   \label{fig:MCTS}
 \end{figure}
 
@@ -123,10 +123,15 @@ simulation, and backpropagation up to a predefined computational cost, shown as 
 \end{enumerate}
 
 %TODO
-\subsubsection*{UCT for Subgraph Feature Space}
+\subsubsection*{UCT algorithm in Subgraph Feature Space}
+UCT algorithm is often used in game-tree space or item set space.
+The major difference between these situations 
+and the subgraph feature space is the difficulty of constructing the search space.
+
 In this problem setting, the search space is not given in advance.
 Therefore, we need to construct a search space that matches the given dataset 
-and subgraph search at the same time.
+and search for a discriminative subgraph at the same time.
+
 When Monte Carlo simulation is performed in this problem, 
 it is necessary to enumerate all the child nodes for each simulation node, which requires a large cost.
 We design a low-cost simulation method 
