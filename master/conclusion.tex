@@ -1,4 +1,22 @@
 \section{Conclusion}
+In summary, we proposed an efficient approximate search method 
+by applying the MCTS algorithm and the best-first search algorithm to the subgraph feature space.
+These approximate search methods were able to obtain better solutions compared 
+to existing naive search policy.
+In addition, the learning model constructed by performing this search iteratively 
+reduced the model construction cost from about 1/10 to 1/200 
+while improving the accuracy compared to the existing exact search model.
+This confirms that the approximate search leads to an improvement in the generalization performance, 
+and may not only reduce the search cost but also provide a good solution for regularization.
+
+However there are many challenges.
+First, regarding cost constraint, 
+there is no standard as to how much cost should be spent on a problem of what scale.
+Currently, it is only experimentally determined, 
+so it is easier to handle if the standard is set theoretically.
+Second, the MCTS method used this paper is the most basic one. 
+Considering more advanced methods and problem-specific heuristics will likely lead to better searches.
+
 \begin{comment}
 In summary, we proposed a novel efficient algorithm to learn the nonlinear model 
 using subgraph indicators without any class constraint.

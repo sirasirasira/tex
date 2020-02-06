@@ -60,6 +60,18 @@ instead of vertical pruning as above.
 This method prunes sibling nodes using the similarity of appearance locations.
 
 The previous discriminative subgraph mining methods have focused on reducing the mining costs by pruning, 
+and searched exactly using them. 
+However, since exact search is very expensive, 
+there are many problems that do not scale even if pruning is used.
+Therefore, we consider approximate search under fixed budget constraint instead of exact search.
+Although the approximate search method is inferior to the strict search in accuracy, 
+it is attracting attention as a means for obtaining a quick solution.
+In this problem, our motivation is to come up with a search method 
+to find out how effective features are at a given cost.
+
+
+\begin{comment}
+The previous discriminative subgraph mining methods have focused on reducing the mining costs by pruning, 
 but all of the search policies have used naive depth-first search.
 One of our motivations is that smarter search policies can make mining more efficient.
 In the previous methods, 
@@ -70,5 +82,5 @@ Some of the previous methods learn ensemble models,
 and in the ensemble models it is not necessary to each weak learner be so strong.
 Conversely, an exact search may not only increase search costs, but also lead to over-fitting.
 Therefore, in present paper, 
-consider a search that can obtain a better approximate solution 
-under a predetermined fixed budget constraint without performing an exact search.
+consider a search that can obtain a better approximate solution under fixed budget constraint.
+\end{comment}

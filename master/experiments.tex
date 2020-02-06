@@ -17,13 +17,13 @@ ECFP family of fingerprints\cite{Rogers:2010}. See \cite{Kearnes2016} for more e
 \tabcolsep = 6pt
 \begin{table}[h]
   \centering
-  \caption{Dataset summary}
+  \caption{Real Dataset summary}
   \label{tbl:dataset}
   	\begin{tabular}{lcccc}
 		\thickhline
 		Dataset			& CPDB           & Mutag        & AIDS(CAvsCM)     & CAS	\\  \hline
 		\# data			& 684            & 188          & 1503             & 4337	\\
-		\# ($y=+1,-1$)	& (341, 343)     & (125, 63)    & (422, 1081)      & (2401, 1936)	\\  
+		\# ($y=-1,+1$)	& (343, 341)     & (63, 125)    & (1081, 422)      & (1936, 2401)	\\  
 		\# nodes		& 25.2           & 26.3         & 59.0             & 30.3	\\  
 		\# edges		& 25.6           & 28.1         & 61.6             & 31.3	\\  
 		\thickhline
@@ -31,152 +31,320 @@ ECFP family of fingerprints\cite{Rogers:2010}. See \cite{Kearnes2016} for more e
   \leftline{\hspace*{2pt} \# of nodes and edges are average.}
 \end{table}
 
-\subsection{UNDER CONSTRUCTION}
+In addition to the real datasets, we also have an artificial datasets.
+These artificial datasets are made by randomly sampling 100 graphs from CAS, 
+which is one of the real data, and assigning a random label to each graph. 
+Artificial1 is assigned as a discrete value labels ($y \in \{-1, +1\}$), 
+and Artificial2 is assigned as a real value labels ($y \in [-1, +1]$).
+Prepare 100 similar datasets for each.
+These summary is shown in Table~\ref{tbl:artificial}.
+These are used to more generally evaluate each search policy, 
+taking into account the settings and properties of various problems.
+
+
+\tabcolsep = 20pt
+\begin{table}[h]
+  \centering
+  \caption{Artificial Dataset summary}
+  \label{tbl:artificial}
+  	\begin{tabular}{lcc}
+		\thickhline
+		Dataset			& Artificial1           & Artificial2        \\  \hline
+		\# data			& 100            		& 100          \\
+		\# dataset		& 100     	 			& 100    	\\  
+		$y$				& $\{-1, +1\}$     	 	& $[-1, +1]$    	\\  
+		sampled from			& CAS     	 			& CAS    	\\  
+		\thickhline
+		\end{tabular}
+\end{table}
+
+\subsection{Comparison of Respective Search Efficiency}
+First, a feature search is performed once for each artificial dataset without any budget constraint, 
+thereby comparing the respective search efficiencies.
+Exploration strength parameter of MCTS is set with three type of values (0.1, 1, 10).
+Figure~\ref{fig:bestsearch}, \ref{fig:update} are the average results for all 100 datasets, 
+which show the number of nodes searched until finding the best subgraph pattern 
+and how the provisional solution is updated in each search.
+Figure~\ref{fig:bestsearch} shows that MCTS find the best subgraph with the minimum number of searches, 
+and the best-first search continues at that point.
+In addition, it was found that each search was not significantly affected by the type of graph label, 
+and the smaller the value of the MCTS parameter, the better the result.
+
+In Figure~\ref{fig:update}, both of the proposed methods 
+can find a good solution faster than the existing depth-first search.
+Also the solution is rapidly improved and converged at an early step, 
+there is a sufficient expectation for an approximate search under fixed budget constraint.
+
 \begin{figure}[htbp]
  \begin{minipage}{0.5\hsize}
   \begin{center}
-   \includegraphics[width=60mm]{img/cas/artificial/1/node.png}
+   \includegraphics[width=63mm]{img/cas/artificial/1/node.png}
   \end{center}
-  %\caption{一つめの図}
-  \label{fig:one}
+  \subcaption{Artificial1 ($y \in \{-1, +1\}$)}
  \end{minipage}
  \begin{minipage}{0.5\hsize}
   \begin{center}
-   \includegraphics[width=60mm]{img/cas/artificial/2/node.png}
+   \includegraphics[width=63mm]{img/cas/artificial/2/node.png}
   \end{center}
-  %\caption{二つめの図}
-  \label{fig:two}
+  \subcaption{Artificial2 ($y \in [-1, +1]$)}
  \end{minipage}
- \caption{一つめの図}
+ \caption{Cost comparison until finding the best solution.}
+  \label{fig:bestsearch}
 \end{figure}
 
-\begin{comment}
-\subsection{MCTS Cost Performance Comparison to Exact Search}
-\label{sec:experimentspeed}
-As previously mentioned in Section~\ref{sec:relatedwork}, \ref{sec:ourapproach}, 
-%our method is based on \cite{Shirakawa:2018} that search optimal feature exactly using tricky pruning, 
-our method is based on that search optimal feature exactly using tricky pruning, 
-in this section we call the previous method GTB-exact, and proposed method GTB-MCTS.
-
-MCTS is able to control the cost of feature search by setting the number of Monte Carlo simulations.
-We investigate the cost performance of MCTS and compare with previous exact method.
-Each hyperparameters is shared(the number of trees: 100, max tree depth: 3, stepsize: 1.0) 
-and MCTS specific parameters is fixed(exploration constant: 1).
-In this experimental setup, AIDS(CAvsCM) is used 
-and the maximum subgraph size of feature search space is set to 10.
-Since GTB-MCTS has randomness in the model, 10 model averages and variance values are used for evaluation.
-Fig~\ref{fig:costperformance} shows the model construction time, training loss, and test accuracy compared
-among each cost GTB-MCTS(the number of Monte Carlo simulations = [10,100,200,300,400,500]) and GTB-exact.
-The left figure is log-scale, and this shows the construction time of GTB-MCTS increases linearly 
-with the number of Monte Carlo simulations.
-The lower the search cost, the greater the training loss mean,
-however the test accuracy is higher than GTB-exact at lower search cost.
-For example, the GTB-MCTS(the number of Monte Carlo simulations = 100) is build the higher accuracy model 
-about 100 times faster than GTB-exact.
-It is interesting that the accuracy can be improved in spite of reducing the search cost.
-Then we investigate the detail of the features used in these models.
-
-Fig~\ref{fig:featuresize} shows the size ratio of the features used to learn the model.
-We can observe that the features that GTB-exact uses for learning are almost big, 
-about 80\% are subgraphs with 9 or 10 edges.
-On the other hand, GTB-MCTS has a balanced features size ratio unless the search cost is too low.
-Therefore, GTB-MCTS has higher generalization ability than GTB-exact, which led to improve the test accuracy.
-\begin{figure}[t]
- \centering
-  \includegraphics[width=1\textwidth]{img/speed.eps}
-   \caption{Search cost performance}
-   \label{fig:costperformance}
-\end{figure}
-\begin{figure}[t]
- \centering
-  \includegraphics[width=0.55\textwidth]{img/feature_rate.eps}
-   \caption{Features size ratio}
-   \label{fig:featuresize}
+\begin{figure}[htbp]
+ \begin{minipage}{0.5\hsize}
+  \begin{center}
+   \includegraphics[width=65mm]{img/cas/artificial/1/node_chart.png}
+  \end{center}
+  \subcaption{Artificial1 ($y \in \{-1, +1\}$)}
+ \end{minipage}
+ \begin{minipage}{0.5\hsize}
+  \begin{center}
+   \includegraphics[width=65mm]{img/cas/artificial/2/node_chart.png}
+  \end{center}
+  \subcaption{Artificial2 ($y \in [-1, +1]$)}
+ \end{minipage}
+ \caption{Comparison of update of provisional solution.}
+  \label{fig:update}
 \end{figure}
 
-\subsection{Accuracy for the QSAR}
-Tables~\ref{tbl:acc} shows the performance results obtained 
-by 10-fold cross validations for QSAR datasets.
-We use the same two nonlinear methods used before 
-and one linear method, gBoost\cite{Saigo:2009} that is the basis of our method. 
-The hyperparameter tuning is performed for the ranges described in Table~\ref{tbl:param}, 
-and the best parameters are also listed in Table~\ref{tbl:bestParam}.
-We can observe that nonlinear methods often outperform the linear method. 
-At the same time, our proposed method GTB-MCTS achieves the best performance except for CPDB. 
-The overall accuracy for the CPDB is also the second, 
-this shows that our proposed method is able to be a good solution for real datasets.
+\subsection{Gradient Tree Boosting with Approximate Search for QSAR}
+\label{sec:qsar}
+Now that the search efficiency of the proposed method has been confirmed, 
+in this part, we construct gradient tree boosting (GTB) \cite{Shirakawa:2018} model for QSAR datasets 
+using iterative approximate search of the discriminating subgraphs under fixed budget constraint.
+GTB parameters are fixed at the following values,
+max subgraph size is 10, the number of trees is 100, depth of each trees is 1 and shrinkage is 1.
+The budget constraint on the search is set to 
+CPDB=(1000, 2000, 3000, 4000, 5000), Mutag=(200, 400, 600, 800, 1000), 
+AIDS(CAvsCM)=(1000, 2000, 3000, 4000, 5000) and CAS=(5000, 10000, 15000, 20000, 25000), 
+according to the scale of the dataset, 
+and the search is terminated when the number of search nodes exceeds the budget.
+The results in Figures~\ref{fig:trainloss} \ref{fig:acc_node} and \ref{fig:acc_time} 
+were measured by 10-fold cross validation, 
+and Figure~\ref{fig:frequency_time} was measured using all CAS data.
 
-\tabcolsep = 13pt
-\begin{table}[t]
-  \centering
-  \caption{Hyperparameter settings for the QSAR}
-  \label{tbl:param}
-  \scalebox{0.85}{
-   \begin{tabular}{llcl}
-     \multicolumn{3}{l}{\textit{Common}} \\
-     \thickhline
-     %\multicolumn{2}{|l}{min support} & $m$(\%) & 10, 5, 2.5, 0 \\
-     \multicolumn{2}{l}{max subgraph size (\# edges)} & $x$ & 4, 6, 8 \\
-     \thickhline
-     \multicolumn{3}{l}{} \\
-     \multicolumn{3}{l}{\textit{Model specific}} \\
-     \thickhline
-     GTB- & max tree depth & $d$ & 1, 3, 5 \\
-     (MCTS, exact) & stepsize & $\eta$ & 0.1, 0.4, 0.7, 1.0 \\
-     ~ & \# trees & $k$ & 1-500 \\
-     \hdashline[2pt/1pt]
-     (MCTS) & \# monte carlo simulations & $i$ & 100, 300, 500 \\
-     ~ & exploration constant & $c$ & 1, 10, 100 \\
-     \hline
-     gBoost & regularization & $\nu$ & {0.01, 0.1, 0.2, 0.3,}{0.4, 0.5, 0.6} \\
-     \thickhline
-   \end{tabular}
-  }
-\end{table}
+Figure~\ref{fig:trainloss} shows the change in training loss 
+of the final ensemble model to the search budget constraint.
+Comparing the learning of the model with the same number of searches, 
+it can be seen that the model using MCTS performed the best.
+For the MCTS exploration strength parameter, 
+the same performance is shown, despite the fact that the difference is up to 100 times, 
+indicating that the search is robust to this parameter.
+The result of the accuracy, is shown in Figure~\ref{fig:acc_node}, 
+is similar to the result of the training loss, 
+and the accuracy of the model using the MCTS is the highest. 
+On the other hand, the approximation search based on the existing depth-first policy 
+resulted in poor model accuracy.
 
-\tabcolsep = 7pt
+Then, we consider the execution time.
+Figure~\ref{fig:acc_time} indicates that 
+the best-first search requires the longest execution time. 
+On the other hand, the execution time of the depth-first search 
+is very fast for the same number of searches.
+In order to verify this difference in execution time, 
+consider the properties of the subgraphs searched by each method.
+Figure~\ref{fig:frequency_time} shows the average frequency of the subgraphs searched 
+by each method and the execution time.
+From Figure~\ref{fig:frequency_time} (a), it can be seen that the subgraphs searched by best-first policy 
+have an average frequency 30 times higher than depth-first and 4 times higher than MCTS.
+Looking at the lower bound (\ref{eq:bound_R}) in the previous section \ref{sec:previous}, 
+the graph with the higher frequency has a larger maximum value of $k$, 
+and the lower bound is likely to be larger 
+because the movement pattern of many sets can be considered.
+In addition, the depth-first policy likely to search for many large subgraphs, 
+but the frequency of those is generally low.
+Since the calculation of the lower bound requires a linear cost for the frequency, 
+there is a large difference in the execution time like Figure~\ref{fig:frequency_time} (b).
+The hatched portion of Figure~\ref{fig:frequency_time} (b) indicates the computational cost 
+other than the lower bound, and the other portion indicates the computational cost of the bound.
+Even if the execution time differs for such a reason, 
+the MCTS model showed the best performance 
+when the accuracy of the model was evaluated at the same execution time.
+
+\begin{figure}[htbp]
+ \begin{minipage}{0.5\hsize}
+  \begin{center}
+   \includegraphics[width=65mm]{img/cpdb/grid/trainloss_node.png}
+  \end{center}
+  \subcaption{CPDB}
+ \end{minipage}
+ \begin{minipage}{0.5\hsize}
+  \begin{center}
+   \includegraphics[width=65mm]{img/mutag/grid/trainloss_node.png}
+  \end{center}
+  \subcaption{Mutag}
+ \end{minipage}\\
+ \begin{minipage}{0.5\hsize}
+  \begin{center}
+   \includegraphics[width=65mm]{img/aids/grid/trainloss_node.png}
+  \end{center}
+  \subcaption{AIDS}
+ \end{minipage}
+ \begin{minipage}{0.5\hsize}
+  \begin{center}
+   \includegraphics[width=65mm]{img/cas/grid/trainloss_node.png}
+  \end{center}
+  \subcaption{CAS}
+ \end{minipage}
+ \caption{Training loss to the number of search nodes for QSAR.}
+  \label{fig:trainloss}
+\end{figure}
+
+\begin{figure}[htbp]
+ \begin{minipage}{0.5\hsize}
+  \begin{center}
+   \includegraphics[width=65mm]{img/cpdb/grid/acc_node.png}
+  \end{center}
+  \subcaption{CPDB}
+ \end{minipage}
+ \begin{minipage}{0.5\hsize}
+  \begin{center}
+   \includegraphics[width=65mm]{img/mutag/grid/acc_node.png}
+  \end{center}
+  \subcaption{Mutag}
+ \end{minipage}\\
+ \begin{minipage}{0.5\hsize}
+  \begin{center}
+   \includegraphics[width=65mm]{img/aids/grid/acc_node.png}
+  \end{center}
+  \subcaption{AIDS}
+ \end{minipage}
+ \begin{minipage}{0.5\hsize}
+  \begin{center}
+   \includegraphics[width=65mm]{img/cas/grid/acc_node.png}
+  \end{center}
+  \subcaption{CAS}
+ \end{minipage}
+ \caption{Test accuracy to the number of search nodes for QSAR.}
+  \label{fig:acc_node}
+\end{figure}
+
+\begin{figure}[htbp]
+ \begin{minipage}{0.5\hsize}
+  \begin{center}
+   \includegraphics[width=65mm]{img/cpdb/grid/acc_time.png}
+  \end{center}
+  \subcaption{CPDB}
+ \end{minipage}
+ \begin{minipage}{0.5\hsize}
+  \begin{center}
+   \includegraphics[width=65mm]{img/mutag/grid/acc_time.png}
+  \end{center}
+  \subcaption{Mutag}
+ \end{minipage}\\
+ \begin{minipage}{0.5\hsize}
+  \begin{center}
+   \includegraphics[width=65mm]{img/aids/grid/acc_time.png}
+  \end{center}
+  \subcaption{AIDS}
+ \end{minipage}
+ \begin{minipage}{0.5\hsize}
+  \begin{center}
+   \includegraphics[width=65mm]{img/cas/grid/acc_time.png}
+  \end{center}
+  \subcaption{CAS}
+ \end{minipage}
+ \caption{Test accuracy to execution time for QSAR.}
+  \label{fig:acc_time}
+\end{figure}
+
+\begin{figure}[htbp]
+ \begin{minipage}{0.5\hsize}
+  \begin{center}
+   \includegraphics[width=65mm]{img/frequency.png}
+  \subcaption{Average frequency of searched subgraphs.}
+  \end{center}
+  \label{fig:frequency}
+ \end{minipage}
+ \begin{minipage}{0.5\hsize}
+  \begin{center}
+   \includegraphics[width=65mm]{img/time.png}
+  \subcaption{Execution time of each search.\\　}
+  \end{center}
+  \label{fig:time}
+ \end{minipage}
+ \caption{Relationship between execution time and frequency of searched subgraphs for CAS.}
+  \label{fig:frequency_time}
+\end{figure}
+
+\subsection{Approximate Search vs. Exact Search for Learning}
+So far, we have considered the efficiency of each approximate search.
+Then, we compare the approximate search with the exact search.
+Since approximate search based on MCTS policy performed the best 
+compared with other approximate search methods, 
+this section compares GTB+MCTS with the existing method \cite{Shirakawa:2018}, GTB+exact Depth-first
+The same parameters of GTB and budget constraint are used as for \ref{sec:qsar}
+and compared using the test accuracy of 10-fold cross-validation for QSAR datasets.
+The results are shown in Table~\ref{tbl:acc} 
+and the best MCTS parameters used in the results are shown in Table~\ref{tbl:bestParam}.
+Table~\ref{tbl:acc} shows that, the accuracy of GTB+MCTS was $0.4\%~2.7\%$ higher than 
+the accuracy of GTB+exact Depth-first.
+In addition, the number of search nodes and execution time were reduced from about $1/10$ to $1/200$.
+Why did the accuracy of learning improve despite under budget constrain?
+Figure~\ref{fig:feature_rate} shows the answer.
+This figure indicates the percentage of subgraph size used for learning,
+and it can be seen that model based on the exact Depth-first is learned with almost large features.
+In particular, 40\% or more of the maximum size feature is used.
+This is apparently over-fitting and led to a decrease in accuracy.
+On the other hand, model based on MCTS (approximate search) is built with a good balance of features.
+The latter is considered to be a better model in terms of generalization performance.
+
+\tabcolsep = 10pt
 \begin{table*}[t]
   \centering
-  \caption{Prediction accuracy (\%) for the QSAR}
+  \caption{exact Depth-first vs. MCTS (approximate search).}
   \label{tbl:acc}
-  \scalebox{0.87}{
-  	 \begin{tabular}{lcccccc}
+  \scalebox{0.90}{
+  	 \begin{tabular}{lccc}
   	   \thickhline
-  	   ~								& CPDB						& ~							& Mutag						& ~							& AIDS(CAvsCM)						& ~ 						\\
-  	   ~   							& ACC       				& AUC       				& ACC       				& AUC       				& ACC                 				& AUC              			\\ \hline
-  	   \multicolumn{7}{l}{\textit{Nonlinear models}} \\
-  	   \ss{GTB-MCTS}{~}                & \ss{79.0}{($\pm$2.7)}     & \ss{83.7}{($\pm$2.7)}     & \fss{91.0}{($\pm$5.0)}  	& \fss{94.8}{($\pm$5.0)}   	& \fss{84.4}{($\pm$2.8)}   			& \fss{85.3}{($\pm$2.8)}   	\\
-  	   \ss{GTB-exact}{~}                		& \fss{80.3}{($\pm$4.5)}    & \ss{84.9}{($\pm$4.5)}    & \ss{89.4}{($\pm$6.0)}  	& \ss{94.2}{($\pm$6.0)}   	& \ss{84.0}{($\pm$1.7)}   			& \ss{82.5}{($\pm$1.7)}   	\\ \hline
-  	   \multicolumn{7}{l}{\textit{Linear models}} \\
-  	   \ss{gBoost}{~}                	& \ss{77.9}{($\pm$6.2)}     & \ss{81.7}{($\pm$5.8)}     & \ss{85.0}{($\pm$1.5)}  	& \fss{94.8}{($\pm$5.5)}   	& \ss{83.9}{($\pm$3.6)}   			& \ss{69.0}{($\pm$8.1)}   	\\ \hline
-  	   \hline
-  	   \multicolumn{7}{l}{\textit{Reported values in literature}} \\
-  	   L1-LogReg \cite{takigawa:2017} 	& 78.3 						& -    						& -                      	& -  						& -					   				& -					   	\\
-  	   MGK \cite{Saigo:2009}		 	& 76.5   					& 75.6 						& 80.8                     	& 90.1 						& 76.2				   				& 76.0					   	\\
-  	   freqSVM \cite{Saigo:2009} 		& 77.8 						& 84.5 						& 80.8                     	& 90.6 						& 78.2					   			& 80.8					   	\\
-  	   gBoost \cite{Saigo:2009}		 	& 78.8   				& \fst{85.4} 				& 85.2                     	& 92.6 						& 80.2				   				& 77.4					   	\\
-  	   WL shortest path \cite{Shrvashidze:2011}	& -   						& -    						& 83.7                  	& -  						& -					   			& -					   	\\
-  	   Random walk \cite{Shrvashidze:2011} 		& -   						& -    						& 80.7                    	& -  						& -					   			& -					   	\\
-  	   Shortest path \cite{Shrvashidze:2011} 		& -   						& -    						& 87.2                     	& -  						& -					   			& -					   	\\
+  	   Dataset		& ~								& \# Search nodes					& ~			\\
+  	   ~   			& GTB+exact Depth-first			& GTB+MCTS       			& Ratio \\ \hline
+  	   CPDB 		& $7.2 \times 10^6$				& $5.0 \times 10^5$ 				&  $0.070$  \\
+  	   Mutag 		& $3.8 \times 10^5$				& $6.0 \times 10^4$ 				&  $0.015$  \\
+  	   AIDS(CAvsCM)	& $7.9 \times 10^7$				& $2.0 \times 10^5$ 				&  $0.003$  \\
+  	   CAS	 		& $6.9 \times 10^7$				& $2.0 \times 10^6$ 				&  $0.029$  \\
+  	   \thickhline
+  	  		 		& ~								& Execution time [s]				& ~			\\
+  	   ~   			& GTB+exact Depth-first			& GTB+MCTS       			& Ratio \\ \hline
+  	   CPDB 		& $8.2 \times 10^2$				& $6.2 \times 10$	 				&  $0.076$  \\
+  	   Mutag 		& $2.3 \times 10^2$				& $3.7$				 				&  $0.016$  \\
+  	   AIDS(CAvsCM)	& $2.5 \times 10^4$				& $1.1 \times 10^2$ 				&  $0.004$  \\
+  	   CAS	 		& $8.0 \times 10^4$				& $1.7 \times 10^3$ 				&  $0.040$  \\
+  	   \thickhline
+  	   				& ~								& Accuracy [\%]						& ~			\\
+  	   ~   			& GTB+exact Depth-first			& GTB+MCTS       			& Difference \\ \hline
+  	   CPDB 		& $77.78$						& $78.35$			 				&  $+0.57$  \\
+  	   Mutag 		& $85.03$						& $87.73$			 				&  $+2.70$  \\
+  	   AIDS(CAvsCM)	& $81.37$						& $81.84$ 							&  $+0.47$  \\
+  	   CAS	 		& $80.82$						& $81.99$		 					&  $+1.17$  \\
   	   \thickhline
   	 \end{tabular}
   }
 \end{table*}
 
-\tabcolsep = 6.5pt
+\tabcolsep = 14pt
 \begin{table*}[t]
   \centering
-  \caption{Best hyperparameters}
+  \caption{Best budget constraint and exploration strength parameter.}
   \label{tbl:bestParam}
-  	\scalebox{0.87}{
-  	\begin{tabular}{lllll}
+  	\scalebox{0.90}{
+  	\begin{tabular}{lcccc}
   	  \thickhline
-  	  ~                    & CPDB               				& Mutag            					& AID(CAvsCM)               \\  \hline
-  	  GTB-MCTS             & $x8~d1~\eta0.7~k23~i500~c10$ 	& $x8~d1~\eta0.4~k92~i500~c100$ 	& $x6~d3~\eta0.4~k349~i500~c1$  	\\  
-  	  GTB-exact    		   & $x8~d1~\eta0.4~k497$ 			& $x6~d1~\eta0.4~k289$				& $x6~d5~\eta0.4~k8$ 	 	\\ 
-  	  gBoost               & $x6~\nu0.3         $ 			& $x6~\nu0.4       $ 				& $x8~\nu0.4         $		\\  
+  	  ~                    	& CPDB     	& Mutag 	& AID(CAvsCM) 	& CAS  		\\  \hline
+  	  budget constraint    	& $5000$ 	& $600$ 	& $2000$  		& $20000$		\\  
+  	  exploration strength  & $1$ 		& $0.1$		& $1$ 	 		& $1$			\\ 
   	  \thickhline
   	\end{tabular}
   }
 \end{table*}
-\end{comment}
+
+\begin{figure}[htbp]
+  \begin{center}
+   \includegraphics[width=95mm]{img/feature_rate.eps}
+  \end{center}
+ \caption{The size ratio of the features used for learning the MCTS (approximate search) and the exact Depth-first search.}
+  \label{fig:feature_rate}
+\end{figure}
+

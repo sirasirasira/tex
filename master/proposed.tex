@@ -4,7 +4,7 @@
 	\caption{
 		Depth-first vs. Best-first.
 		The bold circles show already searched nodes and 
-		double circles show the candidate nodes for next expansion}
+		double circles show the candidate nodes for next expansion.}
   	\label{fig:search}
 \end{figure}
 
@@ -84,7 +84,7 @@ simulation, and backpropagation up to a predefined computational cost, shown as 
 \begin{figure}[t]
   \centering
   \includegraphics[width=0.9\linewidth]{img/MCTS.eps}
-  \caption{One circle of processes in UCT algorithm}
+  \caption{One circle of processes in UCT algorithm.}
   \label{fig:MCTS}
 \end{figure}
 
@@ -123,25 +123,21 @@ simulation, and backpropagation up to a predefined computational cost, shown as 
 \end{enumerate}
 
 %TODO
-\subsubsection*{UCT algorithm in Subgraph Feature Space}
+\subsubsection*{Monte Carlo Simulation in Subgraph Feature Space}
 UCT algorithm is often used in game-tree space or item set space.
-The major difference between these situations 
-and the subgraph feature space is the difficulty of constructing the search space.
-
+The major difference between these situations and the subgraph feature space 
+is the difficulty of constructing the search space.
 In this problem setting, the search space is not given in advance.
 Therefore, we need to construct a search space that matches the given dataset 
 and search for a discriminative subgraph at the same time.
-
 When Monte Carlo simulation is performed in this problem, 
-it is necessary to enumerate all the child nodes for each simulation node, which requires a large cost.
+naive way is to enumerate all the child nodes for each simulation node, which requires a large cost.
 We design a low-cost simulation method 
 since the simulation cost has a big influence on the search efficiency.
-
 First, a graph including simulation node is randomly selected from the dataset.
 Expand the subgraph represented by the simulation node on the selected graph.
 If an expanded subgraph is available(minimum order defined by \cite{Yan:2002}), 
 this simulation is taken, otherwise it is repeated. \\
-
 The entire procedure of the proposed algorithm is illustrated with pseudocode in 
 Algorithm.~\ref{alg:uct}, \ref{alg:four_operations}.\\
 
